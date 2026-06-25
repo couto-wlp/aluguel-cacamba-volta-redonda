@@ -10,20 +10,28 @@ import { SITE_CONFIG } from '../data/config';
 const services = await getCollection('servicos');
 services.sort((a, b) => a.data.order - b.data.order);
 const homepageServices = services.slice(0, 6); // Mostrar até 6
-
-// Otimizar imagem de fundo do Hero em formato WebP leve
-const optimizedHeroBg = await getImage({ src: heroBg, format: 'webp', width: 1280, quality: 75 });
-const optimizedAboutImg = await getImage({ src: aboutImg, format: 'webp', width: 800, quality: 80 });
 ---
 
 <Layout title="Caçambas Volta Redonda | Aluguel de Caçamba de Entulho" transparentHeader={true}>
-	<link rel="preload" as="image" href={optimizedHeroBg.src} slot="head" fetchpriority="high" />
 	
 	<!-- 1. Hero Section (Fundo Escuro com Imagem WebP Leve) -->
-	<section id="inicio" class="relative overflow-hidden bg-secondary text-white min-h-screen flex items-center pt-24 pb-16 md:pt-48 md:pb-32 bg-cover bg-center bg-no-repeat" style={`background-image: linear-gradient(rgba(10, 10, 10, 0.65), rgba(10, 10, 10, 0.65)), url(${optimizedHeroBg.src});`}>
-		<div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgba(250,204,21,0.12),transparent_50%)]"></div>
+	<section id="inicio" class="relative overflow-hidden bg-secondary text-white min-h-screen flex items-center pt-24 pb-16 md:pt-48 md:pb-32">
+		<!-- Imagem de Fundo Hero otimizada com srcset responsivo para Mobile -->
+		<Image 
+			src={heroBg} 
+			alt="Caçamba de entulho em Volta Redonda" 
+			loading="eager" 
+			fetchpriority="high" 
+			class="absolute inset-0 w-full h-full object-cover z-0 object-center pointer-events-none"
+			widths={[400, 800, 1200, 1600]}
+			sizes="100vw"
+		/>
+		<!-- Overlay escuro para contraste -->
+		<div class="absolute inset-0 bg-black/65 z-10"></div>
+		<!-- Efeito de Glow de Fundo -->
+		<div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgba(250,204,21,0.12),transparent_50%)] z-20"></div>
 		
-		<div class="container mx-auto px-6 md:px-12 relative z-10">
+		<div class="container mx-auto px-6 md:px-12 relative z-30">
 			<div class="max-w-4xl mx-auto text-center flex flex-col items-center">
 				<!-- Tag de Destaque (Link/Badge com micro-interações) -->
 				<span class="inline-flex items-center gap-1.5 px-2.5 py-1 md:px-3.5 md:py-1.5 rounded-full text-[10px] md:text-xs font-black bg-primary/20 text-primary mb-6 border border-primary/30 tracking-wider uppercase hover:scale-105 transition-all">
@@ -131,7 +139,7 @@ const optimizedAboutImg = await getImage({ src: aboutImg, format: 'webp', width:
 				<div class="lg:col-span-5 relative group flex justify-center lg:justify-start">
 					<!-- Wrapper da imagem com overflow-hidden para o zoom no hover -->
 					<div class="overflow-hidden rounded-[32px] shadow-lg w-full max-w-md aspect-[4/3] sm:aspect-square md:aspect-[4/3] lg:aspect-square">
-						<Image src={aboutImg} alt="Caçambas Volta Redonda" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105 group-hover:rotate-1 cursor-pointer" width={800} height={800} />
+						<Image src={aboutImg} alt="Caçambas Volta Redonda" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105 group-hover:rotate-1 cursor-pointer" width={800} height={800} loading="lazy" />
 					</div>
 					
 					<!-- Badge Amarelo sobreposto no canto inferior direito -->

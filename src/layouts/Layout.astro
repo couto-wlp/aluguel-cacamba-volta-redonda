@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import '@fontsource-variable/inter';
 import SEO from '../components/SEO.astro';
 import SchemaLocalBusiness from '../components/SchemaLocalBusiness.astro';
 import WhatsAppBtn from '../components/WhatsAppBtn.astro';
@@ -24,14 +25,21 @@ const {
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="google-site-verification" content="-Z53BeVUzhrdVxWIChYdzKm8jG4WS3m27fi2YRRZ_K4" />
-		<!-- Google tag (gtag.js) -->
-		<script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-D6XB5V6QYW"></script>
+		<!-- Google tag (gtag.js) diferido para otimização de TBT/FCP -->
 		<script is:inline>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
+			window.addEventListener('load', () => {
+				setTimeout(() => {
+					const script = document.createElement('script');
+					script.src = 'https://www.googletagmanager.com/gtag/js?id=G-D6XB5V6QYW';
+					script.async = true;
+					document.head.appendChild(script);
 
-		  gtag('config', 'G-D6XB5V6QYW');
+					window.dataLayer = window.dataLayer || [];
+					window.gtag = function(){window.dataLayer.push(arguments);}
+					window.gtag('js', new Date());
+					window.gtag('config', 'G-D6XB5V6QYW');
+				}, 1500);
+			});
 		</script>
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<slot name="head" />
