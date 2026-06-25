@@ -1,0 +1,112 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { SITE_CONFIG } from '../data/config';
+---
+
+<Layout title="Política de Privacidade e Proteção de Dados | Caçambas Volta Redonda">
+	<section class="py-24 md:py-32">
+		<div class="container mx-auto px-6 md:px-12">
+			<div class="max-w-3xl mx-auto">
+				
+				<!-- H1 com mb-16 conforme especificação -->
+				<h1 class="text-3xl md:text-5xl font-black text-gray-900 mb-16 leading-tight tracking-tighter">
+					Política de Privacidade e Proteção de Dados
+				</h1>
+				
+				<!-- Parágrafos organizados com space-y-6 para evitar blocos cansativos -->
+				<div class="text-gray-600 text-sm md:text-base space-y-6 leading-relaxed">
+					<p>
+						A sua privacidade e a segurança dos seus dados são prioridades fundamentais para nós. É política do <strong>{SITE_CONFIG.name}</strong> respeitar a sua privacidade em relação a qualquer informação que possamos coletar no site oficial, bem como em outros canais digitais que possuímos e operamos na região de {SITE_CONFIG.city} - {SITE_CONFIG.state}.
+					</p>
+					
+					<p class="font-bold text-gray-900 text-lg pt-4">
+						1. Coleta de Dados e Conformidade com a LGPD
+					</p>
+					<p>
+						Solicitamos informações pessoais (como nome, telefone e endereço para entrega de caçambas) apenas quando estritamente necessário para a prestação dos nossos serviços de locação e descarte de resíduos.
+					</p>
+					<p>
+						Fazemo-lo por meios justos, transparentes e legais, com o seu total conhecimento e consentimento, em estrita conformidade com a Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018). Sempre informamos o motivo da coleta e como esses dados serão utilizados pela nossa equipe.
+					</p>
+					
+					<p class="font-bold text-gray-900 text-lg pt-4">
+						2. Retenção e Segurança das Informações
+					</p>
+					<p>
+						<strong>Armazenamento Seguro:</strong> Apenas retemos as informações coletadas pelo tempo necessário para fornecer o serviço solicitado ou para cumprir obrigações legais de faturamento e descarte de entulho.
+					</p>
+					<p>
+						<strong>Proteção contra Vazamentos:</strong> Quando armazenamos dados, utilizamos padrões de segurança comercialmente aceitáveis para evitar perdas, roubos, bem como acessos não autorizados, divulgação, cópia, uso ou modificação.
+					</p>
+					<p>
+						<strong>Compartilhamento Restrito:</strong> Não compartilhamos suas informações de identificação pessoal publicamente ou com terceiros, exceto quando exigido por órgãos reguladores, fiscalização ambiental ou por força de lei.
+					</p>
+					
+					<p class="font-bold text-gray-900 text-lg pt-4">
+						3. Seus Direitos como Titular dos Dados
+					</p>
+					<p>
+						Você é totalmente livre para recusar a nossa solicitação de informações pessoais, ciente de que isso pode inviabilizar o agendamento ou a entrega dos serviços de caçamba desejados.
+					</p>
+					<p>
+						Conforme a LGPD garante, você tem o direito de, a qualquer momento, solicitar a confirmação, correção, portabilidade ou exclusão definitiva dos seus dados do nosso sistema. Para exercer esses direitos, basta entrar em contato direto conosco através do e-mail: <a href={`mailto:${SITE_CONFIG.email}`} class="text-secondary hover:underline font-semibold">{SITE_CONFIG.email}</a>.
+					</p>
+					
+					<p class="font-bold text-gray-900 text-lg pt-4">
+						4. Uso de Cookies e Ferramentas de Análise
+					</p>
+					<p>
+						Para melhorar a sua experiência de navegação e entender como os clientes interagem com nosso site, utilizamos cookies básicos:
+					</p>
+					<ul class="list-disc pl-6 space-y-4">
+						<li>
+							<strong>Cookies de Desempenho (Analytics):</strong> Utilizamos ferramentas como o Google Analytics para entender métricas de acesso, como páginas mais visitadas e tempo de permanência, sempre de forma anônima.
+						</li>
+						<li>
+							<strong>Cookies de Marketing:</strong> Podemos utilizar tags de rastreamento (como o Pixel da Meta ou Google Ads) apenas para medir a eficácia das nossas próprias campanhas publicitárias, garantindo que você veja ofertas relevantes dos nossos serviços.
+						</li>
+					</ul>
+					
+					<p class="font-bold text-gray-900 text-lg pt-4">
+						5. Links para Sites de Terceiros
+					</p>
+					<p>
+						Nosso site pode conter links para plataformas externas (como portais de órgãos ambientais ou parceiros logísticos) que não são operados por nós. Não temos controle sobre o conteúdo e práticas desses sites e não nos responsabilizamos por suas respectivas políticas de privacidade.
+					</p>
+					
+					<p class="font-bold text-gray-900 text-lg pt-4">
+						6. Compromisso de Conduta do Usuário
+					</p>
+					<p>
+						Ao navegar no site do {SITE_CONFIG.name}, o usuário se compromete a fazer uso adequado dos conteúdos e ferramentas oferecidas, abstendo-se de:
+					</p>
+					<ul class="list-disc pl-6 space-y-2">
+						<li><strong>A)</strong> Praticar atividades ilícitas, contrárias à boa-fé ou à ordem pública;</li>
+						<li><strong>B)</strong> Disseminar vírus digitais, malwares ou quaisquer sistemas que possam comprometer a integridade dos servidores e sistemas do {SITE_CONFIG.name} ou de nossos parceiros;</li>
+						<li><strong>C)</strong> Publicar conteúdos de teor discriminatório, difamatório ou ilegal nos campos de interação do site.</li>
+					</ul>
+					
+					<p class="pt-6 font-medium text-gray-900">
+						O uso continuado da nossa plataforma digital será interpretado como aceitação integral desta Política de Privacidade.
+					</p>
+					
+					<p class="text-sm text-gray-400">
+						Esta política é efetiva a partir de 21 de Junho de 2026.
+					</p>
+
+					<!-- Rodapé com informações corporativas e de contato -->
+					<div class="mt-16 pt-8 border-t border-gray-200 text-gray-500 text-sm space-y-2">
+						<h3 class="font-bold text-gray-900 text-base mb-4">Informações Corporativas e de Contato</h3>
+						<p class="font-bold text-gray-800">{SITE_CONFIG.name}</p>
+						<p>📍 <strong>Endereço da Operação:</strong> {SITE_CONFIG.address}</p>
+						<p>📄 <strong>Licença Ambiental (SMMA):</strong> {SITE_CONFIG.licenseSMMA}</p>
+						<p>📞 <strong>Telefone Fixo (Suporte):</strong> {SITE_CONFIG.phone}</p>
+						<p>💬 <strong>WhatsApp 24h:</strong> {SITE_CONFIG.whatsapp}</p>
+						<p>✉️ <strong>E-mail Comercial/Privacidade:</strong> <a href={`mailto:${SITE_CONFIG.email}`} class="text-secondary hover:underline font-semibold">{SITE_CONFIG.email}</a></p>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+</Layout>

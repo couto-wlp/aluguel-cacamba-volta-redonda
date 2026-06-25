@@ -1,0 +1,223 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import { SITE_CONFIG } from '../data/config';
+
+// Obter todas as páginas de bairros e blog
+const articles = await getCollection('blog');
+const bairros = await getCollection('bairros');
+
+// Para a barra lateral (apenas bairros)
+const sidebarBairros = bairros.map(b => ({
+	bairroName: b.data.bairro,
+	slug: `aluguel-de-cacamba-${b.slug}`
+}));
+sidebarBairros.sort((a, b) => a.bairroName.localeCompare(b.bairroName));
+
+// Para o grid de cartões (artigo + bairros)
+const pages = [
+	...articles.map(p => ({
+		title: p.data.title,
+		description: p.data.description,
+		slug: p.slug,
+		category: 'Artigo Informativo',
+		badgeColorClass: 'text-accent bg-primary',
+		isArticle: true,
+		bairroName: ''
+	})),
+	...bairros.map(b => ({
+		title: b.data.title,
+		description: b.data.description,
+		slug: `aluguel-de-cacamba-${b.slug}`,
+		category: `Bairro: ${b.data.bairro}`,
+		badgeColorClass: 'text-primary bg-secondary',
+		isArticle: false,
+		bairroName: b.data.bairro
+	}))
+];
+
+// Ordenar: bairros em ordem alfabética primeiro, depois artigos informativos por último
+pages.sort((a, b) => {
+	if (a.isArticle && !b.isArticle) return 1;
+	if (!a.isArticle && b.isArticle) return -1;
+	return a.bairroName.localeCompare(b.bairroName);
+});
+---
+
+<Layout title="Bairros de Atuação | Caçambas Volta Redonda">
+	<!-- Cabeçalho da Página com Fundo Azul -->
+	<section class="relative overflow-hidden bg-secondary text-white py-24 md:py-32">
+		<!-- Efeito de Glow de Fundo -->
+		<div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgba(250,204,21,0.12),transparent_50%)]"></div>
+		
+		<div class="container mx-auto px-6 md:px-12 relative z-10">
+			<div class="max-w-3xl mx-auto text-center">
+				<!-- Tag decorativa -->
+				<span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-black bg-primary/20 text-primary mb-6 border border-primary/30 tracking-wider uppercase animate-pulse">
+					Área de Cobertura
+				</span>
+				
+				<h1 class="text-4xl md:text-6xl font-black text-white mb-6 leading-tight tracking-tighter">
+					Bairros de Atuação <br /> em <span class="text-primary">Volta Redonda</span>
+				</h1>
+				
+				<p class="text-lg md:text-xl text-gray-200 leading-relaxed">
+					Atendemos residências, comércios e indústrias em diversas regiões. Selecione o seu bairro abaixo para ver detalhes e solicitar a caçamba ideal para sua obra.
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- Seção do Grid e Sidebar -->
+	<section class="py-16 md:py-24 bg-gray-50 border-t border-gray-100">
+		<div class="container mx-auto px-6 md:px-12">
+			<div class="max-w-7xl mx-auto">
+
+				<!-- Layout Grid Lateral (Lista na Esquerda, Cards na Direita) -->
+				<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+					
+					<!-- Coluna da Esquerda (Sidebar com Lista de Bairros para Acesso Rápido) - 4 colunas -->
+					<div class="lg:col-span-4 xl:col-span-3 lg:sticky lg:top-28">
+						<div class="bg-white border border-gray-150 rounded-[32px] p-6 shadow-sm">
+							<!-- Header botão interativo no mobile, estático no desktop -->
+							<button 
+								id="bairros-mobile-toggle" 
+								class="w-full flex items-center justify-between font-black text-gray-900 text-lg transition-colors text-left hover:text-secondary lg:hover:text-gray-900 lg:cursor-default"
+							>
+								<span class="flex items-center gap-2">
+									<!-- Icone ➕ / ➖ exclusivo mobile -->
+									<span id="bairros-toggle-icon" class="lg:hidden text-secondary">➕</span>
+									
+									<!-- Icone SVG exclusivo desktop -->
+									<svg class="hidden lg:block w-5 h-5 text-secondary shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+										<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zM3.75 12h.007v.008H3.75V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm-.375 5.25h.007v.008H3.75v-.008zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"></path>
+									</svg>
+									
+									<!-- Texto responsivo -->
+									<span class="lg:hidden">Escolher Bairro</span>
+									<span class="hidden lg:inline">Bairros Atendidos</span>
+								</span>
+								
+								<!-- Seta indicadora exclusiva mobile -->
+								<svg 
+									id="bairros-toggle-arrow" 
+									class="lg:hidden w-5 h-5 text-gray-500 transition-transform duration-300" 
+									fill="none" 
+									stroke="currentColor" 
+									stroke-width="2.5" 
+									viewBox="0 0 24 24" 
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+								</svg>
+							</button>
+							
+							<!-- Conteúdo colapsável no mobile, sempre visível no desktop (lg:block) -->
+							<div id="bairros-mobile-content" class="hidden lg:block mt-4 border-t border-gray-100 pt-4">
+								<!-- Lista com Rolagem dos Bairros -->
+								<div class="bairros-sidebar-list max-h-[250px] lg:max-h-[500px] overflow-y-auto pr-1 space-y-1">
+									{sidebarBairros.map(b => (
+										<a 
+											href={`/${b.slug}`} 
+											class="bairro-sidebar-item flex items-center justify-between py-2 px-3 rounded-xl hover:bg-gray-50 text-sm font-bold text-gray-700 hover:text-secondary transition-all group"
+										>
+											<span>{b.bairroName}</span>
+											<span class="text-gray-400 group-hover:text-secondary group-hover:translate-x-1 transition-all text-xs">&rarr;</span>
+										</a>
+									))}
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Coluna da Direita (Grid de Cards de Bairros) - 8 colunas -->
+					<div class="lg:col-span-8 xl:col-span-9 space-y-8">
+						<!-- Grid de Cards (2 colunas) -->
+						<div id="bairros-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+							{pages.map(page => (
+								<div class="bg-white border border-gray-150 rounded-[32px] p-8 flex flex-col justify-between hover:scale-[1.03] active:scale-[0.98] transition-all duration-200 shadow-sm hover:shadow-md cursor-pointer">
+									<div>
+										<span class={`text-[10px] px-2.5 py-1 rounded-full font-bold uppercase tracking-wider inline-block mb-4 ${page.badgeColorClass}`}>
+											{page.category}
+										</span>
+										<h2 class="text-xl font-black text-gray-900 mb-3 hover:text-secondary transition-colors">
+											{page.title}
+										</h2>
+										<p class="text-gray-500 text-sm leading-relaxed mb-6">
+											{page.description}
+										</p>
+									</div>
+									<a href={`/${page.slug}`} class="text-secondary font-extrabold text-sm hover:text-slate-800 transition-colors inline-flex items-center gap-1 group">
+										Visualizar Detalhes <span class="group-hover:translate-x-1 transition-transform">&rarr;</span>
+									</a>
+								</div>
+							))}
+						</div>
+					</div>
+
+				</div>
+
+				<!-- Alerta Informativo -->
+				<div class="mt-20 p-8 rounded-3xl bg-secondary text-white relative overflow-hidden">
+					<div class="absolute -right-8 -top-8 w-24 h-24 bg-primary/15 rounded-full blur-xl"></div>
+					<h2 class="text-lg font-black text-primary mb-2">💡 Não encontrou seu bairro?</h2>
+					<p class="text-xs text-gray-200 leading-relaxed">
+						Se a sua rua ou bairro não estiver especificamente listado acima, não se preocupe! Nós atendemos toda a área urbana e industrial de Volta Redonda. Entre em contato conosco pelo WhatsApp para confirmar a entrega.
+					</p>
+				</div>
+
+			</div>
+		</div>
+	</section>
+</Layout>
+
+<style>
+	/* Custom scrollbar para a lista lateral de bairros */
+	.bairros-sidebar-list::-webkit-scrollbar {
+		width: 4px;
+	}
+	.bairros-sidebar-list::-webkit-scrollbar-track {
+		background: transparent;
+	}
+	.bairros-sidebar-list::-webkit-scrollbar-thumb {
+		background: #E5E7EB;
+		border-radius: 10px;
+	}
+	.bairros-sidebar-list::-webkit-scrollbar-thumb:hover {
+		background: #D1D5DB;
+	}
+</style>
+
+<script>
+	const toggleBtn = document.getElementById('bairros-mobile-toggle');
+	const mobileContent = document.getElementById('bairros-mobile-content');
+	const toggleIcon = document.getElementById('bairros-toggle-icon');
+	const toggleArrow = document.getElementById('bairros-toggle-arrow');
+
+	toggleBtn?.addEventListener('click', () => {
+		// Executar apenas no mobile (telas menores que lg: 1024px)
+		if (window.innerWidth < 1024) {
+			const isHidden = mobileContent?.classList.contains('hidden');
+			if (isHidden) {
+				mobileContent?.classList.remove('hidden');
+				if (toggleIcon) toggleIcon.textContent = '➖';
+				if (toggleArrow) toggleArrow.classList.add('rotate-180');
+			} else {
+				mobileContent?.classList.add('hidden');
+				if (toggleIcon) toggleIcon.textContent = '➕';
+				if (toggleArrow) toggleArrow.classList.remove('rotate-180');
+			}
+		}
+	});
+
+	// Tratar redimensionamento da janela para garantir que no desktop a sidebar não fique oculta
+	window.addEventListener('resize', () => {
+		if (window.innerWidth >= 1024) {
+			mobileContent?.classList.remove('hidden');
+		} else {
+			if (toggleIcon?.textContent === '➕') {
+				mobileContent?.classList.add('hidden');
+			}
+		}
+	});
+</script>

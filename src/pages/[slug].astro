@@ -1,0 +1,393 @@
+---
+import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
+import Layout from '../layouts/Layout.astro';
+import { SITE_CONFIG } from '../data/config';
+
+export async function getStaticPaths() {
+	const blogEntries = await getCollection('blog');
+	const bairroEntries = await getCollection('bairros');
+
+	const blogPaths = blogEntries.map(entry => ({
+		params: { slug: entry.slug },
+		props: { entry, type: 'blog' },
+	}));
+
+	const bairroPaths = bairroEntries.map(entry => ({
+		params: { slug: `aluguel-de-cacamba-${entry.slug}` },
+		props: { entry, type: 'bairro' },
+	}));
+
+	return [...blogPaths, ...bairroPaths];
+}
+
+let { entry, type } = Astro.props;
+
+if (!entry) {
+	const { slug } = Astro.params;
+	if (slug) {
+		if (slug.startsWith('aluguel-de-cacamba-')) {
+			const realSlug = slug.replace('aluguel-de-cacamba-', '');
+			const bairroEntries = await getCollection('bairros');
+			entry = bairroEntries.find(e => e.slug === realSlug);
+			type = 'bairro';
+		} else {
+			const blogEntries = await getCollection('blog');
+			entry = blogEntries.find(e => e.slug === slug);
+			type = 'blog';
+		}
+	}
+}
+
+if (!entry) {
+	return new Response(null, {
+		status: 404,
+		statusText: 'Not Found'
+	});
+}
+
+const { Content } = await entry.render();
+
+// Buscar outros posts/artigos para a seção de relacionados
+const allPosts = await getCollection('blog');
+const relatedPosts = allPosts
+	.filter(p => p.slug !== entry.slug)
+	.slice(0, 2);
+
+// Obter os equipamentos/serviços de caçamba (usado no layout do bairro)
+const services = await getCollection('servicos');
+services.sort((a, b) => a.data.order - b.data.order);
+---
+
+<Layout title={`${entry.data.title}`} description={entry.data.description}>
+	
+	{type === 'blog' ? (
+		/* ---------------------------------------------------- */
+		/* LAYOUT 1: ARTIGO / GUIA DO SITE                     */
+		/* ---------------------------------------------------- */
+		<section class="py-24 md:py-32 bg-white">
+			<div class="container mx-auto px-6 md:px-12">
+				<div class="max-w-5xl mx-auto">
+					<div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+						
+						<!-- Coluna Principal -->
+						<div class="lg:col-span-2">
+							<article>
+								<div class="mb-10">
+									<span class="text-xs text-gray-400 font-bold block mb-3">
+										📅 {new Date(entry.data.pubDate).toLocaleDateString('pt-BR', {
+											year: 'numeric',
+											month: 'long',
+											day: 'numeric'
+										})} &bull; Por {entry.data.author}
+									</span>
+									<h1 class="text-3xl md:text-4xl font-black text-gray-900 mb-16 leading-tight tracking-tighter">
+										{entry.data.title}
+									</h1>
+								</div>
+
+								<div class="prose prose-lg max-w-none text-gray-600 prose-headings:text-gray-900 prose-headings:font-black prose-a:text-secondary hover:prose-a:text-slate-800">
+									<Content />
+								</div>
+							</article>
+						</div>
+
+						<!-- Barra Lateral Adesiva -->
+						<aside class="lg:col-span-1 lg:sticky lg:top-28">
+							<div class="bg-secondary text-white rounded-3xl p-10 shadow-lg text-center relative overflow-hidden hover:scale-105 active:scale-95 transition-all duration-200">
+								<div class="absolute -right-8 -top-8 w-24 h-24 bg-primary/15 rounded-full blur-xl"></div>
+								<span class="text-3xl mb-4 block">🚚</span>
+								<h3 class="text-xl font-black text-primary mb-4 leading-tight">Precisa de uma caçamba no canteiro?</h3>
+								<p class="text-gray-100 text-xs leading-relaxed mb-8">
+									Facilite o descarte legalizado dos resíduos da sua reforma. Agende pelo WhatsApp em menos de 5 minutos!
+								</p>
+								<a href={SITE_CONFIG.whatsappUrl} target="_blank" rel="noopener noreferrer" class="block w-full text-center py-4 rounded-xl bg-primary text-accent font-black text-sm hover:scale-105 active:scale-95 transition-all shadow-md hover:bg-yellow-500">
+									Pedir Orçamento Grátis
+								</a>
+								<a href={`tel:${SITE_CONFIG.phoneFormatted}`} class="block text-xs text-primary hover:text-white transition-colors mt-4 hover:scale-105 active:scale-95 transition-all font-bold">
+									Ou ligue: {SITE_CONFIG.phone}
+								</a>
+							</div>
+						</aside>
+
+					</div>
+				</div>
+			</div>
+		</section>
+	) : (
+		/* ---------------------------------------------------- */
+		/* LAYOUT 2: LANDING PAGE DE BAIRRO (LOCAL SEO)         */
+		/* ---------------------------------------------------- */
+		<div>
+			<!-- Hero da Landing Page do Bairro -->
+			<section class="relative bg-secondary text-white pt-24 pb-20 md:pt-32 md:pb-28 overflow-hidden bg-cover bg-center">
+				<div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgba(250,204,21,0.08),transparent_50%)]"></div>
+				<div class="container mx-auto px-6 md:px-12 relative z-10">
+					<div class="max-w-3xl">
+						<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-black bg-primary/20 text-primary mb-6 border border-primary/30 tracking-widest uppercase">
+							Atendimento Local em Volta Redonda
+						</span>
+						<h1 class="text-4xl md:text-6xl font-black leading-tight tracking-tighter mb-6" set:html={entry.data.title.replace(' | Volta Redonda - RJ', '').replace(entry.data.bairro, `<span class="text-primary">${entry.data.bairro}</span>`)} />
+						<p class="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl leading-relaxed">
+							Locação de caçambas estacionárias licenciadas para coleta e destinação correta de entulhos. Agilidade e segurança para sua obra no bairro {entry.data.bairro}.
+						</p>
+						<div class="flex flex-col sm:flex-row gap-4">
+							<a href={`${SITE_CONFIG.whatsappUrl}?text=Olá! Gostaria de alugar uma caçamba para o bairro ${entry.data.bairro}.`} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-primary text-accent font-black text-base hover:scale-105 active:scale-95 transition-all shadow-xl shadow-primary/20 hover:bg-yellow-500">
+								Orçamento Rápido via WhatsApp
+							</a>
+							<a href="#modelos" class="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-white/10 text-white font-semibold text-base border border-white/20 hover:bg-white/20 hover:scale-105 active:scale-95 transition-all">
+								Ver Caçambas
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Seção de Diferenciais Locais -->
+			<section class="py-20 bg-gray-50 border-b border-gray-100">
+				<div class="container mx-auto px-6 md:px-12">
+					<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+						<div class="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm">
+							<span class="text-3xl mb-4 block">⚡</span>
+							<h2 class="text-lg font-black text-gray-900 mb-2">Logística Expressa</h2>
+							<p class="text-gray-500 text-sm leading-relaxed">
+								Entrega e remoção rápidas e pontuais no bairro {entry.data.bairro}, respeitando o cronograma de sua construção ou reforma.
+							</p>
+						</div>
+						<div class="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm">
+							<span class="text-3xl mb-4 block">📋</span>
+							<h2 class="text-lg font-black text-gray-900 mb-2">Descarte 100% Legal</h2>
+							<p class="text-gray-500 text-sm leading-relaxed">
+								Emissão completa de MTR e conformidade total com as normas da Secretaria Municipal de Meio Ambiente (SMMA) de Volta Redonda.
+							</p>
+						</div>
+						<div class="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm">
+							<span class="text-3xl mb-4 block">🛡️</span>
+							<h2 class="text-lg font-black text-gray-900 mb-2">Posicionamento Seguro</h2>
+							<p class="text-gray-500 text-sm leading-relaxed">
+								Motoristas experientes que posicionam a caçamba de forma regularizada na rua ou calçada de sua obra no {entry.data.bairro}.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Conteúdo Específico do Bairro (Markdown) + Sidebar -->
+			<section class="py-20 bg-white">
+				<div class="container mx-auto px-6 md:px-12">
+					<div class="max-w-5xl mx-auto">
+						<div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+
+							<!-- Coluna Principal -->
+							<div class="lg:col-span-2">
+								<h2 class="text-3xl font-black text-gray-900 mb-8 tracking-tighter">
+									Regras e Dicas de Descarte no {entry.data.bairro}
+								</h2>
+								<div class="prose prose-lg text-gray-600 prose-headings:text-gray-900 prose-headings:font-black prose-strong:text-gray-900">
+									<Content />
+								</div>
+							</div>
+
+							<!-- Sidebar Adesiva -->
+							<aside class="lg:col-span-1 lg:sticky lg:top-28">
+								<div class="bg-secondary rounded-2xl shadow-xl p-8 text-center relative overflow-hidden">
+									<!-- Decoração de fundo -->
+									<div class="absolute -right-8 -top-8 w-32 h-32 bg-primary/10 rounded-full blur-2xl"></div>
+									<div class="absolute -left-8 -bottom-8 w-24 h-24 bg-primary/10 rounded-full blur-2xl"></div>
+
+									<span class="text-xs font-black uppercase tracking-widest text-primary block mb-3 relative z-10">Orçamento Gratuito</span>
+									<h3 class="text-xl font-black text-white mb-6 leading-tight relative z-10">
+										Interessado em alugar uma caçamba no {entry.data.bairro}?
+									</h3>
+
+									<!-- Botão WhatsApp -->
+									<a
+										href={`${SITE_CONFIG.whatsappUrl}?text=Olá! Gostaria de alugar uma caçamba para o bairro ${entry.data.bairro}.`}
+										target="_blank"
+										rel="noopener noreferrer"
+										class="flex items-center justify-center gap-2 w-full py-4 rounded-xl bg-primary text-accent font-black text-sm hover:bg-yellow-400 hover:scale-105 active:scale-95 transition-all shadow-md mb-3 relative z-10"
+									>
+										<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+										Pedir no WhatsApp
+									</a>
+
+									<!-- Botão Ligar -->
+									<a
+										href={`tel:${SITE_CONFIG.phoneFormatted}`}
+										class="flex items-center justify-center gap-2 w-full py-4 rounded-xl bg-white/10 text-white border border-white/20 hover:bg-white/20 font-black text-sm hover:scale-105 active:scale-95 transition-all mb-6 relative z-10"
+									>
+										<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
+										Ligar Agora
+									</a>
+
+									<p class="text-xs text-white/50 mb-2 relative z-10">Dúvidas? Fale com um especialista.</p>
+									<a href={`tel:${SITE_CONFIG.phoneFormatted}`} class="text-primary font-black text-base hover:text-yellow-300 transition-colors relative z-10">
+										{SITE_CONFIG.phone}
+									</a>
+								</div>
+							</aside>
+
+
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+			<!-- Seção de Perguntas Frequentes (FAQ Accordion) -->
+			<section class="py-20 bg-gray-50 border-t border-b border-gray-150">
+				<div class="container mx-auto px-6 md:px-12 max-w-4xl">
+					<div class="text-center mb-16">
+						<span class="text-xs uppercase tracking-widest text-secondary font-bold">Dúvidas Comuns</span>
+						<h2 class="text-3xl font-black text-gray-900 mt-2 tracking-tighter">
+							Perguntas Frequentes
+						</h2>
+					</div>
+
+					<div class="space-y-4">
+						<details class="group bg-white border border-gray-150 rounded-2xl p-6 [&_summary::-webkit-details-marker]:hidden cursor-pointer transition-all duration-300 hover:shadow-sm">
+							<summary class="flex items-center justify-between text-gray-900 font-bold text-lg select-none">
+								<span>Quanto tempo a caçamba pode permanecer no local?</span>
+								<span class="transition group-open:rotate-180 text-primary font-black text-xl">
+									↓
+								</span>
+							</summary>
+							<p class="mt-4 text-gray-600 text-sm leading-relaxed border-t border-gray-200/60 pt-4">
+								De acordo com a legislação de Volta Redonda, o tempo de permanência padrão é de 3 a 7 dias, dependendo da área (comercial, residencial ou zona central). Esse prazo garante a fluidez do trânsito local.
+							</p>
+						</details>
+
+						<details class="group bg-white border border-gray-150 rounded-2xl p-6 [&_summary::-webkit-details-marker]:hidden cursor-pointer transition-all duration-300 hover:shadow-sm">
+							<summary class="flex items-center justify-between text-gray-900 font-bold text-lg select-none">
+								<span>O que posso descartar na caçamba?</span>
+								<span class="transition group-open:rotate-180 text-primary font-black text-xl">
+									↓
+								</span>
+							</summary>
+							<p class="mt-4 text-gray-600 text-sm leading-relaxed border-t border-gray-200/60 pt-4">
+								É permitido o descarte de resíduos da construção civil (tijolos, blocos, concreto, argamassa, madeiras, gesso, ferragens). Não é permitido o descarte de lixo doméstico, materiais químicos, inflamáveis ou resíduos hospitalares.
+							</p>
+						</details>
+
+						<details class="group bg-white border border-gray-150 rounded-2xl p-6 [&_summary::-webkit-details-marker]:hidden cursor-pointer transition-all duration-300 hover:shadow-sm">
+							<summary class="flex items-center justify-between text-gray-900 font-bold text-lg select-none">
+								<span>A caçamba é legalizada? Como funciona o descarte?</span>
+								<span class="transition group-open:rotate-180 text-primary font-black text-xl">
+									↓
+								</span>
+							</summary>
+							<p class="mt-4 text-gray-600 text-sm leading-relaxed border-t border-gray-200/60 pt-4">
+								Sim! Somos homologados pela Secretaria Municipal de Meio Ambiente (SMMA). Emitimos o MTR (Manifesto de Transporte de Resíduos) eletrônico, que garante o destino final correto do entulho em aterros credenciados pela prefeitura de Volta Redonda.
+							</p>
+						</details>
+
+						<details class="group bg-white border border-gray-150 rounded-2xl p-6 [&_summary::-webkit-details-marker]:hidden cursor-pointer transition-all duration-300 hover:shadow-sm">
+							<summary class="flex items-center justify-between text-gray-900 font-bold text-lg select-none">
+								<span>Como é feito o pagamento do aluguel da caçamba?</span>
+								<span class="transition group-open:rotate-180 text-primary font-black text-xl">
+									↓
+								</span>
+							</summary>
+							<p class="mt-4 text-gray-600 text-sm leading-relaxed border-t border-gray-200/60 pt-4">
+								Oferecemos facilidade de pagamento via Pix, transferência bancária ou cartões de crédito. Para empresas e construtoras, disponibilizamos opções de faturamento mensal ou quinzenal mediante cadastro.
+							</p>
+						</details>
+					</div>
+				</div>
+			</section>
+
+			<!-- Seção de Modelos de Caçamba Disponíveis -->
+			<section id="modelos" class="py-20 bg-white border-t border-b border-gray-100">
+				<div class="container mx-auto px-6 md:px-12">
+					<div class="text-center mb-16">
+						<span class="text-xs uppercase tracking-widest text-secondary font-bold">Escolha o tamanho ideal</span>
+						<h2 class="text-3xl md:text-4xl font-black text-gray-900 mt-2 tracking-tighter">
+							Modelos Disponíveis no {entry.data.bairro}
+						</h2>
+					</div>
+
+					<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+						{services.map(service => (
+							<div class={`bg-white border rounded-3xl p-8 flex flex-col justify-between hover:scale-105 active:scale-95 transition-all duration-200 cursor-pointer ${service.data.popular ? 'border-primary ring-2 ring-primary/10 shadow-lg' : 'border-gray-150 shadow-sm'}`}>
+								<div>
+									{service.data.image ? (
+										<div class="w-full h-48 overflow-hidden mb-6 flex items-center justify-center">
+											<Image src={service.data.image} alt={service.data.title} class="w-full h-full object-contain" />
+										</div>
+									) : (
+										<div class="w-full h-48 mb-6 flex items-center justify-center text-5xl">
+											{service.data.icon}
+										</div>
+									)}
+									<h3 class="text-2xl font-black text-gray-900 mb-2">{service.data.title}</h3>
+									<p class="text-xs font-bold text-secondary mb-4">{service.data.capacity}</p>
+									<p class="text-gray-500 text-sm leading-relaxed mb-6">{service.data.description}</p>
+								</div>
+								
+								<a href={`${SITE_CONFIG.whatsappUrl}?text=Olá! Gostaria de alugar a ${service.data.title} para entrega no bairro ${entry.data.bairro}.`} target="_blank" rel="noopener noreferrer" class="block w-full text-center py-3 rounded-xl bg-secondary text-white font-extrabold text-sm hover:bg-slate-800 transition-colors shadow-sm hover:scale-105 duration-200">
+									Alugar no WhatsApp
+								</a>
+							</div>
+						))}
+					</div>
+				</div>
+			</section>
+
+			<!-- CTA Final -->
+			<section class="bg-white py-20 text-center">
+				<div class="container mx-auto px-6 md:px-12 max-w-3xl">
+					<h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-6 tracking-tighter">
+						Solicite sua caçamba no {entry.data.bairro}
+					</h2>
+					<p class="text-lg text-gray-600 mb-8 max-w-xl mx-auto leading-relaxed">
+						Agendamento simples e rápido pelo celular. Receba e pague no local com facilidade.
+					</p>
+					<div class="flex flex-col sm:flex-row justify-center gap-4">
+						<a href={`${SITE_CONFIG.whatsappUrl}?text=Olá! Preciso alugar uma caçamba no bairro ${entry.data.bairro}.`} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-primary text-accent font-black text-base hover:scale-105 active:scale-95 transition-all shadow-xl hover:bg-yellow-500">
+							Conversar no WhatsApp
+						</a>
+						<a href={`tel:${SITE_CONFIG.phoneFormatted}`} class="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-white text-secondary border-2 border-secondary/20 hover:border-secondary font-black text-base hover:scale-105 active:scale-95 transition-all">
+							Ligar para {SITE_CONFIG.phone}
+						</a>
+					</div>
+				</div>
+			</section>
+		</div>
+	)}
+
+	{/* Seção "Outros Artigos Úteis" (Apenas para Blog layout) */}
+	{type === 'blog' && relatedPosts.length > 0 && (
+		<section class="bg-gray-50 py-24 md:py-32 border-t border-gray-100">
+			<div class="container mx-auto px-6 md:px-12">
+				<div class="max-w-5xl mx-auto">
+					<h3 class="text-2xl font-black text-gray-900 mb-12 tracking-tighter">Outros Artigos Úteis</h3>
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+						{relatedPosts.map(p => (
+							<div class="bg-white border border-gray-100 rounded-3xl p-12 shadow-sm flex flex-col justify-between hover:scale-105 active:scale-95 transition-all duration-200 cursor-pointer">
+								<div>
+									<span class="text-xs text-gray-400 font-bold block mb-3">
+										{new Date(p.data.pubDate).toLocaleDateString('pt-BR', {
+											year: 'numeric',
+											month: 'long',
+											day: 'numeric'
+										})}
+									</span>
+									<h4 class="text-xl font-black text-gray-900 mb-4 hover:text-secondary transition-colors">
+										<a href={`/${p.slug}`}>{p.data.title}</a>
+									</h4>
+									<p class="text-gray-600 text-sm leading-relaxed mb-6">
+										{p.data.description}
+									</p>
+								</div>
+								<a href={`/${p.slug}`} class="text-secondary font-extrabold text-sm hover:text-slate-800 transition-colors inline-flex items-center gap-1 group">
+									Ler conteúdo <span class="group-hover:translate-x-1 transition-transform">&rarr;</span>
+								</a>
+							</div>
+						))}
+					</div>
+				</div>
+			</div>
+		</section>
+	)}
+
+</Layout>

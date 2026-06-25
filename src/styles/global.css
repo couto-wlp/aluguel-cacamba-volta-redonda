@@ -1,0 +1,20 @@
+@import '@fontsource-variable/inter';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Aumentar fonte base no mobile para melhor legibilidade */
+html {
+  font-size: 17px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+/* Garantir que as seções principais sigam a diretriz de UX (nunca sufocadas, espaçamento generoso) */
+section, .section-spacing {
+  @apply py-24 md:py-32;
+}

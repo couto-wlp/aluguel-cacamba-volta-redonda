@@ -1,0 +1,82 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { SITE_CONFIG } from '../data/config';
+---
+
+<Layout title="Termos de Uso e Contratação | Caçambas Volta Redonda">
+	<section class="py-24 md:py-32">
+		<div class="container mx-auto px-6 md:px-12">
+			<div class="max-w-3xl mx-auto">
+				
+				<!-- H1 com mb-16 conforme especificação -->
+				<h1 class="text-3xl md:text-5xl font-black text-gray-900 mb-16 leading-tight tracking-tighter">
+					Termos de Uso e Contratação
+				</h1>
+				
+				<!-- Parágrafos organizados com space-y-6 para evitar blocos cansativos -->
+				<div class="text-gray-600 text-sm md:text-base space-y-6 leading-relaxed">
+					<p>
+						Estes termos regulam o serviço de locação de caçambas estacionárias fornecidas pela nossa empresa para o recolhimento e a destinação correta de entulhos em {SITE_CONFIG.city} ({SITE_CONFIG.state}) e região.
+					</p>
+					<p>
+						Atuamos com total transparência e responsabilidade, garantindo que o seu descarte seja feito de forma legal e ecológica. Ao contratar nossos serviços de aluguel de caçambas, o cliente concorda com as diretrizes operacionais e ambientais descritas a seguir.
+					</p>
+					
+					<p class="font-bold text-gray-900 text-lg pt-4">
+						1. Posicionamento e Liberação de Vaga
+					</p>
+					<p>
+						O cliente é o responsável por providenciar e manter livre o espaço necessário na via pública, calçada ou canteiro de obras para o posicionamento seguro da caçamba.
+					</p>
+					<p>
+						<strong>Zonas de Estacionamento Regulamentado:</strong> Caso o endereço da obra exija a colocação em áreas de Zona Azul ou de tráfego restrito, caberá ao cliente providenciar as devidas autorizações temporárias junto aos órgãos de trânsito municipais de {SITE_CONFIG.city}.
+					</p>
+					
+					<p class="font-bold text-gray-900 text-lg pt-4">
+						2. Carga Permitida e Regras de Enchimento
+					</p>
+					<p>
+						Nossas caçambas de entulho são destinadas exclusivamente ao descarte de Resíduos da Construção Civil (RCC), terras, madeiras e restos de poda ou limpeza de terrenos.
+					</p>
+					<p>
+						<strong>Limite de Segurança:</strong> O volume e o peso da carga não podem ultrapassar o limite das bordas (nível d'água) da caçamba. Isso é uma exigência de trânsito para garantir o transporte rodoviário seguro, evitando o derramamento de entulho nas vias.
+					</p>
+					<p>
+						<strong>Resíduos Proibidos:</strong> Em conformidade com a legislação ambiental, é terminantemente proibido o descarte de lixo orgânico doméstico, resíduos químicos perigosos, telhas de amianto, pneus, baterias, óleos, tintas ou materiais inflamáveis. O descarte irregular destes itens sujeita o locatário a multas ambientais.
+					</p>
+					
+					<p class="font-bold text-gray-900 text-lg pt-4">
+						3. Prazos de Locação e Permanência
+					</p>
+					<p>
+						O prazo padrão de permanência da caçamba no local indicado é definido no ato do agendamento comercial.
+					</p>
+					<p>
+						Operamos em estrito cumprimento com o Código de Posturas do Município de {SITE_CONFIG.city}, que regulamenta o tempo máximo que uma caçamba de entulho pode permanecer estacionada em vias públicas. Solicitamos que o agendamento de retirada ou troca seja feito com antecedência.
+					</p>
+					
+					<p class="font-bold text-gray-900 text-lg pt-4">
+						4. Responsabilidade e Conservação do Equipamento
+					</p>
+					<p>
+						O cliente assume a condição de fiel depositário e obriga-se a zelar pela integridade da caçamba de ferro enquanto esta permanecer em sua posse ou no local de sua obra.
+					</p>
+					<p>
+						O locatário responderá por eventuais danos causados ao equipamento, incluindo atos de vandalismo, danos por fogo (queima de lixo no interior da caçamba) ou movimentação não autorizada e inadequada do equipamento por máquinas da obra ou terceiros.
+					</p>
+					
+					<p class="font-bold text-gray-900 text-lg pt-4">
+						5. Compromisso Ambiental e Autorizações
+					</p>
+					<p>
+						Somos uma empresa legalizada e comprometida com o meio ambiente. Todo o material recolhido através do nosso serviço de aluguel de caçambas em {SITE_CONFIG.city} é transportado para Áreas de Transbordo e Triagem (ATT) e aterros licenciados.
+					</p>
+					<p class="pl-4">
+						📄 <strong>Licença SMMA:</strong> {SITE_CONFIG.licenseSMMA}<br />
+						♻️ <strong>Registro ATT-VR:</strong> {SITE_CONFIG.registerATT}
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+</Layout>

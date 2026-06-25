@@ -1,0 +1,49 @@
+---
+import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
+import Layout from '../../layouts/Layout.astro';
+
+const services = await getCollection('servicos');
+services.sort((a, b) => a.data.order - b.data.order);
+---
+
+<Layout title="Serviços de Aluguel de Caçamba | Caçambas Volta Redonda">
+	<!-- 1. Hero / Introdução (Fundo Escuro: bg-secondary) -->
+	<section class="bg-secondary text-white py-24 md:py-32 relative overflow-hidden">
+		<div class="absolute inset-0 bg-[radial-gradient(circle_at_70%_20%,rgba(250,204,21,0.1),transparent_50%)]"></div>
+		<div class="container mx-auto px-6 md:px-12 relative z-10 text-center">
+			<span class="text-xs uppercase tracking-widest text-primary font-bold">Nossas Soluções</span>
+			<h1 class="text-4xl md:text-6xl font-black text-white mt-2 leading-tight max-w-4xl mx-auto tracking-tighter">
+				Serviços Especializados de <span class="text-primary">Coleta de Entulho</span>
+			</h1>
+		</div>
+	</section>
+
+	<!-- 2. Lista de Serviços (Fundo Claro: bg-gray-50) -->
+	<section class="py-24 md:py-32 bg-gray-50">
+		<div class="container mx-auto px-6 md:px-12">
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+				{services.map(service => (
+					<div class={`relative bg-white border rounded-3xl p-8 flex flex-col justify-between md:hover:scale-105 md:active:scale-95 transition-all duration-200 cursor-pointer ${service.data.popular ? 'border-primary/60 ring-2 ring-primary/10 shadow-lg hover:shadow-xl' : 'border-gray-100 shadow-md hover:shadow-lg'}`}>
+						<div>
+							{service.data.image ? (
+								<div class="w-full h-64 overflow-hidden mb-6 flex items-center justify-center">
+									<Image src={service.data.image} alt={service.data.title} class="w-full h-full object-contain" />
+								</div>
+							) : (
+								<div class="w-full h-64 mb-6 flex items-center justify-center text-5xl">
+									{service.data.icon}
+								</div>
+							)}
+							<h2 class="text-2xl font-black text-gray-900 mb-4">{service.data.title}</h2>
+							<p class="text-gray-600 text-sm leading-relaxed mb-8">{service.data.description}</p>
+						</div>
+						<a href={`/servicos/${service.slug}`} class="w-full text-center py-3 px-4 rounded-xl bg-secondary text-white font-extrabold text-sm hover:bg-slate-800 transition-colors shadow-sm md:w-auto md:bg-transparent md:text-secondary md:font-extrabold md:text-sm md:hover:text-slate-800 md:shadow-none md:p-0 md:inline-flex md:items-center md:gap-1 group">
+							Ver detalhes do serviço <span class="hidden md:inline group-hover:translate-x-1 transition-transform">&rarr;</span>
+						</a>
+					</div>
+				))}
+			</div>
+		</div>
+	</section>
+</Layout>

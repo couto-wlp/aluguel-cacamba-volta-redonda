@@ -1,0 +1,303 @@
+---
+import { getCollection } from 'astro:content';
+import { getImage, Image } from 'astro:assets';
+import Layout from '../layouts/Layout.astro';
+import heroBg from '../assets/hero_bg_opt.webp';
+import aboutImg from '../assets/sobre_nos_empresa_opt.webp';
+import { SITE_CONFIG } from '../data/config';
+
+// Obter os equipamentos/serviços e ordenar
+const services = await getCollection('servicos');
+services.sort((a, b) => a.data.order - b.data.order);
+const homepageServices = services.slice(0, 6); // Mostrar até 6
+
+// Otimizar imagem de fundo do Hero em formato WebP leve
+const optimizedHeroBg = await getImage({ src: heroBg, format: 'webp', width: 1280, quality: 75 });
+const optimizedAboutImg = await getImage({ src: aboutImg, format: 'webp', width: 800, quality: 80 });
+---
+
+<Layout title="Caçambas Volta Redonda | Aluguel de Caçamba de Entulho" transparentHeader={true}>
+	<link rel="preload" as="image" href={optimizedHeroBg.src} slot="head" fetchpriority="high" />
+	
+	<!-- 1. Hero Section (Fundo Escuro com Imagem WebP Leve) -->
+	<section id="inicio" class="relative overflow-hidden bg-secondary text-white min-h-screen flex items-center pt-24 pb-16 md:pt-48 md:pb-32 bg-cover bg-center bg-no-repeat" style={`background-image: linear-gradient(rgba(10, 10, 10, 0.65), rgba(10, 10, 10, 0.65)), url(${optimizedHeroBg.src});`}>
+		<div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgba(250,204,21,0.12),transparent_50%)]"></div>
+		
+		<div class="container mx-auto px-6 md:px-12 relative z-10">
+			<div class="max-w-4xl mx-auto text-center flex flex-col items-center">
+				<!-- Tag de Destaque (Link/Badge com micro-interações) -->
+				<span class="inline-flex items-center gap-1.5 px-2.5 py-1 md:px-3.5 md:py-1.5 rounded-full text-[10px] md:text-xs font-black bg-primary/20 text-primary mb-6 border border-primary/30 tracking-wider uppercase hover:scale-105 transition-all">
+					Líder em Caçambas em Volta Redonda
+				</span>
+				
+				<!-- H1 com contrast: text-white (Regra do Contraste em Fundo Escuro), font-black e tracking-tighter -->
+				<h1 class="text-5xl md:text-7xl font-black text-white leading-[1.1] tracking-tighter mb-5 max-w-4xl">
+					Aluguel de Caçamba <br /> em <span class="text-primary">Volta Redonda</span>
+				</h1>
+				
+				<!-- Subtítulo com contrast: text-gray-100 -->
+				<p class="text-lg md:text-xl text-gray-100 max-w-2xl mx-auto leading-relaxed">
+					Caçambas regularizadas de 4m³, 5m³ e 7m³. Atendimento ágil para obras e reformas em Volta Redonda - RJ.
+				</p>
+				
+				<!-- Espaçamento de mt-12 antes dos botões, todos com hover:scale-105 active:scale-95 -->
+				<div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 w-full">
+					<a href={SITE_CONFIG.whatsappUrl} target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl bg-primary text-accent font-black text-base hover:scale-105 active:scale-95 transition-all shadow-xl shadow-primary/20 hover:bg-yellow-500">
+						Chamar no WhatsApp
+					</a>
+					<a href="/servicos" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl bg-white/10 text-white font-semibold text-base border border-white/20 hover:bg-white/20 hover:scale-105 active:scale-95 transition-all">
+						Ver Nossos Serviços
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- 2. Diferenciais Section (Grid com 4 blocos adaptados da imagem) -->
+	<section class="bg-gray-50 py-24 md:py-32 border-b border-gray-100">
+		<div class="container mx-auto px-6 md:px-12">
+			<div class="max-w-3xl mx-auto text-center mb-16">
+				<span class="text-xs uppercase tracking-widest text-secondary font-bold">Por que escolher a Caçambas Volta Redonda</span>
+				<h2 class="text-3xl md:text-4xl font-black text-gray-900 mt-2 tracking-tighter uppercase">
+					NOSSO DIFERENCIAL
+				</h2>
+			</div>
+
+			<!-- Grid de diferenciais -->
+			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+				
+				<!-- Diferencial 1: Entrega em até 2h -->
+				<div class="bg-white border border-primary rounded-[32px] py-6 px-8 hover:scale-[1.03] active:scale-[0.98] transition-all shadow-sm hover:shadow-md hover:shadow-gray-200/50 duration-300 cursor-pointer">
+					<div class="w-14 h-14 bg-primary rounded-2xl flex items-center justify-center mb-4 hover:scale-110 transition-transform duration-200">
+						<svg class="w-6 h-6 text-slate-955" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+							<path d="M13 10V3L4 14h7v7l9-11h-7z" />
+						</svg>
+					</div>
+					<h3 class="text-xl font-bold text-gray-900 mb-2">Entrega em até 2h</h3>
+					<p class="text-gray-500 text-sm leading-relaxed">
+						Frota própria e logística inteligente para entregar sua caçamba no local em tempo recorde.
+					</p>
+				</div>
+
+				<!-- Diferencial 2: Homologado SMMA -->
+				<div class="bg-white border border-primary rounded-[32px] py-6 px-8 hover:scale-[1.03] active:scale-[0.98] transition-all shadow-sm hover:shadow-md hover:shadow-gray-200/50 duration-300 cursor-pointer">
+					<div class="w-14 h-14 bg-primary rounded-2xl flex items-center justify-center mb-4 hover:scale-110 transition-transform duration-200">
+						<svg class="w-6 h-6 text-slate-955" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+						</svg>
+					</div>
+					<h3 class="text-xl font-bold text-gray-900 mb-2">Homologado SMMA</h3>
+					<p class="text-gray-500 text-sm leading-relaxed">
+						Licenciamento oficial completo na prefeitura de Volta Redonda. Garantia de emissão do MTR para sua obra.
+					</p>
+				</div>
+
+				<!-- Diferencial 3: Suporte 24 Horas -->
+				<div class="bg-white border border-primary rounded-[32px] py-6 px-8 hover:scale-[1.03] active:scale-[0.98] transition-all shadow-sm hover:shadow-md hover:shadow-gray-200/50 duration-300 cursor-pointer">
+					<div class="w-14 h-14 bg-primary rounded-2xl flex items-center justify-center mb-4 hover:scale-110 transition-transform duration-200">
+						<svg class="w-6 h-6 text-slate-955" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+						</svg>
+					</div>
+					<h3 class="text-xl font-bold text-gray-900 mb-2">Suporte 24 Horas</h3>
+					<p class="text-gray-500 text-sm leading-relaxed">
+						Atendimento ininterrupto via WhatsApp para emergências de obras, agendamentos e trocas de caçambas.
+					</p>
+				</div>
+
+				<!-- Diferencial 4: Melhor Preço VR -->
+				<div class="bg-white border border-primary rounded-[32px] py-6 px-8 hover:scale-[1.03] active:scale-[0.98] transition-all shadow-sm hover:shadow-md hover:shadow-gray-200/50 duration-300 cursor-pointer">
+					<div class="w-14 h-14 bg-primary rounded-2xl flex items-center justify-center mb-4 hover:scale-110 transition-transform duration-200">
+						<svg class="w-6 h-6 text-slate-955" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+						</svg>
+					</div>
+					<h3 class="text-xl font-bold text-gray-900 mb-2">Melhor Preço VR</h3>
+					<p class="text-gray-500 text-sm leading-relaxed">
+						Orçamentos justos e competitivos. Cobrimos ofertas credenciadas e facilitamos no Pix e cartão de crédito.
+					</p>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<!-- 3. Sobre Nós (Resumo) Section (Dois colunas estilo imagem de referência) -->
+	<section class="bg-white py-24 md:py-32 border-b border-gray-100">
+		<div class="container mx-auto px-6 md:px-12">
+			<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+				
+				<!-- Coluna da Esquerda: Imagem com Badge de Experiência -->
+				<div class="lg:col-span-5 relative group flex justify-center lg:justify-start">
+					<!-- Wrapper da imagem com overflow-hidden para o zoom no hover -->
+					<div class="overflow-hidden rounded-[32px] shadow-lg w-full max-w-md aspect-[4/3] sm:aspect-square md:aspect-[4/3] lg:aspect-square">
+						<Image src={aboutImg} alt="Caçambas Volta Redonda" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105 group-hover:rotate-1 cursor-pointer" width={800} height={800} />
+					</div>
+					
+					<!-- Badge Amarelo sobreposto no canto inferior direito -->
+					<div class="absolute -right-4 -bottom-4 bg-primary text-accent rounded-[24px] p-6 shadow-xl flex flex-col items-center justify-center min-w-[140px] z-20 hover:scale-105 transition-transform duration-300">
+						<span class="text-4xl font-black tracking-tight text-slate-955">20+</span>
+						<span class="text-[10px] font-black tracking-widest uppercase text-center mt-1 text-slate-955 leading-tight">Anos de<br/>Experiência</span>
+					</div>
+				</div>
+
+				<!-- Coluna da Direita: Texto e Link -->
+				<div class="lg:col-span-7 flex flex-col justify-center">
+					<h2 class="text-3xl md:text-5xl font-black text-gray-900 mb-6 tracking-tighter leading-tight">
+						Autoridade em aluguel de caçambas
+					</h2>
+					<p class="text-gray-600 text-base md:text-lg leading-relaxed mb-8">
+						Há mais de <strong>20 anos</strong>, a Caçambas Volta Redonda é referência em gestão de resíduos e limpeza de obras. Com frota própria e modelos de 4m³, 5m³ e 7m³, garantimos agilidade para pequenas reformas ou grandes construtoras. Somos licenciados pela SMMA e emitimos MTR para o descarte 100% correto.
+					</p>
+					<div>
+						<a href="/sobre" class="inline-flex items-center gap-1.5 text-secondary font-black hover:text-slate-800 transition-colors group">
+							Conheça Nossa História <span class="group-hover:translate-x-1 transition-transform">&rarr;</span>
+						</a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<!-- 4. Nossos Equipamentos Section (Grid com hover:scale-105) -->
+	<section id="servicos" class="bg-gray-50 py-24 md:py-32">
+		<div class="container mx-auto px-6 md:px-12">
+			<div class="max-w-3xl mx-auto text-center mb-16">
+				<span class="text-xs uppercase tracking-widest text-secondary font-bold">Modelos Disponíveis</span>
+				<h2 class="text-3xl md:text-4xl font-black text-gray-900 mt-2 tracking-tighter">
+					Nossos Modelos de Caçambas
+				</h2>
+			</div>
+
+			<!-- Grid Gap-8 para caçambas -->
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+				{homepageServices.map(service => (
+					<div class={`relative bg-white border rounded-3xl p-8 flex flex-col justify-between md:hover:scale-105 md:active:scale-95 transition-all duration-200 cursor-pointer ${service.data.popular ? 'border-primary/60 ring-2 ring-primary/10 shadow-lg hover:shadow-xl' : 'border-gray-100 shadow-md hover:shadow-lg'}`}>
+						<div>
+							{service.data.image ? (
+								<div class="w-full h-64 overflow-hidden mb-6 flex items-center justify-center">
+									<Image src={service.data.image} alt={service.data.title} class="w-full h-full object-contain" loading="lazy" />
+								</div>
+							) : (
+								<div class="w-full h-64 mb-6 flex items-center justify-center text-5xl">
+									{service.data.icon}
+								</div>
+							)}
+							<h3 class="text-2xl font-black text-gray-900 mb-4">{service.data.title}</h3>
+							<p class="text-gray-600 text-sm leading-relaxed mb-8">{service.data.description}</p>
+						</div>
+						<a href={`/servicos/${service.slug}`} class="w-full text-center py-3 px-4 rounded-xl bg-secondary text-white font-extrabold text-sm hover:bg-slate-800 transition-colors shadow-sm md:w-auto md:bg-transparent md:text-secondary md:font-extrabold md:text-sm md:hover:text-slate-800 md:shadow-none md:p-0 md:inline-flex md:items-center md:gap-1 group">
+							Mais Informações <span class="hidden md:inline group-hover:translate-x-1 transition-transform">&rarr;</span>
+						</a>
+					</div>
+				))}
+			</div>
+
+			<div class="text-center">
+				<a href="/servicos" class="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-gray-55 hover:bg-gray-100 text-secondary font-bold text-sm border border-gray-250 hover:scale-105 active:scale-95 transition-all">
+					Ver Todos os Equipamentos
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- 5. Depoimentos Section (Fundo Azul: bg-blue-900) -->
+	<section class="bg-blue-900 text-white py-24 md:py-32 border-t border-blue-950/40 relative overflow-hidden">
+		<!-- Glow decorativo sutil -->
+		<div class="absolute -right-20 -top-20 w-72 h-72 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+
+		<div class="container mx-auto px-6 md:px-12 relative z-10">
+			<div class="max-w-3xl mb-16 mx-auto text-center">
+				<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold bg-primary/20 text-primary mb-4 border border-primary/30 tracking-wider uppercase hover:scale-105 transition-all">
+					DEPOIMENTOS DOS CLIENTES
+				</span>
+				<h2 class="text-3xl md:text-4xl font-black text-primary mt-2 tracking-tighter">
+					O que dizem sobre nós
+				</h2>
+			</div>
+
+			<!-- Grid de depoimentos com gap-12 -->
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+				
+				<!-- Depoimento 1 -->
+				<div class="bg-blue-950/40 border border-blue-800/20 rounded-3xl p-12 shadow-sm flex flex-col justify-between hover:scale-105 active:scale-95 transition-all duration-200 cursor-pointer">
+					<div>
+						<p class="text-gray-100 text-sm italic leading-relaxed mb-8">
+							"Precisava de uma caçamba maior para o descarte de materiais volumosos na reforma da minha loja e a equipe me indicou perfeitamente o modelo de 7m³. Foi o melhor custo-benefício que encontrei na cidade. Entrega e retirada super rápidas!"
+						</p>
+					</div>
+					<div class="flex items-center gap-4 border-t border-blue-900/50 pt-6">
+						<img src="/julio-martins.webp" alt="Júlio C. Martins" class="w-12 h-12 rounded-full object-cover" width="48" height="48" loading="lazy" />
+						<div>
+							<h4 class="font-bold text-primary text-sm">Júlio C. Martins</h4>
+							<span class="text-xs text-blue-200">Comerciante local, Volta Redonda</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- Depoimento 2 -->
+				<div class="bg-blue-950/40 border border-blue-800/20 rounded-3xl p-12 shadow-sm flex flex-col justify-between hover:scale-105 active:scale-95 transition-all duration-200 cursor-pointer">
+					<div>
+						<p class="text-gray-100 text-sm italic leading-relaxed mb-8">
+							"A equipe foi super atenciosa desde o primeiro contato pelo WhatsApp. Aluguei uma caçamba de 4m³ para a reforma da minha casa e o motorista foi muito cuidadoso ao manobrar e estacionar. Serviço nota 10, recomendo de olhos fechados!"
+						</p>
+					</div>
+					<div class="flex items-center gap-4 border-t border-blue-900/50 pt-6">
+						<img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=80&h=80&q=80" alt="Mariana L. Silva" class="w-12 h-12 rounded-full object-cover" width="48" height="48" loading="lazy" />
+						<div>
+							<h4 class="font-bold text-primary text-sm">Mariana L. Silva</h4>
+							<span class="text-xs text-blue-200">Moradora do bairro Retiro, VR</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- Depoimento 3 -->
+				<div class="bg-blue-950/40 border border-blue-800/20 rounded-3xl p-12 shadow-sm flex flex-col justify-between hover:scale-105 active:scale-95 transition-all duration-200 cursor-pointer">
+					<div>
+						<p class="text-gray-100 text-sm italic leading-relaxed mb-8">
+							"Serviço impecável! Solicitei a caçamba com urgência e fui atendido no mesmo dia. Empresa séria, com preço justo e que se preocupa com o descarte correto. Ganharam um cliente fixo."
+						</p>
+					</div>
+					<div class="flex items-center gap-4 border-t border-blue-900/50 pt-6">
+						<img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=80&h=80&q=80" alt="Marcos Vinícius Dias" class="w-12 h-12 rounded-full object-cover" width="48" height="48" loading="lazy" />
+						<div>
+							<h4 class="font-bold text-primary text-sm">Marcos Vinícius Dias</h4>
+							<span class="text-xs text-blue-200">Mestre de Obras, Volta Redonda</span>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<!-- 6. Chamada de Contato (Fundo Branco) -->
+	<section class="bg-white text-gray-900 py-24 md:py-32 border-t border-b border-gray-100 relative overflow-hidden">
+		<div class="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(250,204,21,0.06),transparent_50%)]"></div>
+		
+		<div class="container mx-auto px-6 md:px-12 relative z-10 text-center">
+			<!-- H2 com contrast: text-gray-900 (Regra de Contraste), font-black e tracking-tighter -->
+			<h2 class="text-3xl md:text-5xl font-black text-gray-900 leading-tight tracking-tighter mb-6">
+				Pronto para organizar a limpeza da sua obra?
+			</h2>
+			
+			<!-- Texto com contrast: text-gray-600 -->
+			<p class="text-lg text-gray-600 mb-12 max-w-2xl mx-auto leading-relaxed">
+				Fale conosco agora mesmo para tirar suas dúvidas e reservar o melhor tamanho de caçamba. Agendamento ágil pelo telefone ou direto no WhatsApp.
+			</p>
+			
+			<div class="flex flex-col sm:flex-row items-center justify-center gap-6 max-w-xl mx-auto">
+				<!-- Botão WhatsApp: hover:scale-105 active:scale-95 -->
+				<a href={SITE_CONFIG.whatsappUrl} target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center px-10 py-5 rounded-2xl bg-primary text-accent font-black text-lg hover:bg-yellow-500 hover:scale-105 active:scale-95 transition-all shadow-xl shadow-primary/20">
+					Conversar no WhatsApp
+				</a>
+				<!-- Botão Ligar: hover:scale-105 active:scale-95 -->
+				<a href={`tel:${SITE_CONFIG.phoneFormatted}`} class="w-full sm:w-auto inline-flex items-center justify-center px-10 py-5 rounded-2xl bg-white text-secondary border-2 border-secondary/20 hover:border-secondary font-black text-lg hover:bg-secondary/5 hover:scale-105 active:scale-95 transition-all">
+					Ligar Agora
+				</a>
+			</div>
+		</div>
+	</section>
+
+</Layout>

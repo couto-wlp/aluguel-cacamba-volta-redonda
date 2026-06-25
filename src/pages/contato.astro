@@ -1,0 +1,165 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { SITE_CONFIG } from '../data/config';
+---
+
+<Layout title="Fale Conosco | Caçambas Volta Redonda">
+	
+	<!-- 1. Hero / Introdução (Fundo Escuro: bg-secondary) -->
+	<section class="bg-secondary text-white py-24 md:py-32 relative overflow-hidden">
+		<div class="absolute inset-0 bg-[radial-gradient(circle_at_70%_20%,rgba(250,204,21,0.1),transparent_50%)]"></div>
+		<div class="container mx-auto px-6 md:px-12 relative z-10 text-center">
+			<span class="text-xs uppercase tracking-widest text-primary font-bold">Atendimento Oficial</span>
+			<h1 class="text-4xl md:text-6xl font-black text-white mt-2 mb-4 leading-tight tracking-tighter">
+				Fale Conosco para Agendamentos e Dúvidas
+			</h1>
+		</div>
+	</section>
+
+	<!-- 2. Form & Cards (Fundo Claro: bg-white) -->
+	<section class="bg-white py-24 md:py-32 border-b border-gray-100">
+		<div class="container mx-auto px-6 md:px-12">
+			<div class="max-w-4xl mx-auto">
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+					
+					<!-- Links Rápidos e NAP para SEO Local com Schema.org -->
+					<div class="space-y-8">
+						
+						<!-- Card WhatsApp de Conversão Rápida -->
+						<div class="bg-gray-50 border border-gray-100 rounded-3xl p-10 shadow-sm hover:scale-105 active:scale-95 transition-all duration-200">
+							<h2 class="text-xl font-bold text-gray-900 mb-4">💬 Orçamento via WhatsApp</h2>
+							<p class="text-gray-600 text-sm mb-8 leading-relaxed">
+								Quer cotar preços e agendar sua caçamba agora mesmo? Chame nosso atendimento e resolva tudo sem burocracia.
+							</p>
+							
+							<!-- Botão de WhatsApp com padding p-8 (grande e fácil de clicar no celular) com hover:scale-105 -->
+							<a href={SITE_CONFIG.whatsappUrl} target="_blank" rel="noopener noreferrer" class="block w-full text-center p-8 bg-emerald-500 hover:bg-emerald-600 text-white font-extrabold text-lg rounded-2xl shadow-lg hover:scale-105 active:scale-95 transition-all">
+								Solicitar no WhatsApp
+							</a>
+						</div>
+
+						<!-- Card NAP estruturado para buscadores (Onde nos encontrar) -->
+						<div itemscope itemtype="http://schema.org/LocalBusiness" class="bg-white border-0 space-y-8">
+							<h2 class="text-2xl font-black text-slate-900 tracking-tight">Onde nos encontrar</h2>
+							
+							<div class="space-y-8">
+								<!-- 1. Endereço -->
+								<div class="flex items-start gap-6">
+									<div class="w-10 flex flex-col items-center shrink-0 pt-1">
+										<!-- Pin head with 3D reflection highlight (Blue) -->
+										<div class="w-5 h-5 rounded-full bg-[#2563eb] shadow-sm border border-blue-400/20 flex items-start justify-start p-1 relative z-10">
+											<div class="w-1.5 h-1.5 rounded-full bg-white/80"></div>
+										</div>
+										<!-- Pin stick -->
+										<div class="w-0.5 h-5 bg-gray-400 -mt-0.5 relative z-0"></div>
+									</div>
+									<div class="space-y-1">
+										<span class="text-xs font-bold text-[#1b365d] tracking-wider uppercase block">ENDEREÇO</span>
+										<p itemprop="address" itemscope itemtype="http://schema.org/PostalAddress" class="text-sm text-gray-600 font-medium leading-relaxed">
+											<span itemprop="streetAddress">{SITE_CONFIG.street}</span>,<br />
+											<span>{SITE_CONFIG.city} - {SITE_CONFIG.state}, {SITE_CONFIG.postalCode}</span>
+										</p>
+									</div>
+								</div>
+								
+								<!-- 2. Telefone e WhatsApp -->
+								<div class="flex items-start gap-6">
+									<div class="w-10 flex items-center justify-center shrink-0 pt-1">
+										<svg class="w-7 h-7 text-[#2563eb]" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+											<path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-2.2 2.2a15.045 15.045 0 0 1-6.59-6.59l2.2-2.2c.28-.28.36-.67.25-1.02A11.36 11.36 0 0 1 8.54 4c0-.55-.45-1-1-1H4.01c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.51c0-.55-.45-1-1-1z"></path>
+										</svg>
+									</div>
+									<div class="space-y-1">
+										<span class="text-xs font-bold text-[#1b365d] tracking-wider uppercase block">TELEFONE E WHATSAPP</span>
+										<div class="space-y-0.5">
+											<a href={`tel:${SITE_CONFIG.phoneFormatted}`} itemprop="telephone" class="text-sm font-semibold text-gray-700 hover:text-blue-600 transition-colors block">
+												{SITE_CONFIG.phone} (Fixo)
+											</a>
+											<a href={SITE_CONFIG.whatsappUrl} target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-gray-700 hover:text-blue-600 transition-colors block">
+												{SITE_CONFIG.whatsapp} (WhatsApp)
+											</a>
+										</div>
+										<p class="text-xs text-gray-500 italic block pt-1 font-medium leading-relaxed">
+											Segunda a Sexta, das 08:00 às 18:00 <br />
+											Sábado, das 08:00 às 12:00
+										</p>
+									</div>
+								</div>
+								
+								<!-- 3. E-mail -->
+								<div class="flex items-start gap-6">
+									<div class="w-10 h-7 bg-[#e8ecf8] rounded-md flex items-center justify-center shrink-0 mt-1">
+										<div class="w-5 h-5 bg-[#2563eb] rounded-full flex items-center justify-center">
+											<svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+												<path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+												<path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+											</svg>
+										</div>
+									</div>
+									<div class="space-y-1">
+										<span class="text-xs font-bold text-[#1b365d] tracking-wider uppercase block">E-MAIL</span>
+										<a href={`mailto:${SITE_CONFIG.email}`} class="text-sm font-semibold text-gray-700 hover:text-blue-600 transition-colors block">
+											{SITE_CONFIG.email}
+										</a>
+									</div>
+								</div>
+							</div>
+							
+							<meta itemprop="name" content={SITE_CONFIG.legalName} />
+						</div>
+
+					</div>
+
+					<!-- Formulário de Contato Limpo e Acessível (p-10 padding interno) -->
+					<div class="bg-white border border-gray-150 rounded-3xl p-10 shadow-md">
+						<h2 class="text-xl font-bold text-gray-900 mb-6">📩 Enviar Mensagem por E-mail</h2>
+						
+						<form class="space-y-6">
+							<div>
+								<label for="nome" class="block text-xs uppercase tracking-wider text-gray-500 font-bold mb-2">Nome Completo</label>
+								<input type="text" id="nome" name="nome" placeholder="Digite seu nome" required class="w-full p-5 border border-gray-200 rounded-xl text-gray-900 bg-gray-50 focus:outline-none focus:ring-2 focus:ring-secondary/20 focus:border-secondary transition-all" />
+							</div>
+
+							<div>
+								<label for="email" class="block text-xs uppercase tracking-wider text-gray-500 font-bold mb-2">E-mail de Contato</label>
+								<input type="email" id="email" name="email" placeholder="exemplo@email.com" required class="w-full p-5 border border-gray-200 rounded-xl text-gray-900 bg-gray-50 focus:outline-none focus:ring-2 focus:ring-secondary/20 focus:border-secondary transition-all" />
+							</div>
+
+							<div>
+								<label for="mensagem" class="block text-xs uppercase tracking-wider text-gray-500 font-bold mb-2">Detalhes do Pedido</label>
+								<textarea id="mensagem" name="mensagem" rows="4" placeholder="Informe o tamanho da caçamba e o endereço de entrega em Volta Redonda" required class="w-full p-5 border border-gray-200 rounded-xl text-gray-900 bg-gray-50 focus:outline-none focus:ring-2 focus:ring-secondary/20 focus:border-secondary transition-all"></textarea>
+							</div>
+
+							<!-- Botão com hover:scale-105 active:scale-95 -->
+							<button type="submit" class="w-full p-6 bg-secondary hover:bg-slate-800 text-white font-extrabold text-base rounded-xl hover:scale-105 active:scale-95 transition-all shadow-md cursor-pointer">
+								Enviar Mensagem
+							</button>
+						</form>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- 3. Mapa do Google Maps (Fundo Claro: bg-gray-50) -->
+	<section class="bg-gray-50 py-16 border-b border-gray-100">
+		<div class="container mx-auto px-6 md:px-12">
+			<div class="max-w-4xl mx-auto">
+				<h2 class="text-xl font-bold text-gray-900 mb-6">📍 Nossa Localização</h2>
+				<div class="w-full h-96 overflow-hidden rounded-3xl shadow-md border border-gray-200/80">
+					<iframe 
+						src="https://maps.google.com/maps?q=Avenida%20Amaral%20Peixoto,%20533,%20Volta%20Redonda%20-%20RJ,%2027253-000&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+						width="100%" 
+						height="100%" 
+						style="border:0;" 
+						allowfullscreen="" 
+						loading="lazy" 
+						referrerpolicy="no-referrer-when-downgrade"
+						title="Mapa de Localização - Caçambas Volta Redonda"
+					></iframe>
+				</div>
+			</div>
+		</div>
+	</section>
+</Layout>

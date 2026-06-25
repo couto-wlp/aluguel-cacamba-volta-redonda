@@ -1,0 +1,42 @@
+---
+import { SITE_CONFIG } from '../data/config';
+
+// Gerando JSON-LD schema para SEO Local
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": SITE_CONFIG.name,
+  "legalName": SITE_CONFIG.legalName,
+  "url": SITE_CONFIG.siteUrl,
+  "image": new URL('/og-image.jpg', SITE_CONFIG.siteUrl).href,
+  "telephone": SITE_CONFIG.phone,
+  "email": SITE_CONFIG.email,
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": SITE_CONFIG.street,
+    "addressLocality": SITE_CONFIG.city,
+    "addressRegion": SITE_CONFIG.state,
+    "postalCode": SITE_CONFIG.postalCode,
+    "addressCountry": "BR"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ],
+    "opens": "00:00",
+    "closes": "23:59"
+  },
+  "sameAs": [
+    SITE_CONFIG.whatsappUrl
+  ]
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

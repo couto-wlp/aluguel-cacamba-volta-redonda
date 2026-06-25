@@ -1,0 +1,330 @@
+---
+import '../styles/global.css';
+import SEO from '../components/SEO.astro';
+import SchemaLocalBusiness from '../components/SchemaLocalBusiness.astro';
+import WhatsAppBtn from '../components/WhatsAppBtn.astro';
+import { SITE_CONFIG } from '../data/config';
+
+interface Props {
+	title: string;
+	description?: string;
+	transparentHeader?: boolean;
+}
+
+const { 
+	title, 
+	description = "Aluguel de caçambas em Volta Redonda. Serviço rápido, seguro e totalmente regularizado para sua obra.",
+	transparentHeader = false
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="pt-BR" class="scroll-smooth bg-gray-50 text-gray-900">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="google-site-verification" content="-Z53BeVUzhrdVxWIChYdzKm8jG4WS3m27fi2YRRZ_K4" />
+		<!-- Google tag (gtag.js) -->
+		<script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-D6XB5V6QYW"></script>
+		<script is:inline>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'G-D6XB5V6QYW');
+		</script>
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<slot name="head" />
+		<meta name="generator" content={Astro.generator} />
+		
+		<SEO title={title} description={description} />
+		<SchemaLocalBusiness />
+	</head>
+	<body class="font-sans min-h-screen flex flex-col antialiased selection:bg-primary selection:text-accent">
+		
+		<!-- Header (Fixed e dinâmico no scroll) -->
+		<header 
+			id="main-header"
+			data-transparent={transparentHeader ? "true" : "false"}
+			class={transparentHeader 
+				? "fixed top-0 left-0 right-0 z-50 bg-transparent text-white transition-all duration-300 py-5 md:py-8" 
+				: "fixed top-0 left-0 right-0 z-50 bg-white/80 text-gray-900 backdrop-blur-md shadow-sm transition-all duration-300 py-5 md:py-8"}>
+			<div class="container mx-auto px-6 md:px-12 flex items-center justify-between">
+				<a href="/" class="flex items-center gap-2 font-black text-lg lg:text-xl tracking-tight hover:scale-105 active:scale-95 transition-all">
+				<svg class="w-8 h-8 lg:w-12 lg:h-12 shrink-0" width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<rect x="1.5" y="1.5" width="21" height="21" rx="6" fill="#FACC15" />
+					<g transform="translate(12 12) scale(0.8) translate(-12 -12)">
+						<path d="M7.5 10h9" stroke="#1E3A8A" stroke-width="2.5" stroke-linecap="round" />
+						<path d="M8.25 10.5L9.5 15h5L15.75 10.5" stroke="#1E3A8A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+						<line x1="10.6" y1="10.5" x2="11.25" y2="15" stroke="#1E3A8A" stroke-width="1.8" stroke-linecap="round" />
+						<line x1="12" y1="10.5" x2="12" y2="15" stroke="#1E3A8A" stroke-width="1.8" stroke-linecap="round" />
+						<line x1="13.4" y1="10.5" x2="12.75" y2="15" stroke="#1E3A8A" stroke-width="1.8" stroke-linecap="round" />
+					</g>
+				</svg>
+				<span id="header-logo-text" class={transparentHeader ? "text-white" : "text-secondary"}>Caçambas <span id="header-logo-subtext" class={transparentHeader ? "text-white" : "text-slate-800"}><span class="hidden md:inline">Volta Redonda</span><span class="md:hidden">VR</span></span></span>
+			</a>
+				
+				<!-- Desktop Links -->
+				<nav class="hidden lg:flex items-center gap-8 text-sm font-bold">
+					<a href="/" class="nav-link transition-all duration-200 hover:scale-105 active:scale-95">Início</a>
+					<a href="/servicos" class="nav-link transition-all duration-200 hover:scale-105 active:scale-95">Serviços</a>
+					<a href="/sobre" class="nav-link transition-all duration-200 hover:scale-105 active:scale-95">Sobre Nós</a>
+					<a href="/bairros-de-atuacao" class="nav-link transition-all duration-200 hover:scale-105 active:scale-95">Bairros de Atuação</a>
+					<a href="/contato" class="nav-link transition-all duration-200 hover:scale-105 active:scale-95">Contato</a>
+				</nav>
+
+				<div class="hidden lg:block">
+					<a href="/contato" class="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-primary text-accent font-black text-sm hover:scale-105 active:scale-95 hover:bg-yellow-500 shadow-md shadow-primary/20 transition-all duration-200">
+						Pedir Caçamba
+					</a>
+				</div>
+
+				<!-- Botão Hambúrguer Mobile -->
+				<button id="menu-toggle" aria-label="Abrir Menu" class="lg:hidden p-2 focus:outline-none hover:scale-105 active:scale-95 transition-all">
+					<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+					</svg>
+				</button>
+			</div>
+		</header>
+
+		<!-- Menu Mobile Drawer -->
+		<div id="mobile-menu" class="fixed inset-0 z-[999] bg-accent backdrop-blur-lg flex flex-col justify-center items-center transition-all duration-300 translate-x-full opacity-0 pointer-events-none">
+			<button id="menu-close" aria-label="Fechar Menu" class="absolute top-6 right-6 p-4 text-primary font-black text-3xl hover:scale-110 active:scale-90 transition-all cursor-pointer">
+				✕
+			</button>
+			
+			<nav class="flex flex-col items-center gap-8 text-2xl font-black mb-12">
+				<a href="/" class="mobile-link text-white hover:text-primary transition-all hover:scale-105">Início</a>
+				<a href="/servicos" class="mobile-link text-white hover:text-primary transition-all hover:scale-105">Serviços</a>
+				<a href="/sobre" class="mobile-link text-white hover:text-primary transition-all hover:scale-105">Sobre Nós</a>
+				<a href="/bairros-de-atuacao" class="mobile-link text-white hover:text-primary transition-all hover:scale-105">Bairros de Atuação</a>
+				<a href="/contato" class="mobile-link text-white hover:text-primary transition-all hover:scale-105">Contato</a>
+			</nav>
+			
+			<a href={SITE_CONFIG.whatsappUrl} target="_blank" rel="noopener noreferrer" class="mobile-link px-8 py-4 bg-primary text-accent font-black text-lg rounded-2xl shadow-xl shadow-primary/30 hover:scale-105 active:scale-95 transition-all">
+				Pedir Caçamba no WhatsApp
+			</a>
+		</div>
+
+		<!-- Conteúdo Principal (Adiciona padding para compensar menu fixed em páginas não-transparentes) -->
+		<main class={transparentHeader ? "flex-grow" : "flex-grow pt-[88px] md:pt-[112px]"}>
+			<slot />
+		</main>
+
+		<!-- Botão Flutuante WhatsApp (em todas as páginas) -->
+		<WhatsAppBtn />
+
+		<!-- Rodapé Moderno e Premium (Fundo Azul Corporativo: bg-secondary) -->
+		<footer class="border-t border-blue-900/40 bg-secondary text-gray-100 pt-24 pb-16 relative overflow-hidden">
+			<!-- Efeitos de Glow de Fundo -->
+			<div class="absolute -right-20 -bottom-20 w-80 h-80 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+			<div class="absolute -left-20 -top-20 w-80 h-80 bg-white/5 rounded-full blur-3xl pointer-events-none"></div>
+
+			<div class="container mx-auto px-6 md:px-12 relative z-10">
+				
+				<!-- Grid Principal de Links e Infos -->
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 border-b border-blue-900/50 pb-16 mb-12">
+					
+					<!-- Coluna 1: Branding -->
+					<div class="space-y-6">
+						<a href="/" class="flex items-center gap-3 font-black text-xl tracking-tight text-primary hover:scale-105 transition-all inline-flex items-center">
+							<svg class="w-12 h-12 shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<rect x="1.5" y="1.5" width="21" height="21" rx="6" fill="#FACC15" />
+								<g transform="translate(12 12) scale(0.8) translate(-12 -12)">
+									<path d="M7.5 10h9" stroke="#1E3A8A" stroke-width="2.5" stroke-linecap="round" />
+									<path d="M8.25 10.5L9.5 15h5L15.75 10.5" stroke="#1E3A8A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+									<line x1="10.6" y1="10.5" x2="11.25" y2="15" stroke="#1E3A8A" stroke-width="1.8" stroke-linecap="round" />
+									<line x1="12" y1="10.5" x2="12" y2="15" stroke="#1E3A8A" stroke-width="1.8" stroke-linecap="round" />
+									<line x1="13.4" y1="10.5" x2="12.75" y2="15" stroke="#1E3A8A" stroke-width="1.8" stroke-linecap="round" />
+								</g>
+							</svg>
+							<span>Caçambas Volta Redonda</span>
+						</a>
+						<p class="text-sm text-gray-100 leading-relaxed">
+							Locação de caçambas estacionárias licenciadas para coleta e destinação ecologicamente correta de resíduos da construção civil em Volta Redonda e região.
+						</p>
+					</div>
+
+					<!-- Coluna 2: Navegação com efeitos dinâmicos -->
+					<div class="space-y-6">
+						<h4 class="font-black text-primary uppercase text-xs tracking-widest">Navegação rápida</h4>
+						<ul class="space-y-3 text-sm">
+							<li>
+								<a href="/" class="text-gray-300 hover:text-primary hover:translate-x-1.5 inline-flex items-center gap-1.5 transition-all duration-200">
+									<span class="text-primary text-xs">■</span> Início
+								</a>
+							</li>
+							<li>
+								<a href="/servicos" class="text-gray-300 hover:text-primary hover:translate-x-1.5 inline-flex items-center gap-1.5 transition-all duration-200">
+									<span class="text-primary text-xs">■</span> Nossos Serviços
+								</a>
+							</li>
+							<li>
+								<a href="/sobre" class="text-gray-300 hover:text-primary hover:translate-x-1.5 inline-flex items-center gap-1.5 transition-all duration-200">
+									<span class="text-primary text-xs">■</span> Nossa História
+								</a>
+							</li>
+							<li>
+								<a href="/bairros-de-atuacao" class="text-gray-300 hover:text-primary hover:translate-x-1.5 inline-flex items-center gap-1.5 transition-all duration-200">
+									<span class="text-primary text-xs">■</span> Bairros de Atuação
+								</a>
+							</li>
+							<li>
+								<a href="/contato" class="text-gray-300 hover:text-primary hover:translate-x-1.5 inline-flex items-center gap-1.5 transition-all duration-200">
+									<span class="text-primary text-xs">■</span> Fale Conosco
+								</a>
+							</li>
+						</ul>
+					</div>
+
+					<!-- Coluna 3: Canais com Badges Visuais (Corrigidos para bg-blue-950/40) -->
+					<div class="space-y-6">
+						<h4 class="font-black text-primary uppercase text-xs tracking-widest">Suporte & Logística</h4>
+						<ul class="space-y-4 text-sm">
+							<li class="flex items-center gap-3">
+								<span class="w-8 h-8 rounded-full bg-blue-950/40 flex items-center justify-center border border-blue-800/30 text-primary">
+									<svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+										<path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.387a12.035 12.035 0 01-7.108-7.108c-.157-.44.009-.927.387-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"></path>
+									</svg>
+								</span>
+								<div>
+									<span class="text-[10px] text-blue-300 block uppercase font-bold">Fixo</span>
+									<a href={`tel:${SITE_CONFIG.phoneFormatted}`} class="text-white hover:text-primary font-bold transition-colors">{SITE_CONFIG.phone}</a>
+								</div>
+							</li>
+							<li class="flex items-center gap-3">
+								<span class="w-8 h-8 rounded-full bg-blue-950/40 flex items-center justify-center border border-blue-800/30 text-primary">
+									<svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+										<path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z"></path>
+									</svg>
+								</span>
+								<div>
+									<span class="text-[10px] text-blue-300 block uppercase font-bold">WhatsApp 24h</span>
+									<a href={SITE_CONFIG.whatsappUrl} target="_blank" rel="noopener noreferrer" class="text-white hover:text-primary font-bold transition-colors">{SITE_CONFIG.whatsapp}</a>
+								</div>
+							</li>
+							<li class="flex items-center gap-3">
+								<span class="w-8 h-8 rounded-full bg-blue-950/40 flex items-center justify-center border border-blue-800/30 text-primary">
+									<svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+										<path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"></path>
+									</svg>
+								</span>
+								<div>
+									<span class="text-[10px] text-blue-300 block uppercase font-bold">E-mail Comercial</span>
+									<a href={`mailto:${SITE_CONFIG.email}`} class="text-white hover:text-primary transition-colors">{SITE_CONFIG.email}</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<!-- Coluna 4: Certificações & Painel Técnico -->
+					<div class="space-y-6">
+						<h4 class="font-black text-primary uppercase text-xs tracking-widest">Operação & Meio Ambiente</h4>
+						<p class="text-xs text-gray-100 leading-relaxed flex items-start gap-2">
+							<svg class="w-4 h-4 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+								<path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"></path>
+								<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25s-7.5-4.108-7.5-11.25A7.5 7.5 0 0112 3s7.5 4.882 7.5 7.5z"></path>
+							</svg>
+							<span>{SITE_CONFIG.address}</span>
+						</p>
+						<div class="pt-4 border-t border-blue-900/50 space-y-2 text-[11px] text-gray-200">
+							<div class="flex justify-between">
+								<span>Licença SMMA:</span>
+								<span class="font-mono text-white">{SITE_CONFIG.licenseSMMA}</span>
+							</div>
+							<div class="flex justify-between">
+								<span>Registro ATT:</span>
+								<span class="font-mono text-white">{SITE_CONFIG.registerATT}</span>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<!-- Footer Inferior -->
+				<div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-6 text-xs text-gray-200 border-t border-blue-900/50">
+					<p>&copy; {new Date().getFullYear()} {SITE_CONFIG.name}. Todos os direitos reservados. Coleta e destinação sustentável de resíduos civis.</p>
+					<div class="flex gap-6 font-semibold">
+						<a href="/privacidade" class="text-primary hover:text-white transition-all hover:scale-105">Política de Privacidade</a>
+						<a href="/termos" class="text-primary hover:text-white transition-all hover:scale-105">Termos de Uso</a>
+					</div>
+				</div>
+
+			</div>
+		</footer>
+
+		<!-- Script de Lógica do Menu com Trava de Scroll (Garante UX indestrutível) -->
+		<script>
+			const menuToggle = document.getElementById('menu-toggle');
+			const menuClose = document.getElementById('menu-close');
+			const mobileMenu = document.getElementById('mobile-menu');
+			const mobileLinks = document.querySelectorAll('.mobile-link');
+
+			function openMenu() {
+				if (mobileMenu) {
+					mobileMenu.classList.remove('translate-x-full', 'opacity-0', 'pointer-events-none');
+					document.body.style.overflow = 'hidden';
+				}
+			}
+
+			function closeMenu() {
+				if (mobileMenu) {
+					mobileMenu.classList.add('translate-x-full', 'opacity-0', 'pointer-events-none');
+					document.body.style.overflow = '';
+				}
+			}
+
+			menuToggle?.addEventListener('click', openMenu);
+			menuClose?.addEventListener('click', closeMenu);
+			mobileLinks.forEach(link => {
+				link.addEventListener('click', closeMenu);
+			});
+
+			// Lógica para alternar estilo do header no scroll (apenas se começou transparente)
+			const header = document.getElementById('main-header');
+			
+			if (header && header.getAttribute('data-transparent') === 'true') {
+				const checkScroll = () => {
+					if (window.scrollY > 50) {
+						header.setAttribute('data-transparent', 'false');
+					} else {
+						header.setAttribute('data-transparent', 'true');
+					}
+				};
+				
+				window.addEventListener('scroll', checkScroll);
+				// Executar na carga inicial também para evitar bugs ao recarregar a página já scrollada
+				checkScroll();
+			}
+		</script>
+
+		<style is:global>
+			/* Links do menu quando transparente */
+			#main-header[data-transparent="true"] .nav-link {
+				@apply text-white hover:text-primary;
+			}
+			#main-header[data-transparent="true"] #menu-toggle {
+				@apply text-primary;
+			}
+
+			/* Alteração visual do header fixo quando scrollado ou se não for transparente */
+			#main-header[data-transparent="false"] {
+				@apply bg-white/70 backdrop-blur-lg shadow-sm text-gray-900 py-4 md:py-5;
+			}
+			#main-header[data-transparent="false"] .nav-link {
+				@apply text-gray-600 hover:text-secondary;
+			}
+			#main-header[data-transparent="false"] #header-logo-text {
+				@apply text-black;
+			}
+			#main-header[data-transparent="false"] #header-logo-subtext {
+				@apply text-black;
+			}
+			#main-header[data-transparent="false"] #menu-toggle {
+				@apply text-slate-800;
+			}
+		</style>
+
+	</body>
+</html>

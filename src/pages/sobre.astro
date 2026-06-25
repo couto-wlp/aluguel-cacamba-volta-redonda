@@ -1,0 +1,129 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '../layouts/Layout.astro';
+import aboutImg from '../assets/sobre_nos_empresa_frota.jpg';
+---
+
+<Layout title="Nossa Empresa | Caçambas Volta Redonda">
+	
+	<!-- 1. Hero / Introdução (Fundo Escuro: bg-secondary) -->
+	<section class="bg-secondary text-white py-24 md:py-32 relative overflow-hidden">
+		<div class="absolute inset-0 bg-[radial-gradient(circle_at_70%_20%,rgba(250,204,21,0.1),transparent_50%)]"></div>
+		<div class="container mx-auto px-6 md:px-12 relative z-10 text-center">
+			<span class="text-xs uppercase tracking-widest text-primary font-bold">Excelência em aluguel de caçambas</span>
+			<h1 class="text-5xl md:text-7xl font-black text-white mt-2 mb-4 leading-tight tracking-tighter">
+				Quem Somos
+			</h1>
+			<p class="text-lg md:text-xl text-gray-100 max-w-2xl mx-auto leading-relaxed">
+				Oferecemos caçambas para retirada de entulhos de obras de pequeno, médio e grande porte.
+			</p>
+		</div>
+	</section>
+ 
+	<!-- 2. Bloco Único de Conteúdo (Sobre Nós) -->
+	<section class="bg-white py-24 md:py-32 border-b border-gray-100">
+		<div class="container mx-auto px-6 md:px-12">
+			<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+				
+				<!-- Coluna do Texto (Esquerda) -->
+				<div class="lg:col-span-7 space-y-12">
+					
+					<!-- 2.1 Nossa História e Missão -->
+					<div>
+						<h2 class="text-2xl font-black text-gray-900 mb-4 tracking-tighter uppercase border-l-4 border-primary pl-4">
+							Nossa História e Missão
+						</h2>
+						<p class="text-gray-600 text-base md:text-lg leading-relaxed">
+							Há mais de <strong>20 anos</strong>, a Caçambas Volta Redonda é a parceira de confiança para a gestão de resíduos e limpeza de obras na nossa região. Nascemos com a missão de oferecer um serviço rápido, seguro e totalmente regularizado para o mercado da construção civil.
+						</p>
+					</div>
+
+					<!-- 2.2 Frota Própria e Agilidade -->
+					<div>
+						<h2 class="text-2xl font-black text-gray-900 mb-4 tracking-tighter uppercase border-l-4 border-primary pl-4">
+							Frota Própria e Agilidade
+						</h2>
+						<p class="text-gray-600 text-base md:text-lg leading-relaxed">
+							Nosso grande diferencial operacional é a nossa <strong>frota própria de caminhões</strong>. Por não dependermos de terceiros, garantimos total agilidade, pontualidade e segurança na entrega e retirada das caçambas, atendendo com a mesma excelência desde pequenas reformas residenciais até as altas demandas de canteiros de grandes construtoras.
+						</p>
+					</div>
+
+					<!-- 2.3 Equipamentos sob Medida -->
+					<div>
+						<h2 class="text-2xl font-black text-gray-900 mb-4 tracking-tighter uppercase border-l-4 border-primary pl-4">
+							Equipamentos sob Medida
+						</h2>
+						<p class="text-gray-600 text-base md:text-lg leading-relaxed mb-4">
+							Para atender exatamente à demanda do seu projeto com o melhor custo-benefício, oferecemos uma linha completa e versátil de equipamentos.
+						</p>
+						<p class="text-gray-600 text-base md:text-lg leading-relaxed">
+							Trabalhamos com caçambas de <strong>4m³, 5m³ e 7m³</strong>, garantindo o tamanho ideal para qualquer situação — desde a limpeza de um pequeno quintal ou reforma, até o descarte de grandes volumes e materiais leves em obras industriais.
+						</p>
+					</div>
+
+					<!-- 2.4 Responsabilidade Ambiental e Regularização -->
+					<div>
+						<h2 class="text-2xl font-black text-gray-900 mb-4 tracking-tighter uppercase border-l-4 border-primary pl-4">
+							Responsabilidade Ambiental e Regularização
+						</h2>
+						<p class="text-gray-600 text-base md:text-lg leading-relaxed mb-4">
+							Além da estrutura e agilidade, somos especialistas em conformidade ambiental. Somos homologados pela <strong>SMMA</strong> e emitimos todas as licenças necessárias, incluindo o <strong>MTR (Manifesto de Transporte de Resíduos)</strong>.
+						</p>
+						<p class="text-gray-600 text-base md:text-lg leading-relaxed">
+							Com a Caçambas Volta Redonda, você tem a certeza de que o entulho da sua obra terá o descarte 100% correto, garantindo a segurança jurídica do seu projeto e o cuidado com a nossa cidade.
+						</p>
+					</div>
+
+				</div>
+
+				<!-- Coluna Lateral Visual (Direita) -->
+				<div class="lg:col-span-5 space-y-8 lg:sticky lg:top-8">
+					<!-- Imagem da Equipe -->
+					<div class="relative group flex justify-center">
+						<div class="overflow-hidden rounded-[32px] shadow-lg w-full max-w-md aspect-[4/3] sm:aspect-square md:aspect-[4/3] lg:aspect-square">
+							<Image src={aboutImg} alt="Equipe Caçambas Volta Redonda" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105 group-hover:rotate-1 cursor-pointer" width={800} height={800} />
+						</div>
+						
+						<!-- Badge de Anos de Experiência -->
+						<div class="absolute -right-4 -bottom-4 bg-primary text-accent rounded-[24px] p-6 shadow-xl flex flex-col items-center justify-center min-w-[140px] z-20 hover:scale-105 transition-transform duration-300">
+							<span class="text-4xl font-black tracking-tight text-slate-955">20+</span>
+							<span class="text-[10px] font-black tracking-widest uppercase text-center mt-1 text-slate-955 leading-tight">Anos de<br/>Experiência</span>
+						</div>
+					</div>
+
+					<!-- Quadro de Destaques Rápidos -->
+					<div class="bg-gray-50 border-2 border-gray-100 rounded-[32px] p-8 shadow-sm max-w-md mx-auto w-full">
+						<h3 class="font-bold text-gray-900 text-sm uppercase tracking-wider mb-6 border-b border-gray-200 pb-3">Destaques da Operação</h3>
+						<div class="space-y-4">
+							<div class="flex items-center gap-3">
+								<span class="w-6 h-6 bg-primary text-secondary rounded-full flex items-center justify-center font-black text-xs">✓</span>
+								<span class="text-sm font-bold text-gray-700">100% Frota Própria</span>
+							</div>
+							<div class="flex items-center gap-3">
+								<span class="w-6 h-6 bg-primary text-secondary rounded-full flex items-center justify-center font-black text-xs">✓</span>
+								<span class="text-sm font-bold text-gray-700">Modelos de 4m³ a 7m³</span>
+							</div>
+							<div class="flex items-center gap-3">
+								<span class="w-6 h-6 bg-primary text-secondary rounded-full flex items-center justify-center font-black text-xs">✓</span>
+								<span class="text-sm font-bold text-gray-700">Homologado pela SMMA</span>
+							</div>
+							<div class="flex items-center gap-3">
+								<span class="w-6 h-6 bg-primary text-secondary rounded-full flex items-center justify-center font-black text-xs">✓</span>
+								<span class="text-sm font-bold text-gray-700">Emissão Oficial de MTR</span>
+							</div>
+						</div>
+					</div>
+					
+					<!-- CTA de Contato -->
+					<div class="text-center max-w-md mx-auto">
+						<a href="/contato" class="w-full inline-flex items-center justify-center px-8 py-4 rounded-xl bg-primary text-accent font-black text-base hover:scale-105 active:scale-95 transition-all shadow-md hover:bg-yellow-500">
+							Fale com Nossa Equipe
+						</a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+</Layout>

@@ -1,0 +1,16 @@
+# Caçambas Volta Redonda
+
+> Site institucional para aluguel de caçambas de entulho e gestão de resíduos da construção civil em Volta Redonda - RJ.
+
+## Páginas Principais
+- [Início](/) - Apresentação dos diferenciais, depoimentos e chamada para ação via WhatsApp.
+- [Serviços](/servicos) - Listagem de modelos de caçambas de 4m³, 5m³ e 7m³.
+- [Sobre Nós](/sobre) - História da empresa com mais de 20 anos de atuação e certificações ecológicas.
+- [Bairros de Atuação](/bairros-de-atuacao) - Lista de bairros atendidos em Volta Redonda.
+- [Contato](/contato) - Formulário de contato, e-mail, telefone fixo e WhatsApp.
+
+## Informações de Contato & Registro
+- **Telefone:** (24) 3348-1234
+- **WhatsApp:** (24) 99876-5432
+- **Licença SMMA:** 4321/2026
+- **Registro ATT:** 98765-VR
