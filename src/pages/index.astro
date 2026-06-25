@@ -209,12 +209,10 @@ const homepageServices = services.slice(0, 6); // Mostrar até 6
 						</div>
 						
 						<a 
-							href={`${SITE_CONFIG.whatsappUrl}?text=Olá! Gostaria de alugar a ${service.data.title}.`}
-							target="_blank"
-							rel="noopener noreferrer"
+							href={`/servicos/${service.slug}`}
 							class="w-full text-center py-4 px-6 rounded-2xl bg-secondary text-white font-extrabold text-base hover:bg-slate-800 transition-colors shadow-md block"
 						>
-							Alugar no WhatsApp
+							Mais Informações
 						</a>
 					</div>
 				))}
