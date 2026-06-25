@@ -349,92 +349,80 @@ const homepageServices = services.slice(0, 6); // Mostrar até 6
 	</section>
 
 	<!-- 7. Perguntas Frequentes (FAQ) Section -->
-	<section class="bg-gray-50 py-24 md:py-32 border-t border-gray-100">
-		<div class="container mx-auto px-6 md:px-12">
-			<div class="max-w-4xl mx-auto">
-				<div class="text-center mb-16">
-					<span class="text-xs uppercase tracking-widest text-secondary font-bold">Dúvidas Comuns</span>
-					<h2 class="text-3xl md:text-5xl font-black text-gray-900 mt-2 tracking-tighter uppercase">
-						Perguntas Frequentes
-					</h2>
-				</div>
+	<section class="py-20 bg-gray-50 border-t border-b border-gray-150">
+		<div class="container mx-auto px-6 md:px-12 max-w-4xl">
+			<div class="text-center mb-16">
+				<span class="text-xs uppercase tracking-widest text-secondary font-bold">Dúvidas Comuns</span>
+				<h2 class="text-3xl font-black text-gray-900 mt-2 tracking-tighter">
+					Perguntas Frequentes
+				</h2>
+			</div>
 
-				<div class="space-y-4">
-					<!-- FAQ Item 1 -->
-					<div class="faq-item bg-white border border-gray-150 rounded-[24px] overflow-hidden transition-all duration-300">
-						<button class="faq-toggle w-full flex items-center justify-between p-6 md:p-8 text-left focus:outline-none cursor-pointer">
-							<span class="font-extrabold text-lg md:text-xl text-gray-900 pr-4">
-								Quanto custa o aluguel de uma caçamba de entulho em Volta Redonda?
-							</span>
-							<span class="faq-icon text-secondary font-black text-2xl shrink-0 transition-transform duration-300">+</span>
-						</button>
-						<div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-							<div class="p-6 md:p-8 pt-0 border-t border-gray-100/50 text-gray-600 text-base leading-relaxed">
-								O preço do aluguel de caçamba varia de acordo com o tamanho do equipamento (4m³, 5m³ ou 7m³) e o bairro de entrega. Entre em contato conosco via WhatsApp para receber um orçamento instantâneo e sem compromisso para a sua região.
-							</div>
-						</div>
-					</div>
+			<div class="space-y-4">
+				<!-- FAQ Item 1 -->
+				<details class="group bg-white border border-gray-150 rounded-2xl p-6 [&_summary::-webkit-details-marker]:hidden cursor-pointer transition-all duration-300 hover:shadow-sm">
+					<summary class="flex items-center justify-between text-gray-900 font-bold text-lg select-none">
+						<span>Quanto custa o aluguel de uma caçamba de entulho em Volta Redonda?</span>
+						<span class="transition group-open:rotate-180 text-primary font-black text-xl">
+							↓
+						</span>
+					</summary>
+					<p class="mt-4 text-gray-600 text-sm leading-relaxed border-t border-gray-200/60 pt-4">
+						O preço do aluguel de caçamba varia de acordo com o tamanho do equipamento (4m³, 5m³ ou 7m³) e o bairro de entrega. Entre em contato conosco via WhatsApp para receber um orçamento instantâneo e sem compromisso para a sua região.
+					</p>
+				</details>
 
-					<!-- FAQ Item 2 -->
-					<div class="faq-item bg-white border border-gray-150 rounded-[24px] overflow-hidden transition-all duration-300">
-						<button class="faq-toggle w-full flex items-center justify-between p-6 md:p-8 text-left focus:outline-none cursor-pointer">
-							<span class="font-extrabold text-lg md:text-xl text-gray-900 pr-4">
-								Quanto tempo a caçamba de entulho pode ficar na obra?
-							</span>
-							<span class="faq-icon text-secondary font-black text-2xl shrink-0 transition-transform duration-300">+</span>
-						</button>
-						<div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-							<div class="p-6 md:p-8 pt-0 border-t border-gray-100/50 text-gray-600 text-base leading-relaxed">
-								O período padrão de permanência segue rigidamente as normas da Prefeitura de Volta Redonda e a legislação municipal de trânsito. Geralmente, o prazo varia de 2 a 3 dias úteis, dependendo se o equipamento está em via pública ou dentro do terreno.
-							</div>
-						</div>
-					</div>
+				<!-- FAQ Item 2 -->
+				<details class="group bg-white border border-gray-150 rounded-2xl p-6 [&_summary::-webkit-details-marker]:hidden cursor-pointer transition-all duration-300 hover:shadow-sm">
+					<summary class="flex items-center justify-between text-gray-900 font-bold text-lg select-none">
+						<span>Quanto tempo a caçamba de entulho pode ficar na obra?</span>
+						<span class="transition group-open:rotate-180 text-primary font-black text-xl">
+							↓
+						</span>
+					</summary>
+					<p class="mt-4 text-gray-600 text-sm leading-relaxed border-t border-gray-200/60 pt-4">
+						O período padrão de permanência segue rigidamente as normas da Prefeitura de Volta Redonda e a legislação municipal de trânsito. Geralmente, o prazo varia de 2 a 3 dias úteis, dependendo se o equipamento está em via pública ou dentro do terreno.
+					</p>
+				</details>
 
-					<!-- FAQ Item 3 -->
-					<div class="faq-item bg-white border border-gray-150 rounded-[24px] overflow-hidden transition-all duration-300">
-						<button class="faq-toggle w-full flex items-center justify-between p-6 md:p-8 text-left focus:outline-none cursor-pointer">
-							<span class="font-extrabold text-lg md:text-xl text-gray-900 pr-4">
-								Quais materiais são permitidos e quais são proibidos na caçamba?
-							</span>
-							<span class="faq-icon text-secondary font-black text-2xl shrink-0 transition-transform duration-300">+</span>
-						</button>
-						<div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-							<div class="p-6 md:p-8 pt-0 border-t border-gray-100/50 text-gray-600 text-base leading-relaxed">
-								São permitidos resíduos de construção civil (tijolos, concreto, argamassa), gesso, madeiras, restos de jardinagem e podas. São estritamente proibidos: lixo doméstico, resíduos hospitalares ou químicos, lixo eletrônico e materiais inflamáveis.
-							</div>
-						</div>
-					</div>
+				<!-- FAQ Item 3 -->
+				<details class="group bg-white border border-gray-150 rounded-2xl p-6 [&_summary::-webkit-details-marker]:hidden cursor-pointer transition-all duration-300 hover:shadow-sm">
+					<summary class="flex items-center justify-between text-gray-900 font-bold text-lg select-none">
+						<span>Quais materiais são permitidos e quais são proibidos na caçamba?</span>
+						<span class="transition group-open:rotate-180 text-primary font-black text-xl">
+							↓
+						</span>
+					</summary>
+					<p class="mt-4 text-gray-600 text-sm leading-relaxed border-t border-gray-200/60 pt-4">
+						São permitidos resíduos de construção civil (tijolos, concreto, argamassa), gesso, madeiras, restos de jardinagem e podas. São estritamente proibidos: lixo doméstico, resíduos hospitalares ou químicos, lixo eletrônico e materiais inflamáveis.
+					</p>
+				</details>
 
-					<!-- FAQ Item 4 -->
-					<div class="faq-item bg-white border border-gray-150 rounded-[24px] overflow-hidden transition-all duration-300">
-						<button class="faq-toggle w-full flex items-center justify-between p-6 md:p-8 text-left focus:outline-none cursor-pointer">
-							<span class="font-extrabold text-lg md:text-xl text-gray-900 pr-4">
-								Vocês atendem todos os bairros de Volta Redonda?
-							</span>
-							<span class="faq-icon text-secondary font-black text-2xl shrink-0 transition-transform duration-300">+</span>
-						</button>
-						<div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-							<div class="p-6 md:p-8 pt-0 border-t border-gray-100/50 text-gray-600 text-base leading-relaxed">
-								Sim! Graças à nossa frota própria de caminhões, cobrimos todas as regiões e bairros de Volta Redonda (como Retiro, Aterrado, Vila Santa Cecília, Água Limpa, Açude, Belmonte, entre outros) com entrega rápida e agendada.
-							</div>
-						</div>
-					</div>
+				<!-- FAQ Item 4 -->
+				<details class="group bg-white border border-gray-150 rounded-2xl p-6 [&_summary::-webkit-details-marker]:hidden cursor-pointer transition-all duration-300 hover:shadow-sm">
+					<summary class="flex items-center justify-between text-gray-900 font-bold text-lg select-none">
+						<span>Vocês atendem todos os bairros de Volta Redonda?</span>
+						<span class="transition group-open:rotate-180 text-primary font-black text-xl">
+							↓
+						</span>
+					</summary>
+					<p class="mt-4 text-gray-600 text-sm leading-relaxed border-t border-gray-200/60 pt-4">
+						Sim! Graças à nossa frota própria de caminhões, cobrimos todas as regiões e bairros de Volta Redonda (como Retiro, Aterrado, Vila Santa Cecília, Água Limpa, Açude, Belmonte, entre outros) com entrega rápida e agendada.
+					</p>
+				</details>
 
-					<!-- FAQ Item 5 -->
-					<div class="faq-item bg-white border border-gray-150 rounded-[24px] overflow-hidden transition-all duration-300">
-						<button class="faq-toggle w-full flex items-center justify-between p-6 md:p-8 text-left focus:outline-none cursor-pointer">
-							<span class="font-extrabold text-lg md:text-xl text-gray-900 pr-4">
-								A empresa é regularizada junto à prefeitura e órgãos ambientais?
-							</span>
-							<span class="faq-icon text-secondary font-black text-2xl shrink-0 transition-transform duration-300">+</span>
-						</button>
-						<div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-							<div class="p-6 md:p-8 pt-0 border-t border-gray-100/50 text-gray-600 text-base leading-relaxed">
-								Com certeza. Somos uma empresa 100% licenciada pela Secretaria Municipal de Meio Ambiente (SMMA) de Volta Redonda. Emitimos o MTR (Manifesto de Transporte de Resíduos), garantindo o descarte correto e ecológico em áreas de triagem autorizadas.
-							</div>
-						</div>
-					</div>
-				</div>
+				<!-- FAQ Item 5 -->
+				<details class="group bg-white border border-gray-150 rounded-2xl p-6 [&_summary::-webkit-details-marker]:hidden cursor-pointer transition-all duration-300 hover:shadow-sm">
+					<summary class="flex items-center justify-between text-gray-900 font-bold text-lg select-none">
+						<span>A empresa é regularizada junto à prefeitura e órgãos ambientais?</span>
+						<span class="transition group-open:rotate-180 text-primary font-black text-xl">
+							↓
+						</span>
+					</summary>
+					<p class="mt-4 text-gray-600 text-sm leading-relaxed border-t border-gray-200/60 pt-4">
+						Com certeza. Somos uma empresa 100% licenciada pela Secretaria Municipal de Meio Ambiente (SMMA) de Volta Redonda. Emitimos o MTR (Manifesto de Transporte de Resíduos), garantindo o descarte correto e ecológico em áreas de triagem autorizadas.
+					</p>
+				</details>
 			</div>
 		</div>
 	</section>
@@ -487,39 +475,6 @@ const homepageServices = services.slice(0, 6); // Mostrar até 6
 				}
 			]
 		}
-	</script>
-
-	<!-- Accordion Script -->
-	<script>
-		const toggles = document.querySelectorAll('.faq-toggle');
-		toggles.forEach(toggle => {
-			toggle.addEventListener('click', () => {
-				const item = toggle.closest('.faq-item');
-				const content = item.querySelector('.faq-content');
-				const icon = item.querySelector('.faq-icon');
-				
-				const isOpen = item.classList.contains('active');
-				
-				// Close all other items
-				document.querySelectorAll('.faq-item').forEach(otherItem => {
-					if (otherItem !== item) {
-						otherItem.classList.remove('active');
-						otherItem.querySelector('.faq-content').style.maxHeight = null;
-						otherItem.querySelector('.faq-icon').textContent = '+';
-					}
-				});
-				
-				if (isOpen) {
-					item.classList.remove('active');
-					content.style.maxHeight = null;
-					icon.textContent = '+';
-				} else {
-					item.classList.add('active');
-					content.style.maxHeight = content.scrollHeight + 'px';
-					icon.textContent = '−';
-				}
-			});
-		});
 	</script>
 
 </Layout>
