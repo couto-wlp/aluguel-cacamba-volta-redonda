@@ -1,5 +1,5 @@
 ---
-title: "Caçamba na Vila Rica II | Volta Redonda - RJ"
+title: "Aluguel de Caçamba para Construção na Vila Rica II | Volta Redonda - RJ"
 description: "Aluguel de Caçamba para Construção na Vila Rica II. Remoção ágil e segura de entulhos para sua reforma ou obra. Peça seu orçamento!"
 bairro: "Vila Rica II"
 seoKeyword: "Aluguel de Caçamba para Construção na Vila Rica II"

@@ -59,7 +59,7 @@ const services = await getCollection('servicos');
 services.sort((a, b) => a.data.order - b.data.order);
 ---
 
-<Layout title={`${entry.data.title}`} description={entry.data.description}>
+<Layout title={`${entry.data.title}`} description={entry.data.description} isBairro={type === 'bairro'}>
 	
 	{type === 'blog' ? (
 		/* ---------------------------------------------------- */

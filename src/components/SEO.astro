@@ -6,19 +6,24 @@ interface Props {
 	description?: string;
 	image?: string;
 	canonicalUrl?: string;
+	isBairro?: boolean;
 }
 
 const { 
 	title, 
 	description = "Aluguel de caçambas em Volta Redonda. Serviço rápido, seguro e totalmente regularizado para sua obra.",
 	image = "/og-image.jpg",
-	canonicalUrl = Astro.url.href
+	canonicalUrl = Astro.url.href,
+	isBairro = false
 } = Astro.props;
 
 const brandName = SITE_CONFIG.name;
 let fullTitle = title;
 
-if (!title.includes(brandName)) {
+if (isBairro) {
+	// Para páginas de bairros, mantém o título original (ex: "Aluguel de Caçamba no Açude | Volta Redonda - RJ")
+	fullTitle = title;
+} else if (!title.includes(brandName)) {
 	if (title.includes(" | Volta Redonda - RJ")) {
 		fullTitle = title.replace(" | Volta Redonda - RJ", ` | ${brandName}`);
 	} else if (title.includes("Volta Redonda")) {

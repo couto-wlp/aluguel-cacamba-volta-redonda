@@ -10,12 +10,14 @@ interface Props {
 	title: string;
 	description?: string;
 	transparentHeader?: boolean;
+	isBairro?: boolean;
 }
 
 const { 
 	title, 
 	description = "Aluguel de caçambas em Volta Redonda. Serviço rápido, seguro e totalmente regularizado para sua obra.",
-	transparentHeader = false
+	transparentHeader = false,
+	isBairro = false
 } = Astro.props;
 ---
 
@@ -45,7 +47,7 @@ const {
 		<slot name="head" />
 		<meta name="generator" content={Astro.generator} />
 		
-		<SEO title={title} description={description} />
+		<SEO title={title} description={description} isBairro={isBairro} />
 		<SchemaLocalBusiness />
 	</head>
 	<body class="font-sans min-h-screen flex flex-col antialiased selection:bg-primary selection:text-accent">

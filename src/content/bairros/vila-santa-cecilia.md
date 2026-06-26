@@ -1,5 +1,5 @@
 ---
-title: "Caçamba na Vila Santa Cecília | Volta Redonda - RJ"
+title: "Caçamba de Entulho Legalizada na Vila Santa Cecília | Volta Redonda - RJ"
 description: "Caçamba de Entulho Legalizada na Vila Santa Cecília. Remoção ágil e segura de entulhos para sua reforma ou obra. Peça seu orçamento!"
 bairro: "Vila Santa Cecília"
 seoKeyword: "Caçamba de Entulho Legalizada na Vila Santa Cecília"
