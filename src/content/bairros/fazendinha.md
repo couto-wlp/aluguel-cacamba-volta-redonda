@@ -1,6 +1,6 @@
 ---
 title: "Caçambas de Entulho na Fazendinha | Volta Redonda - RJ"
-description: "Caçambas de Entulho na Fazendinha. Serviço rápido, seguro e rápido, seguro e rápido, seguro e rápido, seguro e profissional. Peça seu orçamento!"
+description: "Caçambas de Entulho na Fazendinha. Remoção ágil e segura de entulhos para sua reforma ou obra. Equipe altamente treinada e dedicada. Peça seu orçamento!"
 bairro: "Fazendinha"
 seoKeyword: "Caçambas de Entulho na Fazendinha"
 ---

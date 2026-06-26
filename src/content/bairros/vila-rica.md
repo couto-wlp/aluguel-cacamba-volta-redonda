@@ -1,6 +1,6 @@
 ---
 title: "Retirada de Entulho de Obras na Vila Rica | Volta Redonda - RJ"
-description: "Retirada de Entulho de Obras na Vila Rica. Serviço rápido, seguro e rápido, seguro e rápido, seguro e profissional. Peça seu orçamento!"
+description: "Retirada de Entulho de Obras na Vila Rica. A melhor solução para não acumular resíduos no local. Equipe altamente treinada e dedicada. Peça seu orçamento!"
 bairro: "Vila Rica"
 seoKeyword: "Retirada de Entulho de Obras na Vila Rica"
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Disk Caçamba de Entulho no Jardim Tiradentes | Volta Redonda - RJ"
-description: "Disk Caçamba de Entulho no Jardim Tiradentes. Serviço rápido, seguro e rápido, seguro e rápido, seguro e profissional. Peça seu orçamento!"
+description: "Disk Caçamba de Entulho no Jardim Tiradentes. Facilite o andamento da sua obra de pequeno ou grande porte. Solicite seu orçamento!"
 bairro: "Jardim Tiradentes"
 seoKeyword: "Disk Caçamba de Entulho no Jardim Tiradentes"
 ---

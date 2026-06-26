@@ -1,6 +1,6 @@
 ---
 title: "Coleta de Entulho e Resíduos na Rodovia do Contorno | Volta Redonda - RJ"
-description: "Coleta de Entulho e Resíduos na Rodovia do Contorno. Evite dores de cabeça com caçambas legalizadas e seguras. Peça seu orçamento!"
+description: "Coleta de Entulho e Resíduos na Rodovia do Contorno. Remoção ágil e segura de entulhos para sua reforma ou obra. Peça seu orçamento!"
 bairro: "Rodovia do Contorno"
 seoKeyword: "Coleta de Entulho e Resíduos na Rodovia do Contorno"
 ---

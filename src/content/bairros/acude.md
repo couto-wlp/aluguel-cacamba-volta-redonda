@@ -1,6 +1,6 @@
 ---
 title: "Aluguel de Caçamba no Açude | Volta Redonda - RJ"
-description: "Aluguel de Caçamba no Açude. Serviço rápido, seguro e rápido, seguro e rápido, seguro e rápido, seguro e profissional. Peça seu orçamento!"
+description: "Aluguel de Caçamba no Açude. Remoção ágil e segura de entulhos para sua reforma ou obra. Atendimento rápido em toda Volta Redonda. Peça seu orçamento!"
 bairro: "Açude"
 seoKeyword: "Aluguel de Caçamba no Açude"
 ---

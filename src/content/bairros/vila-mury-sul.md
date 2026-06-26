@@ -1,6 +1,6 @@
 ---
 title: "Locação de Caçambas e Coleta na Vila Mury Sul | Volta Redonda - RJ"
-description: "Locação de Caçambas e Coleta na Vila Mury Sul. Facilite o andamento da sua obra de pequeno ou grande porte. Fale com nossa equipe!"
+description: "Locação de Caçambas e Coleta na Vila Mury Sul. Facilite o andamento da sua obra de pequeno ou grande porte. Reserve pelo WhatsApp!"
 bairro: "Vila Mury Sul"
 seoKeyword: "Locação de Caçambas e Coleta na Vila Mury Sul"
 ---

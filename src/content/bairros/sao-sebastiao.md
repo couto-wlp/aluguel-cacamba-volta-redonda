@@ -1,6 +1,6 @@
 ---
 title: "Remoção de Entulho de Construção no São Sebastião | Volta Redonda - RJ"
-description: "Remoção de Entulho de Construção no São Sebastião. Equipe preparada para entregar e recolher com agilidade. Fale com nossa equipe!"
+description: "Remoção de Entulho de Construção no São Sebastião. Remoção ágil e segura de entulhos para sua reforma ou obra. Peça seu orçamento!"
 bairro: "São Sebastião"
 seoKeyword: "Remoção de Entulho de Construção no São Sebastião"
 ---

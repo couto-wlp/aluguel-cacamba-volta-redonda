@@ -1,6 +1,6 @@
 ---
 title: "Serviços de Caçamba no Conforto | Volta Redonda - RJ"
-description: "Serviços de Caçamba no Conforto. Serviço rápido, seguro e rápido, seguro e rápido, seguro e rápido, seguro e profissional. Peça seu orçamento!"
+description: "Serviços de Caçamba no Conforto. Remoção ágil e segura de entulhos para sua reforma ou obra. Atendimento rápido em toda Volta Redonda. Peça seu orçamento!"
 bairro: "Conforto"
 seoKeyword: "Serviços de Caçamba no Conforto"
 ---

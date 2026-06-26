@@ -1,6 +1,6 @@
 ---
 title: "Caçamba para Entulho Rápida na Vila Mury | Volta Redonda - RJ"
-description: "Caçamba para Entulho Rápida na Vila Mury. Serviço rápido, seguro e rápido, seguro e rápido, seguro e profissional. Peça seu orçamento!"
+description: "Caçamba para Entulho Rápida na Vila Mury. Sua construção ou reforma mais limpa com nosso serviço. Equipe altamente treinada e dedicada. Peça seu orçamento!"
 bairro: "Vila Mury"
 seoKeyword: "Caçamba para Entulho Rápida na Vila Mury"
 ---

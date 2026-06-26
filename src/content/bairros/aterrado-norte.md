@@ -1,6 +1,6 @@
 ---
 title: "Caçamba Estacionária no Aterrado Norte | Volta Redonda - RJ"
-description: "Caçamba Estacionária no Aterrado Norte. Serviço rápido, seguro e rápido, seguro e rápido, seguro e profissional. Peça seu orçamento!"
+description: "Caçamba Estacionária no Aterrado Norte. Atendimento pontual com frota própria e destinação certa. Equipe altamente treinada e dedicada. Peça seu orçamento!"
 bairro: "Aterrado Norte"
 seoKeyword: "Caçamba Estacionária no Aterrado Norte"
 ---

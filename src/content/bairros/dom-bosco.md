@@ -1,6 +1,6 @@
 ---
 title: "Locação de Caçamba Estacionária no Dom Bosco | Volta Redonda - RJ"
-description: "Locação de Caçamba Estacionária no Dom Bosco. Serviço rápido, seguro e rápido, seguro e rápido, seguro e profissional. Peça seu orçamento!"
+description: "Locação de Caçamba Estacionária no Dom Bosco. Facilite o andamento da sua obra de pequeno ou grande porte. Solicite seu orçamento!"
 bairro: "Dom Bosco"
 seoKeyword: "Locação de Caçamba Estacionária no Dom Bosco"
 ---

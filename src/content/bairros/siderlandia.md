@@ -1,6 +1,6 @@
 ---
 title: "Aluguel de Caçamba Rápida na Siderlândia | Volta Redonda - RJ"
-description: "Aluguel de Caçamba Rápida na Siderlândia. Serviço rápido, seguro e rápido, seguro e rápido, seguro e profissional. Peça seu orçamento!"
+description: "Aluguel de Caçamba Rápida na Siderlândia. Sua construção ou reforma mais limpa com nosso serviço. Equipe altamente treinada e dedicada. Peça seu orçamento!"
 bairro: "Siderlândia"
 seoKeyword: "Aluguel de Caçamba Rápida na Siderlândia"
 ---

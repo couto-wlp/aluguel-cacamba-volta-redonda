@@ -1,6 +1,6 @@
 ---
 title: "Descarte Consciente de Entulho no São João | Volta Redonda - RJ"
-description: "Descarte Consciente de Entulho no São João. Serviço rápido, seguro e rápido, seguro e rápido, seguro e profissional. Peça seu orçamento!"
+description: "Descarte Consciente de Entulho no São João. A melhor solução para não acumular resíduos no local. Equipe altamente treinada e dedicada. Peça seu orçamento!"
 bairro: "São João"
 seoKeyword: "Descarte Consciente de Entulho no São João"
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Caçamba de Entulho no Morro da Conquista | Volta Redonda - RJ"
-description: "Caçamba de Entulho no Morro da Conquista. Serviço rápido, seguro e rápido, seguro e rápido, seguro e profissional. Peça seu orçamento!"
+description: "Caçamba de Entulho no Morro da Conquista. Sua construção ou reforma mais limpa com nosso serviço. Equipe altamente treinada e dedicada. Peça seu orçamento!"
 bairro: "Morro da Conquista"
 seoKeyword: "Caçamba de Entulho no Morro da Conquista"
 ---

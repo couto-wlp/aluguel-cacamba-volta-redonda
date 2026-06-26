@@ -1,6 +1,6 @@
 ---
 title: "Caçambas para Descarte Seguro no Padre Josimo | Volta Redonda - RJ"
-description: "Caçambas para Descarte Seguro no Padre Josimo. Facilite o andamento da sua obra de pequeno ou grande porte. Fale com nossa equipe!"
+description: "Caçambas para Descarte Seguro no Padre Josimo. Facilite o andamento da sua obra de pequeno ou grande porte. Reserve pelo WhatsApp!"
 bairro: "Padre Josimo"
 seoKeyword: "Caçambas para Descarte Seguro no Padre Josimo"
 ---

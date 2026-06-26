@@ -1,6 +1,6 @@
 ---
 title: "Caçamba de Entulho para Obra na Ponte Alta Sul | Volta Redonda - RJ"
-description: "Caçamba de Entulho para Obra na Ponte Alta Sul. Facilite o andamento da sua obra de pequeno ou grande porte. Fale com nossa equipe!"
+description: "Caçamba de Entulho para Obra na Ponte Alta Sul. Remoção ágil e segura de entulhos para sua reforma ou obra. Reserve pelo WhatsApp!"
 bairro: "Ponte Alta Sul"
 seoKeyword: "Caçamba de Entulho para Obra na Ponte Alta Sul"
 ---

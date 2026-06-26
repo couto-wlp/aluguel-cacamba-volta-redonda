@@ -1,6 +1,6 @@
 ---
 title: "Retirada de Resíduos de Construção no Conforto II | Volta Redonda - RJ"
-description: "Retirada de Resíduos de Construção no Conforto II. Facilite o andamento da sua obra de pequeno ou grande porte. Entre em contato já!"
+description: "Retirada de Resíduos de Construção no Conforto II. Remoção ágil e segura de entulhos para sua reforma ou obra. Peça seu orçamento!"
 bairro: "Conforto II"
 seoKeyword: "Retirada de Resíduos de Construção no Conforto II"
 ---

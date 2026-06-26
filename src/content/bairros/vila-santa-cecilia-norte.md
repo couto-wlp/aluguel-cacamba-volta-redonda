@@ -1,6 +1,6 @@
 ---
 title: "Locação de Caçamba na Vila Santa Cecília Norte | Volta Redonda - RJ"
-description: "Locação de Caçamba na Vila Santa Cecília Norte. Facilite o andamento da sua obra de pequeno ou grande porte. Solicite agora mesmo!"
+description: "Locação de Caçamba na Vila Santa Cecília Norte. Remoção ágil e segura de entulhos para sua reforma ou obra. Reserve pelo WhatsApp!"
 bairro: "Vila Santa Cecília Norte"
 seoKeyword: "Locação de Caçamba na Vila Santa Cecília Norte"
 ---

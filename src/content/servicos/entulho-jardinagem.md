@@ -1,7 +1,7 @@
 ---
 title: "Entulho de Jardinagem e Podas"
 pageTitle: "Coleta de Entulho de Jardinagem e Podas em Volta Redonda"
-description: "Entulho de Jardinagem e Podas. Serviço rápido, seguro e rápido, seguro e rápido, seguro e rápido, seguro e profissional. Peça seu orçamento!"
+description: "Entulho de Jardinagem e Podas. Remoção ágil e segura de entulhos para sua reforma ou obra. Atendimento rápido em toda Volta Redonda. Peça seu orçamento!"
 icon: "🌿"
 order: 6
 benefits:

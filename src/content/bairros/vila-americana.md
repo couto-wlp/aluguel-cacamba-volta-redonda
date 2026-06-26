@@ -1,6 +1,6 @@
 ---
 title: "Coleta de Resíduos Sólidos na Vila Americana | Volta Redonda - RJ"
-description: "Coleta de Resíduos Sólidos na Vila Americana. Serviço rápido, seguro e rápido, seguro e rápido, seguro e profissional. Peça seu orçamento!"
+description: "Coleta de Resíduos Sólidos na Vila Americana. Facilite o andamento da sua obra de pequeno ou grande porte. Solicite seu orçamento!"
 bairro: "Vila Americana"
 seoKeyword: "Coleta de Resíduos Sólidos na Vila Americana"
 ---

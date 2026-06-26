@@ -1,6 +1,6 @@
 ---
 title: "Coleta de Entulho Especializada na Santa Cruz | Volta Redonda - RJ"
-description: "Coleta de Entulho Especializada na Santa Cruz. Facilite o andamento da sua obra de pequeno ou grande porte. Fale com nossa equipe!"
+description: "Coleta de Entulho Especializada na Santa Cruz. Facilite o andamento da sua obra de pequeno ou grande porte. Reserve pelo WhatsApp!"
 bairro: "Santa Cruz"
 seoKeyword: "Coleta de Entulho Especializada na Santa Cruz"
 ---

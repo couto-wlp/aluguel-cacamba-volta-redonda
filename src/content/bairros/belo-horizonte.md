@@ -1,6 +1,6 @@
 ---
 title: "Aluguel de Caçamba para Reformas no Belo Horizonte | Volta Redonda - RJ"
-description: "Aluguel de Caçamba para Reformas no Belo Horizonte. Cuidado com a sua calçada e rapidez no recolhimento total. Garanta a sua hoje!"
+description: "Aluguel de Caçamba para Reformas no Belo Horizonte. Remoção ágil e segura de entulhos para sua reforma ou obra. Peça seu orçamento!"
 bairro: "Belo Horizonte"
 seoKeyword: "Aluguel de Caçamba para Reformas no Belo Horizonte"
 ---

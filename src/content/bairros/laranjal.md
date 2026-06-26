@@ -1,6 +1,6 @@
 ---
 title: "Locação de Caçambas para Entulho no Laranjal | Volta Redonda - RJ"
-description: "Locação de Caçambas para Entulho no Laranjal. Serviço rápido, seguro e rápido, seguro e rápido, seguro e profissional. Peça seu orçamento!"
+description: "Locação de Caçambas para Entulho no Laranjal. Facilite o andamento da sua obra de pequeno ou grande porte. Solicite seu orçamento!"
 bairro: "Laranjal"
 seoKeyword: "Locação de Caçambas para Entulho no Laranjal"
 ---

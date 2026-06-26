@@ -1,6 +1,6 @@
 ---
 title: "Descarte de Entulho com Caçamba no Morro da Serra | Volta Redonda - RJ"
-description: "Descarte de Entulho com Caçamba no Morro da Serra. Evite dores de cabeça com caçambas legalizadas e seguras. Solicite agora mesmo!"
+description: "Descarte de Entulho com Caçamba no Morro da Serra. Remoção ágil e segura de entulhos para sua reforma ou obra. Peça seu orçamento!"
 bairro: "Morro da Serra"
 seoKeyword: "Descarte de Entulho com Caçamba no Morro da Serra"
 ---

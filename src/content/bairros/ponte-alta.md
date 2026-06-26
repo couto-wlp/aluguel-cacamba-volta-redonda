@@ -1,6 +1,6 @@
 ---
 title: "Aluguel de Caçamba Estacionária na Ponte Alta | Volta Redonda - RJ"
-description: "Aluguel de Caçamba Estacionária na Ponte Alta. Facilite o andamento da sua obra de pequeno ou grande porte. Fale com nossa equipe!"
+description: "Aluguel de Caçamba Estacionária na Ponte Alta. Facilite o andamento da sua obra de pequeno ou grande porte. Reserve pelo WhatsApp!"
 bairro: "Ponte Alta"
 seoKeyword: "Aluguel de Caçamba Estacionária na Ponte Alta"
 ---

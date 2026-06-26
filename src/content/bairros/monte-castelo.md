@@ -1,6 +1,6 @@
 ---
 title: "Aluguel de Caçamba Legalizada no Monte Castelo | Volta Redonda - RJ"
-description: "Aluguel de Caçamba Legalizada no Monte Castelo. Facilite o andamento da sua obra de pequeno ou grande porte. Solicite agora mesmo!"
+description: "Aluguel de Caçamba Legalizada no Monte Castelo. Remoção ágil e segura de entulhos para sua reforma ou obra. Reserve pelo WhatsApp!"
 bairro: "Monte Castelo"
 seoKeyword: "Aluguel de Caçamba Legalizada no Monte Castelo"
 ---

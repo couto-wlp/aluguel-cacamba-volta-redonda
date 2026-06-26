@@ -1,6 +1,6 @@
 ---
 title: "Locação de Caçamba Rápida na Candelária | Volta Redonda - RJ"
-description: "Locação de Caçamba Rápida na Candelária. Serviço rápido, seguro e rápido, seguro e rápido, seguro e profissional. Peça seu orçamento!"
+description: "Locação de Caçamba Rápida na Candelária. Sua construção ou reforma mais limpa com nosso serviço. Equipe altamente treinada e dedicada. Peça seu orçamento!"
 bairro: "Candelária"
 seoKeyword: "Locação de Caçamba Rápida na Candelária"
 ---

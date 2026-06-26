@@ -1,6 +1,6 @@
 ---
 title: "Locação de Caçamba de Resíduos em Três Poços | Volta Redonda - RJ"
-description: "Locação de Caçamba de Resíduos em Três Poços. Serviço rápido, seguro e rápido, seguro e rápido, seguro e profissional. Peça seu orçamento!"
+description: "Locação de Caçamba de Resíduos em Três Poços. Facilite o andamento da sua obra de pequeno ou grande porte. Solicite seu orçamento!"
 bairro: "Três Poços"
 seoKeyword: "Locação de Caçamba de Resíduos em Três Poços"
 ---

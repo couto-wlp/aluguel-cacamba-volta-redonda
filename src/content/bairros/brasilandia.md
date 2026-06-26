@@ -1,6 +1,6 @@
 ---
 title: "Caçamba para Obras na Brasilândia | Volta Redonda - RJ"
-description: "Caçamba para Obras na Brasilândia. Serviço rápido, seguro e rápido, seguro e rápido, seguro e rápido, seguro e profissional. Peça seu orçamento!"
+description: "Caçamba para Obras na Brasilândia. Remoção ágil e segura de entulhos para sua reforma ou obra. Equipe altamente treinada e dedicada. Peça seu orçamento!"
 bairro: "Brasilândia"
 seoKeyword: "Caçamba para Obras na Brasilândia"
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Aluguel de Caçamba para Entulho no Retiro II | Volta Redonda - RJ"
-description: "Aluguel de Caçamba para Entulho no Retiro II. Serviço rápido, seguro e rápido, seguro e rápido, seguro e profissional. Peça seu orçamento!"
+description: "Aluguel de Caçamba para Entulho no Retiro II. Facilite o andamento da sua obra de pequeno ou grande porte. Solicite seu orçamento!"
 bairro: "Retiro II"
 seoKeyword: "Aluguel de Caçamba para Entulho no Retiro II"
 ---

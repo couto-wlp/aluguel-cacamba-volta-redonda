@@ -1,6 +1,6 @@
 ---
 title: "Remoção de Entulhos e Resíduos no Morro da Paz | Volta Redonda - RJ"
-description: "Remoção de Entulhos e Resíduos no Morro da Paz. Facilite o andamento da sua obra de pequeno ou grande porte. Fale com nossa equipe!"
+description: "Remoção de Entulhos e Resíduos no Morro da Paz. Remoção ágil e segura de entulhos para sua reforma ou obra. Reserve pelo WhatsApp!"
 bairro: "Morro da Paz"
 seoKeyword: "Remoção de Entulhos e Resíduos no Morro da Paz"
 ---

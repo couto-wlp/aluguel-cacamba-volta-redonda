@@ -1,6 +1,6 @@
 ---
 title: "Disk Caçamba Rápido na Santa Inês | Volta Redonda - RJ"
-description: "Disk Caçamba Rápido na Santa Inês. Serviço rápido, seguro e rápido, seguro e rápido, seguro e rápido, seguro e profissional. Peça seu orçamento!"
+description: "Disk Caçamba Rápido na Santa Inês. Remoção ágil e segura de entulhos para sua reforma ou obra. Equipe altamente treinada e dedicada. Peça seu orçamento!"
 bairro: "Santa Inês"
 seoKeyword: "Disk Caçamba Rápido na Santa Inês"
 ---

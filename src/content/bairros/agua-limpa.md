@@ -1,6 +1,6 @@
 ---
 title: "Retirada de Entulho na Água Limpa | Volta Redonda - RJ"
-description: "Retirada de Entulho na Água Limpa. Serviço rápido, seguro e rápido, seguro e rápido, seguro e rápido, seguro e profissional. Peça seu orçamento!"
+description: "Retirada de Entulho na Água Limpa. Remoção ágil e segura de entulhos para sua reforma ou obra. Equipe altamente treinada e dedicada. Peça seu orçamento!"
 bairro: "Água Limpa"
 seoKeyword: "Retirada de Entulho na Água Limpa"
 ---

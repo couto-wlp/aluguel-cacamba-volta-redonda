@@ -1,6 +1,6 @@
 ---
 title: "Caçamba para Construção Civil no Jardim Normândia | Volta Redonda - RJ"
-description: "Caçamba para Construção Civil no Jardim Normândia. Facilite o andamento da sua obra de pequeno ou grande porte. Entre em contato já!"
+description: "Caçamba para Construção Civil no Jardim Normândia. Remoção ágil e segura de entulhos para sua reforma ou obra. Peça seu orçamento!"
 bairro: "Jardim Normândia"
 seoKeyword: "Caçamba para Construção Civil no Jardim Normândia"
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Caçamba para Indústria e Comércio em Três Poços Industrial | Volta Redonda - RJ"
-description: "Caçamba para Indústria e Comércio em Três Poços Industrial. Eficiência na retirada de materiais mistos e construção. Reserve pelo Zap!"
+description: "Caçamba para Indústria e Comércio em Três Poços Industrial. Remoção ágil e segura de entulhos para sua reforma ou obra. Peça seu orçamento!"
 bairro: "Três Poços Industrial"
 seoKeyword: "Caçamba para Indústria e Comércio em Três Poços Industrial"
 ---

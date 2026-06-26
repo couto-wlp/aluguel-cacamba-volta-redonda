@@ -1,6 +1,6 @@
 ---
 title: "Disk Caçamba Legalizada na Vila Brasília | Volta Redonda - RJ"
-description: "Disk Caçamba Legalizada na Vila Brasília. Serviço rápido, seguro e rápido, seguro e rápido, seguro e profissional. Peça seu orçamento!"
+description: "Disk Caçamba Legalizada na Vila Brasília. Sua construção ou reforma mais limpa com nosso serviço. Equipe altamente treinada e dedicada. Peça seu orçamento!"
 bairro: "Vila Brasília"
 seoKeyword: "Disk Caçamba Legalizada na Vila Brasília"
 ---

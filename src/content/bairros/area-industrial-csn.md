@@ -1,6 +1,6 @@
 ---
 title: "Caçambas para Indústria e Obras na Área Industrial CSN | Volta Redonda - RJ"
-description: "Caçambas para Indústria e Obras na Área Industrial CSN. Deixe o trabalho pesado de coleta de entulho com a gente. Garanta a sua hoje!"
+description: "Caçambas para Indústria e Obras na Área Industrial CSN. Remoção ágil e segura de entulhos para sua reforma ou obra. Peça seu orçamento!"
 bairro: "Área Industrial CSN"
 seoKeyword: "Caçambas para Indústria e Obras na Área Industrial CSN"
 ---

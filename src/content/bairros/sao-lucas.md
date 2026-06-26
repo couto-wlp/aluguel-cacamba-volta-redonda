@@ -1,6 +1,6 @@
 ---
 title: "Retirada de Entulho no São Lucas | Volta Redonda - RJ"
-description: "Retirada de Entulho no São Lucas. Serviço rápido, seguro e rápido, seguro e rápido, seguro e rápido, seguro e profissional. Peça seu orçamento!"
+description: "Retirada de Entulho no São Lucas. Remoção ágil e segura de entulhos para sua reforma ou obra. Atendimento rápido em toda Volta Redonda. Peça seu orçamento!"
 bairro: "São Lucas"
 seoKeyword: "Retirada de Entulho no São Lucas"
 ---

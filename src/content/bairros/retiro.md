@@ -1,6 +1,6 @@
 ---
 title: "Locação Ágil de Caçambas no Retiro | Volta Redonda - RJ"
-description: "Locação Ágil de Caçambas no Retiro. Serviço rápido, seguro e rápido, seguro e rápido, seguro e rápido, seguro e profissional. Peça seu orçamento!"
+description: "Locação Ágil de Caçambas no Retiro. Remoção ágil e segura de entulhos para sua reforma ou obra. Equipe altamente treinada e dedicada. Peça seu orçamento!"
 bairro: "Retiro"
 seoKeyword: "Locação Ágil de Caçambas no Retiro"
 ---

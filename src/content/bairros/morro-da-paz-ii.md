@@ -1,6 +1,6 @@
 ---
 title: "Aluguel de Caçamba Licenciada no Morro da Paz II | Volta Redonda - RJ"
-description: "Aluguel de Caçamba Licenciada no Morro da Paz II. Cuidado com a sua calçada e rapidez no recolhimento total. Solicite agora mesmo!"
+description: "Aluguel de Caçamba Licenciada no Morro da Paz II. Facilite o andamento da sua obra de pequeno ou grande porte. Peça seu orçamento!"
 bairro: "Morro da Paz II"
 seoKeyword: "Aluguel de Caçamba Licenciada no Morro da Paz II"
 ---

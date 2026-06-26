@@ -1,6 +1,6 @@
 ---
 title: "Locação de Caçamba Legalizada no Parque das Ilhas | Volta Redonda - RJ"
-description: "Locação de Caçamba Legalizada no Parque das Ilhas. Deixe o trabalho pesado de coleta de entulho com a gente. Solicite agora mesmo!"
+description: "Locação de Caçamba Legalizada no Parque das Ilhas. Remoção ágil e segura de entulhos para sua reforma ou obra. Peça seu orçamento!"
 bairro: "Parque das Ilhas"
 seoKeyword: "Locação de Caçamba Legalizada no Parque das Ilhas"
 ---

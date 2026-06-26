@@ -1,6 +1,6 @@
 ---
 title: "Locação de Caçambas no Aero Clube | Volta Redonda - RJ"
-description: "Locação de Caçambas no Aero Clube. Serviço rápido, seguro e rápido, seguro e rápido, seguro e rápido, seguro e profissional. Peça seu orçamento!"
+description: "Locação de Caçambas no Aero Clube. Remoção ágil e segura de entulhos para sua reforma ou obra. Equipe altamente treinada e dedicada. Peça seu orçamento!"
 bairro: "Aero Clube"
 seoKeyword: "Locação de Caçambas no Aero Clube"
 ---

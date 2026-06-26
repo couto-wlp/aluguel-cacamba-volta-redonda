@@ -1,6 +1,6 @@
 ---
 title: "Remoção de Entulho Licenciada na Vila Mury Norte | Volta Redonda - RJ"
-description: "Remoção de Entulho Licenciada na Vila Mury Norte. Facilite o andamento da sua obra de pequeno ou grande porte. Garanta a sua hoje!"
+description: "Remoção de Entulho Licenciada na Vila Mury Norte. Facilite o andamento da sua obra de pequeno ou grande porte. Peça seu orçamento!"
 bairro: "Vila Mury Norte"
 seoKeyword: "Remoção de Entulho Licenciada na Vila Mury Norte"
 ---

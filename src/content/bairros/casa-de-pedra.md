@@ -1,6 +1,6 @@
 ---
 title: "Disk Caçamba e Coleta na Casa de Pedra | Volta Redonda - RJ"
-description: "Disk Caçamba e Coleta na Casa de Pedra. Serviço rápido, seguro e rápido, seguro e rápido, seguro e profissional. Peça seu orçamento!"
+description: "Disk Caçamba e Coleta na Casa de Pedra. Atendimento pontual com frota própria e destinação certa. Equipe altamente treinada e dedicada. Peça seu orçamento!"
 bairro: "Casa de Pedra"
 seoKeyword: "Disk Caçamba e Coleta na Casa de Pedra"
 ---

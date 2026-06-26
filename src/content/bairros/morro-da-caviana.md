@@ -1,6 +1,6 @@
 ---
 title: "Retirada de Entulho de Reformas no Morro da Caviana | Volta Redonda - RJ"
-description: "Retirada de Entulho de Reformas no Morro da Caviana. Remoção ágil e segura de entulhos para sua obra fluir bem. Chame no WhatsApp!"
+description: "Retirada de Entulho de Reformas no Morro da Caviana. Remoção ágil e segura de entulhos para sua reforma ou obra. Peça seu orçamento!"
 bairro: "Morro da Caviana"
 seoKeyword: "Retirada de Entulho de Reformas no Morro da Caviana"
 ---

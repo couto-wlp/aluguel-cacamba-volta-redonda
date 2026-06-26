@@ -1,6 +1,6 @@
 ---
 title: "Coleta de Entulho e Resíduos no Aterrado | Volta Redonda - RJ"
-description: "Coleta de Entulho e Resíduos no Aterrado. Serviço rápido, seguro e rápido, seguro e rápido, seguro e profissional. Peça seu orçamento!"
+description: "Coleta de Entulho e Resíduos no Aterrado. Sua construção ou reforma mais limpa com nosso serviço. Equipe altamente treinada e dedicada. Peça seu orçamento!"
 bairro: "Aterrado"
 seoKeyword: "Coleta de Entulho e Resíduos no Aterrado"
 ---

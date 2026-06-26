@@ -1,6 +1,6 @@
 ---
 title: "Caçambas de Grande Porte na Região da CSN | Volta Redonda - RJ"
-description: "Caçambas de Grande Porte na Região da CSN. Serviço rápido, seguro e rápido, seguro e rápido, seguro e profissional. Peça seu orçamento!"
+description: "Caçambas de Grande Porte na Região da CSN. A melhor solução para não acumular resíduos no local. Equipe altamente treinada e dedicada. Peça seu orçamento!"
 bairro: "Região da CSN"
 seoKeyword: "Caçambas de Grande Porte na Região da CSN"
 ---

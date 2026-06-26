@@ -1,6 +1,6 @@
 ---
 title: "Coleta de Resíduos de Obra no Morro dos Cabritos | Volta Redonda - RJ"
-description: "Coleta de Resíduos de Obra no Morro dos Cabritos. Evite dores de cabeça com caçambas legalizadas e seguras. Fale com nossa equipe!"
+description: "Coleta de Resíduos de Obra no Morro dos Cabritos. Facilite o andamento da sua obra de pequeno ou grande porte. Peça seu orçamento!"
 bairro: "Morro dos Cabritos"
 seoKeyword: "Coleta de Resíduos de Obra no Morro dos Cabritos"
 ---

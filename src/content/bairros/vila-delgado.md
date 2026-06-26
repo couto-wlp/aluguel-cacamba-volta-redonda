@@ -1,6 +1,6 @@
 ---
 title: "Aluguel de Caçambas Estacionárias na Vila Delgado | Volta Redonda - RJ"
-description: "Aluguel de Caçambas Estacionárias na Vila Delgado. Facilite o andamento da sua obra de pequeno ou grande porte. Solicite agora mesmo!"
+description: "Aluguel de Caçambas Estacionárias na Vila Delgado. Remoção ágil e segura de entulhos para sua reforma ou obra. Peça seu orçamento!"
 bairro: "Vila Delgado"
 seoKeyword: "Aluguel de Caçambas Estacionárias na Vila Delgado"
 ---

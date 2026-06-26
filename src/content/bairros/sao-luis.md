@@ -1,6 +1,6 @@
 ---
 title: "Caçamba Estacionária para Locação no São Luís | Volta Redonda - RJ"
-description: "Caçamba Estacionária para Locação no São Luís. Facilite o andamento da sua obra de pequeno ou grande porte. Fale com nossa equipe!"
+description: "Caçamba Estacionária para Locação no São Luís. Facilite o andamento da sua obra de pequeno ou grande porte. Reserve pelo WhatsApp!"
 bairro: "São Luís"
 seoKeyword: "Caçamba Estacionária para Locação no São Luís"
 ---

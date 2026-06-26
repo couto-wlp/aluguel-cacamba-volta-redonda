@@ -1,6 +1,6 @@
 ---
 title: "Aluguel de Caçambas (4m³ a 7m³) no Jardim Amália II | Volta Redonda - RJ"
-description: "Aluguel de Caçambas (4m³ a 7m³) no Jardim Amália II. Facilite o andamento da sua obra de pequeno ou grande porte. Entre em contato já!"
+description: "Aluguel de Caçambas (4m³ a 7m³) no Jardim Amália II. Remoção ágil e segura de entulhos para sua reforma ou obra. Peça seu orçamento!"
 bairro: "Jardim Amália II"
 seoKeyword: "Aluguel de Caçambas (4m³ a 7m³) no Jardim Amália II"
 ---
