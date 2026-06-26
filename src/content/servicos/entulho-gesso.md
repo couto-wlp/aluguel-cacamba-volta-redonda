@@ -3,7 +3,7 @@ title: "Entulho de Gesso e Drywall"
 pageTitle: "Coleta de Entulho de Gesso e Drywall em Volta Redonda"
 description: "Entulho de Gesso e Drywall. Remoção ágil e segura de entulhos para sua reforma ou obra. Atendimento rápido em toda Volta Redonda. Peça seu orçamento!"
 icon: "📐"
-image: "../../assets/entulho-gesso.webp"
+image: "../../assets/entulho-gesso_opt.webp"
 order: 5
 benefits:
   - "Coleta separada de gesso comum e acartonado (drywall)"
