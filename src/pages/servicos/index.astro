@@ -4,8 +4,32 @@ import { Image } from 'astro:assets';
 import Layout from '../../layouts/Layout.astro';
 import { SITE_CONFIG } from '../../data/config';
 
+// Obter serviços e ordenar
 const services = await getCollection('servicos');
 services.sort((a, b) => a.data.order - b.data.order);
+
+function getExcerpt(body) {
+	if (!body) return "";
+	let text = body
+		.replace(/^#+\s+.+$/gm, '') // remove headers
+		.replace(/\*\*|__/g, '') // remove bold markers
+		.replace(/\*|_/g, '') // remove italic markers
+		.replace(/\[([^\]]+)\]\([^\)]+\)/g, '$1') // remove markdown links, keeping text
+		.trim();
+	
+	const paragraphs = text.split('\n').map(p => p.trim()).filter(p => p.length > 0);
+	if (paragraphs.length === 0) return "";
+	
+	let firstParagraph = paragraphs[0];
+	if (firstParagraph.length > 140) {
+		const idx = firstParagraph.indexOf('.', 100);
+		if (idx !== -1 && idx < 180) {
+			return firstParagraph.slice(0, idx + 1);
+		}
+		return firstParagraph.slice(0, 140) + '...';
+	}
+	return firstParagraph;
+}
 ---
 
 <Layout title="Serviços de Aluguel de Caçamba | Caçambas Volta Redonda" description="Aluguel de caçamba em Volta Redonda e serviços especializados. Remoção ágil e segura de entulhos para sua reforma ou obra. Peça seu orçamento!">
@@ -56,7 +80,7 @@ services.sort((a, b) => a.data.order - b.data.order);
 								</span>
 							)}
 							
-							<p class="text-gray-600 text-sm leading-relaxed mb-6">{service.data.description}</p>
+							<p class="text-gray-600 text-sm leading-relaxed mb-6">{getExcerpt(service.body)}</p>
 						</div>
 						
 						<a 
