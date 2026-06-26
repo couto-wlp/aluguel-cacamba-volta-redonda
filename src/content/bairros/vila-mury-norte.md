@@ -1,6 +1,6 @@
 ---
 title: "Remoção de Entulho Licenciada na Vila Mury Norte | Volta Redonda - RJ"
-description: "Remoção de Entulho Licenciada na Vila Mury Norte, Volta Redonda. Caçambas de 4m³, 5m³ e 7m³ regularizadas e com entrega rápida. Peça seu orçamento pelo WhatsApp!"
+description: "Remoção de Entulho Licenciada na Vila Mury Norte. Facilite o andamento da sua obra de pequeno ou grande porte. Garanta a sua hoje!"
 bairro: "Vila Mury Norte"
 seoKeyword: "Remoção de Entulho Licenciada na Vila Mury Norte"
 ---

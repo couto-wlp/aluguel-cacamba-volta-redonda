@@ -1,6 +1,6 @@
 ---
 title: "Caçamba para Obras na Brasilândia | Volta Redonda - RJ"
-description: "Caçamba para Obras na Brasilândia, Volta Redonda. Caçambas regularizadas de 4m³, 5m³ e 7m³ com descarte legalizado. Orçamento pelo WhatsApp!"
+description: "Caçamba para Obras na Brasilândia. Serviço rápido, seguro e rápido, seguro e rápido, seguro e rápido, seguro e profissional. Peça seu orçamento!"
 bairro: "Brasilândia"
 seoKeyword: "Caçamba para Obras na Brasilândia"
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Entulho de Construção (Alvenaria)"
 pageTitle: "Coleta de Entulho de Construção (Alvenaria) em Volta Redonda"
-description: "Coleta rápida de restos de obra, tijolos e concreto. Mantenha seu canteiro limpo e seguro em Volta Redonda."
+description: "Entulho de Construção (Alvenaria). Serviço rápido, seguro e rápido, seguro e rápido, seguro e rápido, seguro e profissional. Peça seu orçamento!"
 icon: "🧱"
 order: 4
 benefits:

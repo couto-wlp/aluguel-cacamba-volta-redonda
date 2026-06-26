@@ -1,6 +1,6 @@
 ---
 title: "Locação de Caçamba Estacionária no Dom Bosco | Volta Redonda - RJ"
-description: "Locação de Caçamba Estacionária no Dom Bosco, Volta Redonda. Caçambas regularizadas de 4m³, 5m³ e 7m³ com entrega rápida. Peça seu orçamento pelo WhatsApp!"
+description: "Locação de Caçamba Estacionária no Dom Bosco. Serviço rápido, seguro e rápido, seguro e rápido, seguro e profissional. Peça seu orçamento!"
 bairro: "Dom Bosco"
 seoKeyword: "Locação de Caçamba Estacionária no Dom Bosco"
 ---

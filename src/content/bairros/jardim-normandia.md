@@ -1,6 +1,6 @@
 ---
 title: "Caçamba para Construção Civil no Jardim Normândia | Volta Redonda - RJ"
-description: "Caçamba para Construção Civil no Jardim Normândia, Volta Redonda. Caçambas regularizadas de 4m³, 5m³ e 7m³ com entrega rápida. Peça seu orçamento pelo WhatsApp!"
+description: "Caçamba para Construção Civil no Jardim Normândia. Facilite o andamento da sua obra de pequeno ou grande porte. Entre em contato já!"
 bairro: "Jardim Normândia"
 seoKeyword: "Caçamba para Construção Civil no Jardim Normândia"
 ---

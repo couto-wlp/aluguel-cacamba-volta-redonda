@@ -1,6 +1,6 @@
 ---
 title: "Caçambas de Grande Porte na Região da CSN | Volta Redonda - RJ"
-description: "Caçambas de Grande Porte na Região da CSN, Volta Redonda. Caçambas regularizadas de 4m³, 5m³ e 7m³ com entrega rápida. Peça seu orçamento pelo WhatsApp!"
+description: "Caçambas de Grande Porte na Região da CSN. Serviço rápido, seguro e rápido, seguro e rápido, seguro e profissional. Peça seu orçamento!"
 bairro: "Região da CSN"
 seoKeyword: "Caçambas de Grande Porte na Região da CSN"
 ---

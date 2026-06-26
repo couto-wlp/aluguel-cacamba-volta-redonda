@@ -1,6 +1,6 @@
 ---
 title: "Retirada de Resíduos de Construção no Conforto II | Volta Redonda - RJ"
-description: "Retirada de Resíduos de Construção no Conforto II, Volta Redonda. Caçambas regularizadas de 4m³, 5m³ e 7m³ com entrega rápida. Peça seu orçamento pelo WhatsApp!"
+description: "Retirada de Resíduos de Construção no Conforto II. Facilite o andamento da sua obra de pequeno ou grande porte. Entre em contato já!"
 bairro: "Conforto II"
 seoKeyword: "Retirada de Resíduos de Construção no Conforto II"
 ---

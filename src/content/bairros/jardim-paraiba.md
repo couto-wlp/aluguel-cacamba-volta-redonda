@@ -1,6 +1,6 @@
 ---
 title: "Coleta de Entulho Rápida no Jardim Paraíba | Volta Redonda - RJ"
-description: "Coleta de Entulho Rápida no Jardim Paraíba, Volta Redonda. Caçambas regularizadas de 4m³, 5m³ e 7m³ com entrega rápida. Peça seu orçamento pelo WhatsApp!"
+description: "Coleta de Entulho Rápida no Jardim Paraíba. Serviço rápido, seguro e rápido, seguro e rápido, seguro e profissional. Peça seu orçamento!"
 bairro: "Jardim Paraíba"
 seoKeyword: "Coleta de Entulho Rápida no Jardim Paraíba"
 ---

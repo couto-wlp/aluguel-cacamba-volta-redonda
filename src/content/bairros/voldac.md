@@ -1,6 +1,6 @@
 ---
 title: "Aluguel de Caçambas e Entulho na Voldac | Volta Redonda - RJ"
-description: "Aluguel de Caçambas e Entulho no Voldac, Volta Redonda. Caçambas regularizadas de 4m³, 5m³ e 7m³ com entrega rápida. Peça seu orçamento pelo WhatsApp!"
+description: "Aluguel de Caçambas e Entulho na Voldac. Serviço rápido, seguro e rápido, seguro e rápido, seguro e profissional. Peça seu orçamento!"
 bairro: "Voldac"
 seoKeyword: "Aluguel de Caçambas e Entulho na Voldac"
 ---

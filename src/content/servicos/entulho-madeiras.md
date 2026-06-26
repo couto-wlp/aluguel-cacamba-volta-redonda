@@ -1,7 +1,7 @@
 ---
 title: "Entulho de Madeiras e MDF"
 pageTitle: "Coleta de Entulho de Madeiras e MDF em Volta Redonda"
-description: "Remoção ecológica de móveis antigos desmontados, pallets e tábuas. Garantimos um descarte totalmente sustentável em sua obra."
+description: "Entulho de Madeiras e MDF. Serviço rápido, seguro e rápido, seguro e rápido, seguro e rápido, seguro e profissional. Peça seu orçamento!"
 icon: "🪵"
 order: 7
 benefits:

@@ -1,6 +1,6 @@
 ---
 title: "Aluguel de Caçamba de Entulho nos Coqueiros | Volta Redonda - RJ"
-description: "Aluguel de Caçamba de Entulho no Coqueiros, Volta Redonda. Caçambas regularizadas de 4m³, 5m³ e 7m³ com entrega rápida. Peça seu orçamento pelo WhatsApp!"
+description: "Aluguel de Caçamba de Entulho nos Coqueiros. Serviço rápido, seguro e rápido, seguro e rápido, seguro e profissional. Peça seu orçamento!"
 bairro: "Coqueiros"
 seoKeyword: "Aluguel de Caçamba de Entulho nos Coqueiros"
 ---

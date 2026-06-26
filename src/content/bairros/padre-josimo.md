@@ -1,6 +1,6 @@
 ---
 title: "Caçambas para Descarte Seguro no Padre Josimo | Volta Redonda - RJ"
-description: "Caçambas para Descarte Seguro no Padre Josimo, Volta Redonda. Caçambas regularizadas de 4m³, 5m³ e 7m³ com entrega rápida. Peça seu orçamento pelo WhatsApp!"
+description: "Caçambas para Descarte Seguro no Padre Josimo. Facilite o andamento da sua obra de pequeno ou grande porte. Fale com nossa equipe!"
 bairro: "Padre Josimo"
 seoKeyword: "Caçambas para Descarte Seguro no Padre Josimo"
 ---

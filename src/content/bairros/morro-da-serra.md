@@ -1,6 +1,6 @@
 ---
 title: "Descarte de Entulho com Caçamba no Morro da Serra | Volta Redonda - RJ"
-description: "Descarte de Entulho com Caçamba no Morro da Serra, Volta Redonda. Caçambas regularizadas de 4m³, 5m³ e 7m³ com entrega rápida. Peça seu orçamento pelo WhatsApp!"
+description: "Descarte de Entulho com Caçamba no Morro da Serra. Evite dores de cabeça com caçambas legalizadas e seguras. Solicite agora mesmo!"
 bairro: "Morro da Serra"
 seoKeyword: "Descarte de Entulho com Caçamba no Morro da Serra"
 ---

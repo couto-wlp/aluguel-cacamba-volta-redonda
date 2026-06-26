@@ -1,6 +1,6 @@
 ---
 title: "Descarte de Entulho Legalizado no Bom Jesus | Volta Redonda - RJ"
-description: "Descarte de Entulho Legalizado no Bom Jesus, Volta Redonda. Caçambas regularizadas de 4m³, 5m³ e 7m³ para descarte ecológico. Peça seu orçamento pelo WhatsApp!"
+description: "Descarte de Entulho Legalizado no Bom Jesus. Serviço rápido, seguro e rápido, seguro e rápido, seguro e profissional. Peça seu orçamento!"
 bairro: "Bom Jesus"
 seoKeyword: "Descarte de Entulho Legalizado no Bom Jesus"
 ---

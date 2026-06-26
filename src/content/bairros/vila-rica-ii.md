@@ -1,6 +1,6 @@
 ---
 title: "Aluguel de Caçamba para Construção na Vila Rica II | Volta Redonda - RJ"
-description: "Aluguel de Caçamba para Construção no Vila Rica II, Volta Redonda. Caçambas regularizadas de 4m³, 5m³ e 7m³ com entrega rápida. Peça seu orçamento pelo WhatsApp!"
+description: "Aluguel de Caçamba para Construção na Vila Rica II. Equipe preparada para entregar e recolher com agilidade. Fale com nossa equipe!"
 bairro: "Vila Rica II"
 seoKeyword: "Aluguel de Caçamba para Construção na Vila Rica II"
 ---

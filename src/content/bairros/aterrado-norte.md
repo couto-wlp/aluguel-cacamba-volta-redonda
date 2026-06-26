@@ -1,6 +1,6 @@
 ---
 title: "Caçamba Estacionária no Aterrado Norte | Volta Redonda - RJ"
-description: "Caçamba Estacionária no Aterrado Norte, Volta Redonda. Caçambas regularizadas de 4m³, 5m³ e 7m³ com entrega rápida. Peça seu orçamento pelo WhatsApp!"
+description: "Caçamba Estacionária no Aterrado Norte. Serviço rápido, seguro e rápido, seguro e rápido, seguro e profissional. Peça seu orçamento!"
 bairro: "Aterrado Norte"
 seoKeyword: "Caçamba Estacionária no Aterrado Norte"
 ---

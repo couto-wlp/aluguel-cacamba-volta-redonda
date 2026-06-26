@@ -1,7 +1,7 @@
 ---
 title: "Caçamba de 4m³"
 pageTitle: "Aluguel de Caçamba de 4m³ em Volta Redonda"
-description: "Ideal para reformas residenciais de pequeno porte, descarte de entulho de obras domésticas e terraplanagem leve."
+description: "Caçamba de 4m³. Serviço rápido, seguro e rápido, seguro e rápido, seguro e rápido, seguro e rápido, seguro e profissional. Peça seu orçamento!"
 icon: "🏡"
 image: "../../assets/cacamba-4m.webp"
 order: 1

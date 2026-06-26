@@ -1,6 +1,6 @@
 ---
 title: "Aluguel de Caçamba para Reformas no Belo Horizonte | Volta Redonda - RJ"
-description: "Aluguel de Caçamba para Reformas no Belo Horizonte, Volta Redonda. Caçambas regularizadas de 4m³, 5m³ e 7m³ com entrega rápida. Peça seu orçamento pelo WhatsApp!"
+description: "Aluguel de Caçamba para Reformas no Belo Horizonte. Cuidado com a sua calçada e rapidez no recolhimento total. Garanta a sua hoje!"
 bairro: "Belo Horizonte"
 seoKeyword: "Aluguel de Caçamba para Reformas no Belo Horizonte"
 ---

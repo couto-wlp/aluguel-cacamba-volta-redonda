@@ -1,6 +1,6 @@
 ---
 title: "Aluguel de Caçamba Rápida na Siderlândia | Volta Redonda - RJ"
-description: "Aluguel de Caçamba Rápida na Siderlândia, Volta Redonda. Caçambas regulamentadas de 4m³, 5m³ e 7m³ com descarte legalizado. Solicite orçamento via WhatsApp!"
+description: "Aluguel de Caçamba Rápida na Siderlândia. Serviço rápido, seguro e rápido, seguro e rápido, seguro e profissional. Peça seu orçamento!"
 bairro: "Siderlândia"
 seoKeyword: "Aluguel de Caçamba Rápida na Siderlândia"
 ---

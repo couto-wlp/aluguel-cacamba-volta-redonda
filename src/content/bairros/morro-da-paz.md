@@ -1,6 +1,6 @@
 ---
 title: "Remoção de Entulhos e Resíduos no Morro da Paz | Volta Redonda - RJ"
-description: "Remoção de Entulhos e Resíduos no Morro da Paz, Volta Redonda. Caçambas regularizadas de 4m³, 5m³ e 7m³ com entrega rápida. Peça seu orçamento pelo WhatsApp!"
+description: "Remoção de Entulhos e Resíduos no Morro da Paz. Facilite o andamento da sua obra de pequeno ou grande porte. Fale com nossa equipe!"
 bairro: "Morro da Paz"
 seoKeyword: "Remoção de Entulhos e Resíduos no Morro da Paz"
 ---

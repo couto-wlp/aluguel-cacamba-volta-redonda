@@ -1,6 +1,6 @@
 ---
 title: "Locação de Caçamba Rápida na Candelária | Volta Redonda - RJ"
-description: "Locação de Caçamba Rápida na Candelária, Volta Redonda. Caçambas regularizadas de 4m³, 5m³ e 7m³ com descarte legalizado. Orçamento pelo WhatsApp!"
+description: "Locação de Caçamba Rápida na Candelária. Serviço rápido, seguro e rápido, seguro e rápido, seguro e profissional. Peça seu orçamento!"
 bairro: "Candelária"
 seoKeyword: "Locação de Caçamba Rápida na Candelária"
 ---

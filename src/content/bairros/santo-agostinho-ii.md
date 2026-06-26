@@ -1,6 +1,6 @@
 ---
 title: "Caçamba para Limpeza de Terreno no Santo Agostinho II | Volta Redonda - RJ"
-description: "Caçamba para Limpeza de Terreno no Santo Agostinho II, Volta Redonda. Caçambas regularizadas de 4m³, 5m³ e 7m³ com entrega rápida. Peça seu orçamento pelo WhatsApp!"
+description: "Caçamba para Limpeza de Terreno no Santo Agostinho II. Deixe o trabalho pesado de coleta de entulho com a gente. Fale com nossa equipe!"
 bairro: "Santo Agostinho II"
 seoKeyword: "Caçamba para Limpeza de Terreno no Santo Agostinho II"
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Descarte Ecológico com Caçamba no Jardim Belvedere | Volta Redonda - RJ"
-description: "Descarte Ecológico com Caçamba no Jardim Belvedere, Volta Redonda. Caçambas regularizadas de 4m³, 5m³ e 7m³ para condomínios e residências. Orçamento pelo WhatsApp!"
+description: "Descarte Ecológico com Caçamba no Jardim Belvedere. Equipe preparada para entregar e recolher com agilidade. Fale com nossa equipe!"
 bairro: "Jardim Belvedere"
 seoKeyword: "Descarte Ecológico com Caçamba no Jardim Belvedere"
 ---

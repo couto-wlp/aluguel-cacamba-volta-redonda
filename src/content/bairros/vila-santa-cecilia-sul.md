@@ -1,6 +1,6 @@
 ---
 title: "Serviços de Caçamba Rápida na Vila Santa Cecília Sul | Volta Redonda - RJ"
-description: "Serviços de Caçamba Rápida na Vila Santa Cecília Sul, Volta Redonda. Caçambas regularizadas de 4m³, 5m³ e 7m³ com entrega rápida. Peça seu orçamento pelo WhatsApp!"
+description: "Serviços de Caçamba Rápida na Vila Santa Cecília Sul. Cuidado com a sua calçada e rapidez no recolhimento total. Chame no WhatsApp!"
 bairro: "Vila Santa Cecília Sul"
 seoKeyword: "Serviços de Caçamba Rápida na Vila Santa Cecília Sul"
 ---

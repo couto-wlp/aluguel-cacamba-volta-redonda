@@ -1,6 +1,6 @@
 ---
 title: "Disk Caçamba Rápido na Santa Inês | Volta Redonda - RJ"
-description: "Disk Caçamba Rápido no Santa Inês, Volta Redonda. Caçambas estacionárias licenciadas de 4m³, 5m³ e 7m³ com emissão de MTR. Peça orçamento via WhatsApp!"
+description: "Disk Caçamba Rápido na Santa Inês. Serviço rápido, seguro e rápido, seguro e rápido, seguro e rápido, seguro e profissional. Peça seu orçamento!"
 bairro: "Santa Inês"
 seoKeyword: "Disk Caçamba Rápido na Santa Inês"
 ---

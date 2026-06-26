@@ -1,6 +1,6 @@
 ---
 title: "Coleta de Entulho e Resíduos no Aterrado | Volta Redonda - RJ"
-description: "Coleta de Entulho e Resíduos no Aterrado, Volta Redonda. Caçambas regularizadas de 4m³, 5m³ e 7m³ com entrega rápida. Peça seu orçamento pelo WhatsApp!"
+description: "Coleta de Entulho e Resíduos no Aterrado. Serviço rápido, seguro e rápido, seguro e rápido, seguro e profissional. Peça seu orçamento!"
 bairro: "Aterrado"
 seoKeyword: "Coleta de Entulho e Resíduos no Aterrado"
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Disk Caçamba e Coleta na Casa de Pedra | Volta Redonda - RJ"
-description: "Disk Caçamba e Coleta no Casa de Pedra, Volta Redonda. Caçambas regularizadas de 4m³, 5m³ e 7m³ com entrega rápida. Peça seu orçamento pelo WhatsApp!"
+description: "Disk Caçamba e Coleta na Casa de Pedra. Serviço rápido, seguro e rápido, seguro e rápido, seguro e profissional. Peça seu orçamento!"
 bairro: "Casa de Pedra"
 seoKeyword: "Disk Caçamba e Coleta na Casa de Pedra"
 ---

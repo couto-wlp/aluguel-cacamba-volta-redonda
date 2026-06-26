@@ -1,6 +1,6 @@
 ---
 title: "Serviços de Caçamba no Conforto | Volta Redonda - RJ"
-description: "Serviços de Caçamba no Conforto, Volta Redonda. Caçambas estacionárias licenciadas de 4m³, 5m³ e 7m³ com emissão de MTR. Peça seu orçamento pelo WhatsApp!"
+description: "Serviços de Caçamba no Conforto. Serviço rápido, seguro e rápido, seguro e rápido, seguro e rápido, seguro e profissional. Peça seu orçamento!"
 bairro: "Conforto"
 seoKeyword: "Serviços de Caçamba no Conforto"
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Locação de Caçambas no Aero Clube | Volta Redonda - RJ"
-description: "Locação de Caçambas no Aero Clube, Volta Redonda. Caçambas regularizadas de 4m³, 5m³ e 7m³ com entrega rápida. Peça seu orçamento pelo WhatsApp!"
+description: "Locação de Caçambas no Aero Clube. Serviço rápido, seguro e rápido, seguro e rápido, seguro e rápido, seguro e profissional. Peça seu orçamento!"
 bairro: "Aero Clube"
 seoKeyword: "Locação de Caçambas no Aero Clube"
 ---

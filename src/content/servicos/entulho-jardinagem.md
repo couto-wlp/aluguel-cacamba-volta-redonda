@@ -1,7 +1,7 @@
 ---
 title: "Entulho de Jardinagem e Podas"
 pageTitle: "Coleta de Entulho de Jardinagem e Podas em Volta Redonda"
-description: "Caçambas prontas para receber terra, galhos e restos de árvores. Perfeito para limpeza de quintais e terrenos."
+description: "Entulho de Jardinagem e Podas. Serviço rápido, seguro e rápido, seguro e rápido, seguro e rápido, seguro e profissional. Peça seu orçamento!"
 icon: "🌿"
 order: 6
 benefits:

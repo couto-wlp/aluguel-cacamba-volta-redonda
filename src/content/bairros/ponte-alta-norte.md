@@ -1,6 +1,6 @@
 ---
 title: "Retirada Rápida de Entulho na Ponte Alta Norte | Volta Redonda - RJ"
-description: "Retirada Rápida de Entulho na Ponte Alta Norte, Volta Redonda. Caçambas regularizadas de 4m³, 5m³ e 7m³ com entrega rápida. Peça seu orçamento pelo WhatsApp!"
+description: "Retirada Rápida de Entulho na Ponte Alta Norte. Facilite o andamento da sua obra de pequeno ou grande porte. Solicite agora mesmo!"
 bairro: "Ponte Alta Norte"
 seoKeyword: "Retirada Rápida de Entulho na Ponte Alta Norte"
 ---

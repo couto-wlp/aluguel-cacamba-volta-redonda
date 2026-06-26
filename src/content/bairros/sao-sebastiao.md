@@ -1,6 +1,6 @@
 ---
 title: "Remoção de Entulho de Construção no São Sebastião | Volta Redonda - RJ"
-description: "Remoção de Entulho de Construção no São Sebastião, Volta Redonda. Caçambas de 4m³, 5m³ e 7m³ regularizadas e com entrega rápida. Fale conosco pelo WhatsApp!"
+description: "Remoção de Entulho de Construção no São Sebastião. Equipe preparada para entregar e recolher com agilidade. Fale com nossa equipe!"
 bairro: "São Sebastião"
 seoKeyword: "Remoção de Entulho de Construção no São Sebastião"
 ---

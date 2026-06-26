@@ -1,7 +1,7 @@
 ---
 title: "Caçamba de 7m³"
 pageTitle: "Aluguel de Caçamba de 7m³ em Volta Redonda"
-description: "Caçamba de grande porte. Recomendada para grandes obras comerciais, limpeza industrial e materiais volumosos leves."
+description: "Caçamba de 7m³. Serviço rápido, seguro e rápido, seguro e rápido, seguro e rápido, seguro e rápido, seguro e profissional. Peça seu orçamento!"
 icon: "🏗️"
 image: "../../assets/cacamba-7m.webp"
 order: 3

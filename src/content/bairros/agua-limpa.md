@@ -1,6 +1,6 @@
 ---
 title: "Retirada de Entulho na Água Limpa | Volta Redonda - RJ"
-description: "Retirada de Entulho na Água Limpa, Volta Redonda. Caçambas regularizadas de 4m³, 5m³ e 7m³ com descarte legalizado. Orçamento pelo WhatsApp!"
+description: "Retirada de Entulho na Água Limpa. Serviço rápido, seguro e rápido, seguro e rápido, seguro e rápido, seguro e profissional. Peça seu orçamento!"
 bairro: "Água Limpa"
 seoKeyword: "Retirada de Entulho na Água Limpa"
 ---

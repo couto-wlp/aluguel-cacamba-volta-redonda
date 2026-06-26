@@ -1,6 +1,6 @@
 ---
 title: "Coleta de Entulho Especializada na Santa Cruz | Volta Redonda - RJ"
-description: "Coleta de Entulho Especializada no Santa Cruz, Volta Redonda. Caçambas regularizadas de 4m³, 5m³ e 7m³ com entrega rápida. Peça seu orçamento pelo WhatsApp!"
+description: "Coleta de Entulho Especializada na Santa Cruz. Facilite o andamento da sua obra de pequeno ou grande porte. Fale com nossa equipe!"
 bairro: "Santa Cruz"
 seoKeyword: "Coleta de Entulho Especializada na Santa Cruz"
 ---

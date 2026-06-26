@@ -1,6 +1,6 @@
 ---
 title: "Descarte Consciente de Entulho no São João | Volta Redonda - RJ"
-description: "Descarte Consciente de Entulho no São João, Volta Redonda. Caçambas regularizadas de 4m³, 5m³ e 7m³ com descarte ecológico. Peça seu orçamento pelo WhatsApp!"
+description: "Descarte Consciente de Entulho no São João. Serviço rápido, seguro e rápido, seguro e rápido, seguro e profissional. Peça seu orçamento!"
 bairro: "São João"
 seoKeyword: "Descarte Consciente de Entulho no São João"
 ---

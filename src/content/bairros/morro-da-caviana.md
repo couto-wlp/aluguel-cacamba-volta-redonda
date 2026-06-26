@@ -1,6 +1,6 @@
 ---
 title: "Retirada de Entulho de Reformas no Morro da Caviana | Volta Redonda - RJ"
-description: "Retirada de Entulho de Reformas no Morro da Caviana, Volta Redonda. Caçambas regularizadas de 4m³, 5m³ e 7m³ com entrega rápida. Peça seu orçamento pelo WhatsApp!"
+description: "Retirada de Entulho de Reformas no Morro da Caviana. Remoção ágil e segura de entulhos para sua obra fluir bem. Chame no WhatsApp!"
 bairro: "Morro da Caviana"
 seoKeyword: "Retirada de Entulho de Reformas no Morro da Caviana"
 ---

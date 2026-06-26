@@ -1,6 +1,6 @@
 ---
 title: "Caçamba para Indústria e Comércio em Três Poços Industrial | Volta Redonda - RJ"
-description: "Caçamba para Indústria e Comércio no Três Poços Industrial, Volta Redonda. Caçambas regularizadas de 4m³, 5m³ e 7m³ com entrega rápida. Peça seu orçamento pelo WhatsApp!"
+description: "Caçamba para Indústria e Comércio em Três Poços Industrial. Eficiência na retirada de materiais mistos e construção. Reserve pelo Zap!"
 bairro: "Três Poços Industrial"
 seoKeyword: "Caçamba para Indústria e Comércio em Três Poços Industrial"
 ---

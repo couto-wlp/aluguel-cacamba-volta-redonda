@@ -1,6 +1,6 @@
 ---
 title: "Caçamba para Entulho Rápida na Vila Mury | Volta Redonda - RJ"
-description: "Caçamba para Entulho Rápida na Vila Mury, Volta Redonda. Caçambas regularizadas de 4m³, 5m³ e 7m³ com entrega rápida. Peça seu orçamento pelo WhatsApp!"
+description: "Caçamba para Entulho Rápida na Vila Mury. Serviço rápido, seguro e rápido, seguro e rápido, seguro e profissional. Peça seu orçamento!"
 bairro: "Vila Mury"
 seoKeyword: "Caçamba para Entulho Rápida na Vila Mury"
 ---

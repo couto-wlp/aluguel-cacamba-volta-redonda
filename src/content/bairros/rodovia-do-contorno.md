@@ -1,6 +1,6 @@
 ---
 title: "Coleta de Entulho e Resíduos na Rodovia do Contorno | Volta Redonda - RJ"
-description: "Coleta de Entulho e Resíduos na Rodovia do Contorno, Volta Redonda. Caçambas regularizadas de 4m³, 5m³ e 7m³ com entrega rápida. Peça seu orçamento pelo WhatsApp!"
+description: "Coleta de Entulho e Resíduos na Rodovia do Contorno. Evite dores de cabeça com caçambas legalizadas e seguras. Peça seu orçamento!"
 bairro: "Rodovia do Contorno"
 seoKeyword: "Coleta de Entulho e Resíduos na Rodovia do Contorno"
 ---

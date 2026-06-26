@@ -1,6 +1,6 @@
 ---
 title: "Aluguel de Caçamba Estacionária na Ponte Alta | Volta Redonda - RJ"
-description: "Aluguel de Caçamba Estacionária na Ponte Alta, Volta Redonda. Caçambas regularizadas de 4m³, 5m³ e 7m³ com entrega rápida. Peça seu orçamento pelo WhatsApp!"
+description: "Aluguel de Caçamba Estacionária na Ponte Alta. Facilite o andamento da sua obra de pequeno ou grande porte. Fale com nossa equipe!"
 bairro: "Ponte Alta"
 seoKeyword: "Aluguel de Caçamba Estacionária na Ponte Alta"
 ---

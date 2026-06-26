@@ -1,6 +1,6 @@
 ---
 title: "Remoção de Entulho no Aterrado Sul | Volta Redonda - RJ"
-description: "Remoção de Entulho no Aterrado Sul, Volta Redonda. Caçambas de 4m³, 5m³ e 7m³ regularizadas e com entrega rápida. Peça seu orçamento pelo WhatsApp!"
+description: "Remoção de Entulho no Aterrado Sul. Serviço rápido, seguro e rápido, seguro e rápido, seguro e rápido, seguro e profissional. Peça seu orçamento!"
 bairro: "Aterrado Sul"
 seoKeyword: "Remoção de Entulho no Aterrado Sul"
 ---

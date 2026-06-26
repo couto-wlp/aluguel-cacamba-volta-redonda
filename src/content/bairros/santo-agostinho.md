@@ -1,6 +1,6 @@
 ---
 title: "Aluguel de Caçambas no Santo Agostinho | Volta Redonda - RJ"
-description: "Aluguel de Caçambas no Santo Agostinho, Volta Redonda. Caçambas licenciadas de 4m³, 5m³ e 7m³ com entrega rápida. Peça seu orçamento pelo WhatsApp!"
+description: "Aluguel de Caçambas no Santo Agostinho. Serviço rápido, seguro e rápido, seguro e rápido, seguro e profissional. Peça seu orçamento!"
 bairro: "Santo Agostinho"
 seoKeyword: "Aluguel de Caçambas no Santo Agostinho"
 ---

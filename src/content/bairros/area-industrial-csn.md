@@ -1,6 +1,6 @@
 ---
 title: "Caçambas para Indústria e Obras na Área Industrial CSN | Volta Redonda - RJ"
-description: "Caçambas para Indústria e Obras na Área Industrial CSN, Volta Redonda. Caçambas regularizadas de 4m³, 5m³ e 7m³ com entrega rápida. Peça seu orçamento pelo WhatsApp!"
+description: "Caçambas para Indústria e Obras na Área Industrial CSN. Deixe o trabalho pesado de coleta de entulho com a gente. Garanta a sua hoje!"
 bairro: "Área Industrial CSN"
 seoKeyword: "Caçambas para Indústria e Obras na Área Industrial CSN"
 ---

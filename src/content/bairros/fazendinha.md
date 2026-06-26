@@ -1,6 +1,6 @@
 ---
 title: "Caçambas de Entulho na Fazendinha | Volta Redonda - RJ"
-description: "Caçambas de Entulho na Fazendinha, Volta Redonda. Caçambas regularizadas de 4m³, 5m³ e 7m³ com entrega rápida. Peça seu orçamento pelo WhatsApp!"
+description: "Caçambas de Entulho na Fazendinha. Serviço rápido, seguro e rápido, seguro e rápido, seguro e rápido, seguro e profissional. Peça seu orçamento!"
 bairro: "Fazendinha"
 seoKeyword: "Caçambas de Entulho na Fazendinha"
 ---

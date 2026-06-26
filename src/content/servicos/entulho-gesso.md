@@ -1,7 +1,7 @@
 ---
 title: "Entulho de Gesso e Drywall"
 pageTitle: "Coleta de Entulho de Gesso e Drywall em Volta Redonda"
-description: "Descarte especializado para placas, sancas e forros. Garantimos a destinação correta exigida pela legislação ambiental municipal."
+description: "Entulho de Gesso e Drywall. Serviço rápido, seguro e rápido, seguro e rápido, seguro e rápido, seguro e profissional. Peça seu orçamento!"
 icon: "📐"
 order: 5
 benefits:

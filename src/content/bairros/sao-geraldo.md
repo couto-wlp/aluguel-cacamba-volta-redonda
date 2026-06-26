@@ -1,6 +1,6 @@
 ---
 title: "Locação de Caçamba para Reforma no São Geraldo | Volta Redonda - RJ"
-description: "Locação de Caçamba para Reforma no São Geraldo, Volta Redonda. Caçambas regulamentadas de 4m³, 5m³ e 7m³ para sua obra. Peça seu orçamento pelo WhatsApp!"
+description: "Locação de Caçamba para Reforma no São Geraldo. Facilite o andamento da sua obra de pequeno ou grande porte. Fale com nossa equipe!"
 bairro: "São Geraldo"
 seoKeyword: "Locação de Caçamba para Reforma no São Geraldo"
 ---

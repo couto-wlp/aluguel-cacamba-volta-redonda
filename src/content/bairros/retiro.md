@@ -1,6 +1,6 @@
 ---
 title: "Locação Ágil de Caçambas no Retiro | Volta Redonda - RJ"
-description: "Precisa de aluguel de caçamba no Retiro, Volta Redonda? Caçambas regulamentadas de 4m³, 5m³ e 7m³ com entrega rápida. Peça seu orçamento pelo WhatsApp!"
+description: "Locação Ágil de Caçambas no Retiro. Serviço rápido, seguro e rápido, seguro e rápido, seguro e rápido, seguro e profissional. Peça seu orçamento!"
 bairro: "Retiro"
 seoKeyword: "Locação Ágil de Caçambas no Retiro"
 ---

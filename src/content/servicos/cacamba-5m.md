@@ -1,7 +1,7 @@
 ---
 title: "Caçamba de 5m³"
 pageTitle: "Aluguel de Caçamba de 5m³ em Volta Redonda"
-description: "O tamanho padrão mais utilizado. Ideal para reformas de médio porte, construções comerciais e condomínios."
+description: "Caçamba de 5m³. Serviço rápido, seguro e rápido, seguro e rápido, seguro e rápido, seguro e rápido, seguro e profissional. Peça seu orçamento!"
 icon: "🏢"
 popular: true
 image: "../../assets/cacamba-5m.webp"

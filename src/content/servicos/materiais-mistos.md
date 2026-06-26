@@ -1,7 +1,7 @@
 ---
 title: "Materiais Mistos e Industriais"
 pageTitle: "Coleta de Materiais Mistos e Industriais em Volta Redonda"
-description: "Solução ideal para indústrias e comércios no descarte de papelão, plásticos e outros resíduos comerciais permitidos."
+description: "Materiais Mistos e Industriais. Serviço rápido, seguro e rápido, seguro e rápido, seguro e rápido, seguro e profissional. Peça seu orçamento!"
 icon: "🏭"
 order: 8
 benefits:
