@@ -3,6 +3,7 @@ title: "Materiais Mistos e Industriais"
 pageTitle: "Coleta de Materiais Mistos e Industriais em Volta Redonda"
 description: "Materiais Mistos e Industriais. Remoção ágil e segura de entulhos para sua reforma ou obra. Atendimento rápido em toda Volta Redonda. Peça seu orçamento!"
 icon: "🏭"
+image: "../../assets/materiais-mistos.webp"
 order: 8
 benefits:
   - "Coleta integrada de plásticos, papelões e embalagens comerciais"

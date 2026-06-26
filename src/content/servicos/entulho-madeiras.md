@@ -3,6 +3,7 @@ title: "Entulho de Madeiras e MDF"
 pageTitle: "Coleta de Entulho de Madeiras e MDF em Volta Redonda"
 description: "Entulho de Madeiras e MDF. Remoção ágil e segura de entulhos para sua reforma ou obra. Atendimento rápido em toda Volta Redonda. Peça seu orçamento!"
 icon: "🪵"
+image: "../../assets/entulho-madeiras.webp"
 order: 7
 benefits:
   - "Coleta integrada de sobras de madeira, pontaletes e tábuas de obra"
