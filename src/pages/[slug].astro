@@ -29,8 +29,15 @@ if (!entry) {
 		if (slug.startsWith('aluguel-de-cacamba-')) {
 			const realSlug = slug.replace('aluguel-de-cacamba-', '');
 			const bairroEntries = await getCollection('bairros');
-			entry = bairroEntries.find(e => e.slug === realSlug);
-			type = 'bairro';
+			const foundBairro = bairroEntries.find(e => e.slug === realSlug);
+			if (foundBairro) {
+				entry = foundBairro;
+				type = 'bairro';
+			} else {
+				const blogEntries = await getCollection('blog');
+				entry = blogEntries.find(e => e.slug === slug);
+				type = 'blog';
+			}
 		} else {
 			const blogEntries = await getCollection('blog');
 			entry = blogEntries.find(e => e.slug === slug);
