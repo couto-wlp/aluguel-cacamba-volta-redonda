@@ -33,8 +33,7 @@ const titles = {
   "monte-castelo.md": "Caçambas de Entulho no Monte Castelo",
   "morro-da-caviana.md": "Retirada de Entulho de Reformas no Morro da Caviana",
   "morro-da-conquista.md": "Caçamba de Entulho no Morro da Conquista",
-  "morro-da-paz.md": "Remoção de Entulhos e Resíduos no Morro da Paz",
-  "morro-da-paz-ii.md": "Aluguel de Caçamba Licenciada no Morro da Paz II",
+
   "morro-da-serra.md": "Descarte de Entulho com Caçamba no Morro da Serra",
   "morro-dos-cabritos.md": "Coleta de Resíduos de Obra no Morro dos Cabritos",
   "padre-josimo.md": "Caçambas para Descarte Seguro no Padre Josimo",

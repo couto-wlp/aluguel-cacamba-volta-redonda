@@ -22,18 +22,21 @@ async function pushToGit() {
   console.log('Obtendo status dos arquivos...');
   const status = await git.statusMatrix({ fs, dir });
   
-  const modifiedFiles = status
-    .filter(row => row[2] !== row[3]) // 2 is head, 3 is workdir
-    .map(row => row[0]);
+  const changedRows = status.filter(row => row[2] !== row[3]);
+  console.log(`Foram encontrados ${changedRows.length} arquivos modificados/deletados.`);
 
-  console.log(`Foram encontrados ${modifiedFiles.length} arquivos modificados.`);
-
-  if (modifiedFiles.length === 0) {
+  if (changedRows.length === 0) {
     console.log('Nenhum arquivo modificado para commitar.');
   } else {
-    console.log('Adicionando arquivos...');
-    for (const filepath of modifiedFiles) {
-      await git.add({ fs, dir, filepath });
+    console.log('Atualizando o índice do git (add/remove)...');
+    for (const row of changedRows) {
+      const filepath = row[0];
+      const inWorkDir = row[2] !== 0;
+      if (inWorkDir) {
+        await git.add({ fs, dir, filepath });
+      } else {
+        await git.remove({ fs, dir, filepath });
+      }
     }
 
     console.log('Criando commit...');
