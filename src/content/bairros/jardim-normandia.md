@@ -4,6 +4,7 @@ description: "Locação de Caçambas no Jardim Normândia. Soluções eficientes
 bairro: "Jardim Normândia"
 seoKeyword: "Locação de Caçambas no Jardim Normândia"
 subtitle: "Soluções eficientes e licenciadas para coleta e destinação de resíduos da construção civil no bairro Jardim Normândia."
+introTitle: "Particularidades do Descarte no Jardim Normândia"
 differentials:
   - icon: "⚡"
     title: "Agilidade Logística"

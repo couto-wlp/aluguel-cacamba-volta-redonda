@@ -4,6 +4,7 @@ description: "Locação de Caçambas no Jardim Tiradentes. Serviço credenciado 
 bairro: "Jardim Tiradentes"
 seoKeyword: "Locação de Caçambas no Jardim Tiradentes"
 subtitle: "Serviço credenciado e ágil de coleta de entulho e resíduos residenciais para o bairro Jardim Tiradentes."
+introTitle: "Particularidades do Descarte no Jardim Tiradentes"
 differentials:
   - icon: "⚡"
     title: "Logística Integrada"

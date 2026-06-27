@@ -4,6 +4,7 @@ description: "Locação de Caçambas no Jardim Paraíba. Soluções integradas e
 bairro: "Jardim Paraíba"
 seoKeyword: "Locação de Caçambas no Jardim Paraíba"
 subtitle: "Soluções integradas e regularizadas para coleta, transporte e destinação de resíduos civis no bairro Jardim Paraíba."
+introTitle: "Particularidades do Descarte no Jardim Paraíba"
 differentials:
   - icon: "⚡"
     title: "Eficiência Central"

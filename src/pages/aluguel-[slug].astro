@@ -360,7 +360,7 @@ if (type === 'bairro') {
 							<!-- Coluna Principal -->
 							<div class="lg:col-span-2">
 								<h2 class="text-3xl font-black text-gray-900 mb-8 tracking-tighter">
-									Regras e Dicas de Descarte no {entry.data.bairro}
+									{entry.data.introTitle || `Regras e Dicas de Descarte no ${entry.data.bairro}`}
 								</h2>
 								<div class="prose prose-lg text-gray-600 prose-headings:text-gray-900 prose-headings:font-black prose-strong:text-gray-900">
 									<Content />

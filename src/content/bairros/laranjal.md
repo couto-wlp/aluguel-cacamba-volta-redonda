@@ -4,6 +4,7 @@ description: "Caçambas para Entulho no Laranjal. Soluções exclusivas e licenc
 bairro: "Laranjal"
 seoKeyword: "Caçambas para Entulho no Laranjal"
 subtitle: "Soluções exclusivas e licenciadas para coleta, transporte e destinação de resíduos residenciais e comerciais no bairro Laranjal."
+introTitle: "Particularidades do Descarte no Laranjal"
 differentials:
   - icon: "⚡"
     title: "Pontualidade no Laranjal"

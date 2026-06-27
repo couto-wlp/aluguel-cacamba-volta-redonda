@@ -19,6 +19,7 @@ const bairros = defineCollection({
 		bairro: z.string(),
 		seoKeyword: z.string().optional(),
 		subtitle: z.string().optional(),
+		introTitle: z.string().optional(),
 		differentials: z.array(z.object({
 			icon: z.string(),
 			title: z.string(),

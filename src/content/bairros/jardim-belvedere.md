@@ -4,6 +4,7 @@ description: "Locação de Caçambas para Condomínios no Jardim Belvedere. Serv
 bairro: "Jardim Belvedere"
 seoKeyword: "Locação de Caçambas para Condomínios no Jardim Belvedere"
 subtitle: "Serviço especializado de coleta e destinação de resíduos de construção civil para residências de alto padrão no bairro Jardim Belvedere."
+introTitle: "Particularidades do Descarte no Jardim Belvedere"
 differentials:
   - icon: "⚡"
     title: "Atendimento Express"
