@@ -1,7 +1,7 @@
 ---
 title: "Entulho de Gesso e Drywall"
 pageTitle: "Coleta de Entulho de Gesso e Drywall em Volta Redonda"
-description: "Entulho de Gesso e Drywall. Remoção ágil e segura de entulhos para sua reforma ou obra. Atendimento rápido em toda Volta Redonda. Peça seu orçamento!"
+description: "Solução especializada para a coleta e destinação ecológica de gesso, sancas e drywall. Evite multas ambientais com nosso atendimento rápido e 100% regularizado em toda Volta Redonda. Agende a sua caçamba hoje mesmo!"
 icon: "📐"
 image: "../../assets/entulho-gesso_opt.webp"
 order: 5

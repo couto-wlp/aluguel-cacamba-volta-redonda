@@ -1,7 +1,7 @@
 ---
 title: "Materiais Mistos e Industriais"
 pageTitle: "Coleta de Materiais Mistos e Industriais em Volta Redonda"
-description: "Materiais Mistos e Industriais. Remoção ágil e segura de entulhos para sua reforma ou obra. Atendimento rápido em toda Volta Redonda. Peça seu orçamento!"
+description: "Locação de caçambas focada em resíduos comerciais, recicláveis e industriais não perigosos. Logística pontual, rastreabilidade e emissão de certificados ambientais para a sua empresa em Volta Redonda. Fale com um especialista!"
 icon: "🏭"
 image: "../../assets/materiais-mistos_opt.webp"
 order: 8

@@ -1,7 +1,7 @@
 ---
 title: "Entulho de Jardinagem e Podas"
 pageTitle: "Coleta de Entulho de Jardinagem e Podas em Volta Redonda"
-description: "Entulho de Jardinagem e Podas. Remoção ágil e segura de entulhos para sua reforma ou obra. Atendimento rápido em toda Volta Redonda. Peça seu orçamento!"
+description: "Limpeza de terrenos e descarte de galhos, folhas e restos de podas com destinação sustentável. Mantenha seu quintal ou condomínio organizado com nossa entrega expressa em Volta Redonda. Peça sua caçamba pelo WhatsApp!"
 icon: "🌿"
 image: "../../assets/entulho-jardinagem_opt.webp"
 order: 6
