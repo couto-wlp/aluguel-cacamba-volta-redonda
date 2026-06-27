@@ -29,7 +29,7 @@ const titles = {
   "jardim-normandia.md": "Locação de Caçambas no Jardim Normândia",
   "jardim-paraiba.md": "Locação de Caçambas no Jardim Paraíba",
   "jardim-tiradentes.md": "Locação de Caçambas no Jardim Tiradentes",
-  "laranjal.md": "Locação de Caçambas para Entulho no Laranjal",
+  "laranjal.md": "Caçambas para Entulho no Laranjal",
   "monte-castelo.md": "Aluguel de Caçamba Legalizada no Monte Castelo",
   "morro-da-caviana.md": "Retirada de Entulho de Reformas no Morro da Caviana",
   "morro-da-conquista.md": "Caçamba de Entulho no Morro da Conquista",
