@@ -1,7 +1,7 @@
 ---
 title: "Entulho de Construção (Alvenaria)"
 pageTitle: "Coleta de Entulho de Construção (Alvenaria) em Volta Redonda"
-description: "Entulho de Construção (Alvenaria). Remoção ágil e segura de entulhos para sua reforma ou obra. Equipe altamente treinada e dedicada. Peça seu orçamento!"
+description: "Descarte correto e legalizado de restos de obras, tijolos e concreto em Volta Redonda. Alugue sua caçamba com nossa equipe especializada e garanta um canteiro de obras limpo, seguro e sem dores de cabeça. Solicite seu orçamento!"
 icon: "🧱"
 image: "../../assets/entulho-construcao_opt.webp"
 order: 4
