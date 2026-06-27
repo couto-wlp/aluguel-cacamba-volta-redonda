@@ -3,6 +3,26 @@ import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 import { SITE_CONFIG } from '../data/config';
 
+function getBairroCardTitle(bairro) {
+  let prep = "no";
+  if ([
+    "Água Limpa", "Área Industrial CSN", "Brasilândia", "Candelária", "Casa de Pedra", 
+    "Fazendinha", "Ponte Alta", "Ponte Alta Norte", "Ponte Alta Sul", "Região da CSN", 
+    "Rodovia do Contorno", "Siderlândia", "Vila Americana", "Vila Brasília", "Vila Delgado", 
+    "Vila Mury", "Vila Mury Norte", "Vila Mury Sul", "Vila Rica", "Vila Rica II", 
+    "Vila Santa Cecília", "Vila Santa Cecília Norte", "Vila Santa Cecília Sul", "Voldac"
+  ].includes(bairro)) {
+    prep = "na";
+  } else if ([
+    "Santa Cruz", "Santa Inês", "Três Poços", "Três Poços Industrial"
+  ].includes(bairro)) {
+    prep = "em";
+  } else if (bairro === "Coqueiros") {
+    prep = "nos";
+  }
+  return `Aluguel de Caçamba ${prep} ${bairro} | Volta Redonda - RJ`;
+}
+
 // Obter todas as páginas de bairros e blog
 const articles = await getCollection('blog');
 const bairros = await getCollection('bairros');
@@ -49,7 +69,7 @@ const pages = [
 		bairroName: ''
 	})),
 	...bairros.map(b => ({
-		title: b.data.title,
+		title: getBairroCardTitle(b.data.bairro),
 		description: getExcerpt(b.body),
 		slug: `aluguel-de-cacamba-${b.slug}`,
 		category: `Bairro: ${b.data.bairro}`,
