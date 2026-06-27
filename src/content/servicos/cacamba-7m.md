@@ -1,7 +1,7 @@
 ---
 title: "Caçamba de 7m³"
 pageTitle: "Aluguel de Caçamba de 7m³ em Volta Redonda"
-description: "Caçamba de 7m³. Remoção ágil e segura de entulhos para sua reforma ou obra. Atendimento rápido em toda Volta Redonda. Peça seu orçamento!"
+description: "Projetada para grandes volumes, a caçamba de 7m³ é a nossa gigante, perfeita para remoção de materiais volumosos de construções comerciais, podas extensas ou limpeza industrial em Volta Redonda. Fale com nossa equipe no WhatsApp e agende a sua!"
 icon: "🏗️"
 image: "../../assets/cacamba-7m.webp"
 order: 3

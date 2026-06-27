@@ -1,7 +1,7 @@
 ---
 title: "Caçamba de 5m³"
 pageTitle: "Aluguel de Caçamba de 5m³ em Volta Redonda"
-description: "Caçamba de 5m³. Remoção ágil e segura de entulhos para sua reforma ou obra. Atendimento rápido em toda Volta Redonda. Peça seu orçamento!"
+description: "Nosso modelo padrão de 5m³ oferece o equilíbrio perfeito entre volume e capacidade de carga, sendo o mais indicado para reformas de médio porte e construções comerciais na cidade. Alugue com total segurança e descarte legalizado. Solicite seu orçamento!"
 icon: "🏢"
 popular: true
 image: "../../assets/cacamba-5m.webp"
