@@ -61,17 +61,17 @@ function getExcerpt(body) {
 					<div class={`relative bg-white border border-gray-150 rounded-[32px] p-8 flex flex-col justify-between transition-all duration-300 shadow-sm hover:shadow-2xl cursor-pointer ${service.data.popular ? 'border-primary/60 ring-2 ring-primary/10' : ''}`}>
 						<div>
 							{service.data.image ? (
-								<a href={`/servicos/${service.slug}`} class="block w-full h-64 overflow-hidden mb-6 flex items-center justify-center">
+								<a href={`/aluguel-${service.slug}`} class="block w-full h-64 overflow-hidden mb-6 flex items-center justify-center">
 									<Image src={service.data.image} alt={service.data.title} class="w-full h-full object-contain" />
 								</a>
 							) : (
-								<a href={`/servicos/${service.slug}`} class="block w-full h-64 mb-6 flex items-center justify-center text-5xl bg-gray-50 rounded-2xl">
+								<a href={`/aluguel-${service.slug}`} class="block w-full h-64 mb-6 flex items-center justify-center text-5xl bg-gray-50 rounded-2xl">
 									{service.data.icon}
 								</a>
 							)}
 							
 							<h2 class="text-2xl font-black text-gray-900 mb-2 hover:text-secondary transition-colors">
-								<a href={`/servicos/${service.slug}`}>{service.data.title}</a>
+								<a href={`/aluguel-${service.slug}`}>{service.data.title}</a>
 							</h2>
 							
 							{service.data.capacity && (
@@ -84,7 +84,7 @@ function getExcerpt(body) {
 						</div>
 						
 						<a 
-							href={`/servicos/${service.slug}`}
+							href={`/aluguel-${service.slug}`}
 							class="w-full text-center py-4 px-6 rounded-2xl bg-secondary text-white font-extrabold text-base hover:bg-slate-800 transition-colors shadow-md block"
 						>
 							Mais Informações
