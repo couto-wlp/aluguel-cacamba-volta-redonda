@@ -3,7 +3,15 @@ const http = require('isomorphic-git/http/node');
 const fs = require('fs');
 
 const dir = process.cwd();
-const token = process.env.GITHUB_TOKEN || process.argv[2];
+let token = process.env.GITHUB_TOKEN || process.argv[2];
+
+if (!token && fs.existsSync('.env')) {
+  const envContent = fs.readFileSync('.env', 'utf-8');
+  const match = envContent.match(/GITHUB_TOKEN\s*=\s*["']?(.*?)["']?$/m);
+  if (match) {
+    token = match[1].trim();
+  }
+}
 const branchName = 'atualizacao-seo-' + Date.now();
 
 if (!token) {

@@ -1,0 +1,257 @@
+---
+import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
+import Layout from '../../layouts/Layout.astro';
+import { SITE_CONFIG } from '../../data/config';
+
+export async function getStaticPaths() {
+	const services = await getCollection('servicos');
+	return services.map(service => ({
+		params: { slug: service.slug },
+		props: { service },
+	}));
+}
+
+let { service } = Astro.props;
+
+if (!service) {
+	const { slug } = Astro.params;
+	if (slug) {
+		const services = await getCollection('servicos');
+		service = services.find(s => s.slug === slug);
+	}
+}
+
+if (!service) {
+	return new Response(null, {
+		status: 404,
+		statusText: 'Not Found'
+	});
+}
+
+const { Content } = await service.render();
+---
+
+<Layout title={`${service.data.title} | Caçambas Volta Redonda`} description={service.data.description}>
+	
+	<!-- 1. Hero do Serviço (Fundo Escuro: bg-secondary) -->
+	<section class="bg-secondary text-white py-24 md:py-32 relative overflow-hidden">
+		<div class="absolute inset-0 bg-[radial-gradient(circle_at_70%_20%,rgba(250,204,21,0.1),transparent_50%)]"></div>
+		<div class="container mx-auto px-6 md:px-12 relative z-10">
+			<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+				<div class={service.data.image ? "lg:col-span-7" : "lg:col-span-12"}>
+					<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold bg-primary/20 text-primary mb-6 border border-primary/20 hover:scale-105 transition-all">
+						{service.data.icon} Categoria Técnica
+					</span>
+					
+					<!-- H1 com contrast: text-primary (Regra do Contraste em Fundo Escuro), font-black e mb-8/16 -->
+					<h1 class="text-4xl md:text-5xl font-black text-primary mt-2 mb-8 leading-tight tracking-tighter">
+						{service.data.pageTitle || service.data.title}
+					</h1>
+					
+					<!-- Corpo em Fundo Escuro: text-gray-100 -->
+					<p class="text-lg md:text-xl text-gray-100 max-w-2xl leading-relaxed">
+						{service.data.description}
+					</p>
+				</div>
+				{service.data.image && (
+					<div class="lg:col-span-5 flex justify-center">
+						<div class="bg-white rounded-[32px] p-6 max-w-sm w-full shadow-2xl hover:scale-[1.03] transition-transform duration-300">
+							<Image src={service.data.image} alt={service.data.title} title={service.data.description} class="w-full h-auto object-contain rounded-2xl" loading="eager" fetchpriority="high" />
+						</div>
+					</div>
+				)}
+			</div>
+		</div>
+	</section>
+
+	<!-- 2. Conteúdo Adicional do Post (Markdown) + Sidebar -->
+	<section class="bg-white py-24 md:py-32 border-b border-gray-100">
+		<div class="container mx-auto px-6 md:px-12">
+			<div class="max-w-5xl mx-auto">
+				<div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+
+					<!-- Coluna Principal -->
+					<article class="lg:col-span-2">
+						<div class="prose prose-lg max-w-none text-gray-600 prose-headings:text-gray-900 prose-headings:font-black">
+							<Content />
+						</div>
+					</article>
+
+					<!-- Sidebar Adesiva -->
+					<aside class="lg:col-span-1 lg:sticky lg:top-28">
+						<div class="bg-secondary rounded-2xl shadow-xl p-8 text-center relative overflow-hidden">
+							<!-- Decoração de fundo -->
+							<div class="absolute -right-8 -top-8 w-32 h-32 bg-primary/10 rounded-full blur-2xl"></div>
+							<div class="absolute -left-8 -bottom-8 w-24 h-24 bg-primary/10 rounded-full blur-2xl"></div>
+
+							<span class="text-xs font-black uppercase tracking-widest text-primary block mb-3 relative z-10">Orçamento Gratuito</span>
+							<h3 class="text-xl font-black text-white mb-6 leading-tight relative z-10">
+								Interessado neste modelo?
+							</h3>
+
+							<!-- Botão WhatsApp -->
+							<a
+								href={`${SITE_CONFIG.whatsappUrl}?text=Olá! Gostaria de fazer um orçamento para a ${service.data.title}.`}
+								target="_blank"
+								rel="noopener noreferrer"
+								class="flex items-center justify-center gap-2 w-full py-4 rounded-xl bg-primary text-accent font-black text-sm hover:bg-yellow-400 hover:scale-105 active:scale-95 transition-all shadow-md mb-3 relative z-10"
+							>
+								<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+								Pedir no WhatsApp
+							</a>
+
+							<!-- Botão Ligar -->
+							<a
+								href={`tel:${SITE_CONFIG.phoneFormatted}`}
+								class="flex items-center justify-center gap-2 w-full py-4 rounded-xl bg-white/10 text-white border border-white/20 hover:bg-white/20 font-black text-sm hover:scale-105 active:scale-95 transition-all mb-6 relative z-10"
+							>
+								<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
+								Ligar Agora
+							</a>
+
+							<p class="text-xs text-white/50 mb-2 relative z-10">Dúvidas? Fale com um especialista.</p>
+							<a href={`tel:${SITE_CONFIG.phoneFormatted}`} class="text-primary font-black text-base hover:text-yellow-300 transition-colors relative z-10">
+								{SITE_CONFIG.phone}
+							</a>
+						</div>
+					</aside>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- 3. Seção de Especificações Técnicas -->
+	{ (service.data.altura || service.data.largura || service.data.comprimento || service.data.volume) && (
+	<section class="bg-gray-50/50 py-24 md:py-32 border-b border-gray-100">
+		<div class="container mx-auto px-6 md:px-12">
+			<div class="max-w-5xl mx-auto">
+				<h2 class="text-3xl font-black text-gray-900 mb-10 tracking-tighter">Especificações Técnicas</h2>
+				
+				<!-- Box Especificações -->
+				<div class="bg-white border border-gray-150 rounded-[32px] p-8 md:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.02)] mb-8">
+					<div class="grid grid-cols-2 md:grid-cols-3 gap-y-10 gap-x-8 md:gap-x-16">
+						<!-- Altura -->
+						<div>
+							<span class="text-xs md:text-sm font-bold text-gray-400 uppercase tracking-wider block mb-1">Altura</span>
+							<span class="text-xl md:text-2xl font-black text-gray-900">{service.data.altura || '-'}</span>
+						</div>
+						<!-- Largura -->
+						<div>
+							<span class="text-xs md:text-sm font-bold text-gray-400 uppercase tracking-wider block mb-1">Largura</span>
+							<span class="text-xl md:text-2xl font-black text-gray-900">{service.data.largura || '-'}</span>
+						</div>
+						<!-- Comprimento -->
+						<div>
+							<span class="text-xs md:text-sm font-bold text-gray-400 uppercase tracking-wider block mb-1">Comprimento</span>
+							<span class="text-xl md:text-2xl font-black text-gray-900">{service.data.comprimento || '-'}</span>
+						</div>
+						<!-- Volume -->
+						<div>
+							<span class="text-xs md:text-sm font-bold text-gray-400 uppercase tracking-wider block mb-1">Volume</span>
+							<span class="text-xl md:text-2xl font-black text-gray-900">{service.data.volume || '-'}</span>
+						</div>
+						<!-- Peso Suportado -->
+						<div>
+							<span class="text-xs md:text-sm font-bold text-gray-400 uppercase tracking-wider block mb-1">Peso Suportado</span>
+							<span class="text-xl md:text-2xl font-black text-gray-900">{service.data.pesoSuportado || '-'}</span>
+						</div>
+						<!-- Permanência -->
+						<div>
+							<span class="text-xs md:text-sm font-bold text-gray-400 uppercase tracking-wider block mb-1">Permanência</span>
+							<span class="text-xl md:text-2xl font-black text-gray-900">{service.data.permanencia || '-'}</span>
+						</div>
+					</div>
+
+					{service.data.equivalencia && (
+						<div class="mt-8 pt-8 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+							<div class="flex items-center gap-3">
+								<span class="text-2xl">💡</span>
+								<div>
+									<h3 class="text-sm font-bold text-gray-900">Capacidade Estimada em Latas ou Carrinhos</h3>
+									<p class="text-xs text-gray-500">Para facilitar o planejamento da sua obra, esta caçamba equivale a aproximadamente:</p>
+								</div>
+							</div>
+							<div class="bg-gray-50 border border-gray-150 rounded-2xl px-6 py-3 text-sm font-black text-secondary whitespace-nowrap">
+								{service.data.equivalencia}
+							</div>
+						</div>
+					)}
+				</div>
+
+				<!-- Grid com os dois cards embaixo -->
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+					<!-- Descarte Legalizado Card -->
+					<div class="bg-emerald-50/15 border border-emerald-100/50 rounded-3xl p-8 hover:scale-[1.01] transition-transform duration-200">
+						<svg class="w-8 h-8 text-emerald-600 mb-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+						</svg>
+						<h3 class="text-lg font-black text-gray-900 mb-2">Descarte Legalizado</h3>
+						<p class="text-gray-600 text-sm leading-relaxed">
+							Garantimos o descarte 100% legalizado em aterros credenciados pela prefeitura de Volta Redonda e emissão do Manifesto de Transporte de Resíduos (MTR).
+						</p>
+					</div>
+
+					<!-- Entrega Rápida Card -->
+					<div class="bg-amber-50/15 border border-amber-100/50 rounded-3xl p-8 hover:scale-[1.01] transition-transform duration-200">
+						<svg class="w-8 h-8 text-amber-555 mb-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.75a1.125 1.125 0 01-1.125-1.125V15m1.5 3.75a3 3 0 00-3 0m9.75-3h.75m0 0h2.76c.307 0 .599-.12.814-.334l3.19-3.19c.214-.214.334-.507.334-.814V9.375c0-.621-.504-1.125-1.125-1.125h-2.76m-9.75 0H18m-9.75 0H5.625c-.621 0-1.125.504-1.125 1.125v1.71m0 0h12m-12 0V15m12.75-6v6m0 0h-.75m.75 0h3a1.125 1.125 0 001.125-1.125V15m-1.125 0h-3"></path>
+						</svg>
+						<h3 class="text-lg font-black text-gray-900 mb-2">Entrega Rápida</h3>
+						<p class="text-gray-600 text-sm leading-relaxed">
+							Logística otimizada com frota moderna para garantir que sua caçamba seja posicionada no local e horário agendados, com agilidade e total segurança.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	)}
+
+	<!-- 4. Benefícios / Aplicações (com hover em cards/itens se necessário) -->
+	{service.data.benefits && (
+		<section class="bg-gray-50 py-24 md:py-32 border-b border-gray-100">
+			<div class="container mx-auto px-6 md:px-12">
+				<div class="max-w-5xl mx-auto">
+					<h2 class="text-2xl font-black text-gray-900 mb-12 tracking-tighter">Benefícios e Aplicações</h2>
+					
+					<div class="grid grid-cols-1 sm:grid-cols-2 gap-10">
+						{service.data.benefits.map(benefit => (
+							<div class="flex gap-4 hover:translate-x-1 transition-transform">
+								<div class="flex-shrink-0 w-8 h-8 rounded-full bg-secondary/15 text-secondary flex items-center justify-center font-extrabold text-sm">✓</div>
+								<p class="text-gray-600 text-base font-medium leading-relaxed">{benefit}</p>
+							</div>
+						))}
+					</div>
+				</div>
+			</div>
+		</section>
+	)}
+
+	<!-- 5. CTA de Fechamento (WhatsApp + Ligação, botões com hover scale) -->
+	<section class="bg-gray-50 py-24 md:py-32">
+		<div class="container mx-auto px-6 md:px-12">
+			<div class="max-w-4xl mx-auto bg-white border border-gray-150 rounded-3xl p-12 md:p-16 shadow-md text-center hover:scale-105 active:scale-95 transition-all duration-200">
+				<span class="text-xs uppercase tracking-widest text-secondary font-bold">Faça seu Pedido</span>
+				<h2 class="text-3xl font-black text-gray-900 mt-2 mb-4 tracking-tighter">
+					Pronto para alugar esta caçamba?
+				</h2>
+				<p class="text-gray-600 text-base mb-10 max-w-xl mx-auto leading-relaxed">
+					Agende agora a entrega rápida no seu bairro em Volta Redonda. Nossa equipe está pronta para direcionar o equipamento ideal.
+				</p>
+				
+				<div class="flex flex-col sm:flex-row items-center justify-center gap-6 max-w-lg mx-auto">
+					<a href={SITE_CONFIG.whatsappUrl} target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4.5 rounded-xl bg-primary text-accent font-black text-base hover:scale-105 active:scale-95 transition-all shadow-md hover:bg-yellow-500">
+						Pedir pelo WhatsApp
+					</a>
+					<a href={`tel:${SITE_CONFIG.phoneFormatted}`} class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4.5 rounded-xl bg-gray-100 text-secondary border border-gray-250 font-bold text-base hover:scale-105 active:scale-95 transition-all">
+						Ligar: {SITE_CONFIG.phone}
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+</Layout>

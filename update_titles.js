@@ -24,7 +24,7 @@ const titles = {
   "dom-bosco.md": "Locação de Caçamba Estacionária no Dom Bosco",
   "fazendinha.md": "Caçambas de Entulho na Fazendinha",
   "jardim-amalia.md": "Remoção de Resíduos no Jardim Amália",
-  "jardim-amalia-ii.md": "Aluguel de Caçambas (4m³ a 7m³) no Jardim Amália II",
+  "jardim-amalia-ii.md": "Gestão de Entulho de Alto Padrão no Jardim Amália II",
   "jardim-belvedere.md": "Descarte Ecológico com Caçamba no Jardim Belvedere",
   "jardim-normandia.md": "Caçamba para Construção Civil no Jardim Normândia",
   "jardim-paraiba.md": "Coleta de Entulho Rápida no Jardim Paraíba",
