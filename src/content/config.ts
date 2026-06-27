@@ -18,6 +18,12 @@ const bairros = defineCollection({
 		description: z.string(),
 		bairro: z.string(),
 		seoKeyword: z.string().optional(),
+		subtitle: z.string().optional(),
+		differentials: z.array(z.object({
+			icon: z.string(),
+			title: z.string(),
+			description: z.string(),
+		})).optional(),
 	}),
 });
 

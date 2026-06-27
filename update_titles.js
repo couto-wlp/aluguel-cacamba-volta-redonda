@@ -25,7 +25,7 @@ const titles = {
   "fazendinha.md": "Caçambas de Entulho na Fazendinha",
   "jardim-amalia.md": "Remoção de Resíduos no Jardim Amália",
   "jardim-amalia-ii.md": "Gestão de Entulho de Alto Padrão no Jardim Amália II",
-  "jardim-belvedere.md": "Descarte Ecológico com Caçamba no Jardim Belvedere",
+  "jardim-belvedere.md": "Locação de Caçambas para Condomínios no Jardim Belvedere",
   "jardim-normandia.md": "Caçamba para Construção Civil no Jardim Normândia",
   "jardim-paraiba.md": "Coleta de Entulho Rápida no Jardim Paraíba",
   "jardim-tiradentes.md": "Disk Caçamba de Entulho no Jardim Tiradentes",

@@ -296,7 +296,7 @@ if (type === 'bairro') {
 						</span>
 						<h1 class="text-4xl md:text-6xl font-black leading-tight tracking-tighter mb-6" set:html={entry.data.title.replace(' | Volta Redonda - RJ', '').replace(entry.data.bairro, `<span class="text-primary">${entry.data.bairro}</span>`)} />
 						<p class="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl leading-relaxed">
-							Locação de caçambas estacionárias licenciadas para coleta e destinação correta de entulhos. Agilidade e segurança para sua obra no bairro {entry.data.bairro}.
+							{entry.data.subtitle || `Locação de caçambas estacionárias licenciadas para coleta e destinação correta de entulhos. Agilidade e segurança para sua obra no bairro ${entry.data.bairro}.`}
 						</p>
 						<div class="flex flex-col sm:flex-row gap-4">
 							<a href={`${SITE_CONFIG.whatsappUrl}?text=Olá! Gostaria de alugar uma caçamba para o bairro ${entry.data.bairro}.`} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-primary text-accent font-black text-base hover:scale-105 active:scale-95 transition-all shadow-xl shadow-primary/20 hover:bg-yellow-500">
@@ -314,27 +314,39 @@ if (type === 'bairro') {
 			<section class="py-20 bg-gray-50 border-b border-gray-100">
 				<div class="container mx-auto px-6 md:px-12">
 					<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-						<div class="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm">
-							<span class="text-3xl mb-4 block">⚡</span>
-							<h2 class="text-lg font-black text-gray-900 mb-2">Logística Expressa</h2>
-							<p class="text-gray-500 text-sm leading-relaxed">
-								Entrega e remoção rápidas e pontuais no bairro {entry.data.bairro}, respeitando o cronograma de sua construção ou reforma.
-							</p>
-						</div>
-						<div class="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm">
-							<span class="text-3xl mb-4 block">📋</span>
-							<h2 class="text-lg font-black text-gray-900 mb-2">Descarte 100% Legal</h2>
-							<p class="text-gray-500 text-sm leading-relaxed">
-								Emissão completa de MTR e conformidade total com as normas da Secretaria Municipal de Meio Ambiente (SMMA) de Volta Redonda.
-							</p>
-						</div>
-						<div class="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm">
-							<span class="text-3xl mb-4 block">🛡️</span>
-							<h2 class="text-lg font-black text-gray-900 mb-2">Posicionamento Seguro</h2>
-							<p class="text-gray-500 text-sm leading-relaxed">
-								Motoristas experientes que posicionam a caçamba de forma regularizada na rua ou calçada de sua obra no {entry.data.bairro}.
-							</p>
-						</div>
+						{entry.data.differentials ? (
+							entry.data.differentials.map(diff => (
+								<div class="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm">
+									<span class="text-3xl mb-4 block">{diff.icon}</span>
+									<h2 class="text-lg font-black text-gray-900 mb-2">{diff.title}</h2>
+									<p class="text-gray-500 text-sm leading-relaxed">{diff.description}</p>
+								</div>
+							))
+						) : (
+							<>
+								<div class="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm">
+									<span class="text-3xl mb-4 block">⚡</span>
+									<h2 class="text-lg font-black text-gray-900 mb-2">Logística Expressa</h2>
+									<p class="text-gray-500 text-sm leading-relaxed">
+										Entrega e remoção rápidas e pontuais no bairro {entry.data.bairro}, respeitando o cronograma de sua construção ou reforma.
+									</p>
+								</div>
+								<div class="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm">
+									<span class="text-3xl mb-4 block">📋</span>
+									<h2 class="text-lg font-black text-gray-900 mb-2">Descarte 100% Legal</h2>
+									<p class="text-gray-500 text-sm leading-relaxed">
+										Emissão completa de MTR e conformidade total com as normas da Secretaria Municipal de Meio Ambiente (SMMA) de Volta Redonda.
+									</p>
+								</div>
+								<div class="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm">
+									<span class="text-3xl mb-4 block">🛡️</span>
+									<h2 class="text-lg font-black text-gray-900 mb-2">Posicionamento Seguro</h2>
+									<p class="text-gray-500 text-sm leading-relaxed">
+										Motoristas experientes que posicionam a caçamba de forma regularizada na rua ou calçada de sua obra no {entry.data.bairro}.
+									</p>
+								</div>
+							</>
+						)}
 					</div>
 				</div>
 			</section>
