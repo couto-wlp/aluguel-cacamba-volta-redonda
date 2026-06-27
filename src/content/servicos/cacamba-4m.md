@@ -1,7 +1,7 @@
 ---
 title: "Caçamba de 4m³"
 pageTitle: "Aluguel de Caçamba de 4m³ em Volta Redonda"
-description: "Caçamba de 4m³. Remoção ágil e segura de entulhos para sua reforma ou obra. Atendimento rápido em toda Volta Redonda. Peça seu orçamento!"
+description: "A caçamba de 4m³ é a escolha ideal e mais econômica para pequenas reformas residenciais, obras domésticas e descarte de entulho leve. Garanta agilidade e organização no seu canteiro de obras com entrega rápida em Volta Redonda. Peça seu orçamento!"
 icon: "🏡"
 image: "../../assets/cacamba-4m.webp"
 order: 1
