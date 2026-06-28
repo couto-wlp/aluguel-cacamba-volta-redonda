@@ -47,7 +47,7 @@ async function pushToGit() {
         name: 'couto-wlp',
         email: 'coutowlp@gmail.com',
       },
-      message: 'remover paginas de morro da caviana, jardim amalia ii, conforto ii, aterrado norte, aterrado sul'
+      message: 'adicionar pagina do bairro barreira cravo'
     });
     console.log(`Commit criado com sucesso: ${sha}`);
   }
