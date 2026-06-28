@@ -47,7 +47,7 @@ async function pushToGit() {
         name: 'couto-wlp',
         email: 'coutowlp@gmail.com',
       },
-      message: 'remover paginas de regiao csn, area industrial csn, ponte alta norte/sul, morro cabritos/serra/conquista'
+      message: 'remover paginas de morro da caviana, jardim amalia ii, conforto ii, aterrado norte, aterrado sul'
     });
     console.log(`Commit criado com sucesso: ${sha}`);
   }
