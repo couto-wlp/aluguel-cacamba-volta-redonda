@@ -63,10 +63,7 @@ const titles = {
   "vila-brasilia.md": "Disk Caçamba Legalizada na Vila Brasília",
   "vila-delgado.md": "Aluguel de Caçambas Estacionárias na Vila Delgado",
   "vila-mury.md": "Caçamba para Entulho Rápida na Vila Mury",
-  "vila-mury-norte.md": "Remoção de Entulho Licenciada na Vila Mury Norte",
-  "vila-mury-sul.md": "Locação de Caçambas e Coleta na Vila Mury Sul",
   "vila-rica.md": "Retirada de Entulho de Obras na Vila Rica",
-  "vila-rica-ii.md": "Aluguel de Caçamba para Construção na Vila Rica II",
   "vila-santa-cecilia.md": "Caçamba de Entulho Legalizada na Vila Santa Cecília",
   "voldac.md": "Aluguel de Caçambas e Entulho na Voldac"
 };

@@ -47,7 +47,7 @@ async function pushToGit() {
         name: 'couto-wlp',
         email: 'coutowlp@gmail.com',
       },
-      message: 'remover paginas de vila santa cecilia norte e sul'
+      message: 'remover paginas de vila mury norte, sul e vila rica ii'
     });
     console.log(`Commit criado com sucesso: ${sha}`);
   }
