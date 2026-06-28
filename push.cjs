@@ -47,7 +47,7 @@ async function pushToGit() {
         name: 'couto-wlp',
         email: 'coutowlp@gmail.com',
       },
-      message: 'remover paginas de vila mury norte, sul e vila rica ii'
+      message: 'remover paginas de vila delgado, tres pocos industrial, santo agostinho ii, rodovia do contorno, retiro ii'
     });
     console.log(`Commit criado com sucesso: ${sha}`);
   }
