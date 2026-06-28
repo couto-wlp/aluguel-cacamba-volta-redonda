@@ -47,7 +47,7 @@ async function pushToGit() {
         name: 'couto-wlp',
         email: 'coutowlp@gmail.com',
       },
-      message: 'SEO: Atualização em massa das meta descrições'
+      message: 'remover paginas de vila santa cecilia norte e sul'
     });
     console.log(`Commit criado com sucesso: ${sha}`);
   }

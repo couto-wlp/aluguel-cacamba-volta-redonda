@@ -68,8 +68,6 @@ const titles = {
   "vila-rica.md": "Retirada de Entulho de Obras na Vila Rica",
   "vila-rica-ii.md": "Aluguel de Caçamba para Construção na Vila Rica II",
   "vila-santa-cecilia.md": "Caçamba de Entulho Legalizada na Vila Santa Cecília",
-  "vila-santa-cecilia-norte.md": "Locação de Caçamba na Vila Santa Cecília Norte",
-  "vila-santa-cecilia-sul.md": "Serviços de Caçamba Rápida na Vila Santa Cecília Sul",
   "voldac.md": "Aluguel de Caçambas e Entulho na Voldac"
 };
 
