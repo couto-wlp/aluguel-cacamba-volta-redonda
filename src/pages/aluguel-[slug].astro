@@ -12,20 +12,88 @@ export async function getStaticPaths() {
 	}));
 
 	const bairros = await getCollection('bairros');
-	const bairroPaths = bairros.map(bairro => ({
-		params: { slug: `de-cacamba-${bairro.slug}` },
-		props: { entry: bairro, type: 'bairro' },
-	}));
+	const bairroPaths = bairros.map(bairro => {
+		let slug;
+		if (bairro.slug === 'cacamba-entulho-duzentos-e-quarenta-e-nove' || bairro.slug === 'cacamba-entulho-niteroi') {
+			slug = bairro.slug;
+		} else if (bairro.slug === 'aluguel-cacamba-belmonte') {
+			slug = 'cacamba-belmonte';
+		} else if (bairro.slug === 'aluguel-cacamba-jardim-suica') {
+			slug = 'cacamba-jardim-suica';
+		} else if (bairro.slug === 'aluguel-cacamba-santa-rita-de-zarur') {
+			slug = 'cacamba-santa-rita-de-zarur';
+		} else if (bairro.slug === 'aluguel-cacamba-jardim-europa') {
+			slug = 'cacamba-jardim-europa';
+		} else if (bairro.slug === 'aluguel-cacamba-sideropolis') {
+			slug = 'cacamba-sideropolis';
+		} else {
+			slug = `de-cacamba-${bairro.slug}`;
+		}
+		return {
+			params: { slug },
+			props: { entry: bairro, type: 'bairro' },
+		};
+	});
 
 	return [...servicePaths, ...bairroPaths];
 }
 
 let { service, entry, type } = Astro.props;
 
+const { slug } = Astro.params;
+
+if (slug === 'de-cacamba-cacamba-entulho-duzentos-e-quarenta-e-nove' || slug === 'cacamba-entulho-duzentos-e-quarenta-e-nove') {
+	return Astro.redirect('/cacamba-entulho-duzentos-e-quarenta-e-nove', 301);
+}
+
+if (slug === 'de-cacamba-aluguel-cacamba-belmonte' || slug === 'de-cacamba-belmonte') {
+	return Astro.redirect('/aluguel-cacamba-belmonte', 301);
+}
+
+if (slug === 'de-cacamba-cacamba-entulho-niteroi' || slug === 'cacamba-entulho-niteroi') {
+	return Astro.redirect('/cacamba-entulho-niteroi', 301);
+}
+
+if (slug === 'de-cacamba-aluguel-cacamba-jardim-suica' || slug === 'de-cacamba-jardim-suica') {
+	return Astro.redirect('/aluguel-cacamba-jardim-suica', 301);
+}
+
+if (slug === 'de-cacamba-aluguel-cacamba-santa-rita-de-zarur' || slug === 'de-cacamba-santa-rita-de-zarur') {
+	return Astro.redirect('/aluguel-cacamba-santa-rita-de-zarur', 301);
+}
+
+if (slug === 'de-cacamba-aluguel-cacamba-jardim-europa' || slug === 'de-cacamba-jardim-europa') {
+	return Astro.redirect('/aluguel-cacamba-jardim-europa', 301);
+}
+
+if (slug === 'de-cacamba-aluguel-cacamba-sideropolis' || slug === 'de-cacamba-sideropolis') {
+	return Astro.redirect('/aluguel-cacamba-sideropolis', 301);
+}
+
 if (!type) {
 	const { slug } = Astro.params;
 	if (slug) {
-		if (slug.startsWith('de-cacamba-')) {
+		if (slug === 'cacamba-belmonte') {
+			const bairroEntries = await getCollection('bairros');
+			entry = bairroEntries.find(e => e.slug === 'aluguel-cacamba-belmonte');
+			type = 'bairro';
+		} else if (slug === 'cacamba-jardim-suica') {
+			const bairroEntries = await getCollection('bairros');
+			entry = bairroEntries.find(e => e.slug === 'aluguel-cacamba-jardim-suica');
+			type = 'bairro';
+		} else if (slug === 'cacamba-santa-rita-de-zarur') {
+			const bairroEntries = await getCollection('bairros');
+			entry = bairroEntries.find(e => e.slug === 'aluguel-cacamba-santa-rita-de-zarur');
+			type = 'bairro';
+		} else if (slug === 'cacamba-jardim-europa') {
+			const bairroEntries = await getCollection('bairros');
+			entry = bairroEntries.find(e => e.slug === 'aluguel-cacamba-jardim-europa');
+			type = 'bairro';
+		} else if (slug === 'cacamba-sideropolis') {
+			const bairroEntries = await getCollection('bairros');
+			entry = bairroEntries.find(e => e.slug === 'aluguel-cacamba-sideropolis');
+			type = 'bairro';
+		} else if (slug.startsWith('de-cacamba-')) {
 			const realSlug = slug.replace('de-cacamba-', '');
 			const bairroEntries = await getCollection('bairros');
 			entry = bairroEntries.find(e => e.slug === realSlug);
@@ -294,7 +362,7 @@ if (type === 'bairro') {
 						<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-black bg-primary/20 text-primary mb-6 border border-primary/30 tracking-widest uppercase">
 							Atendimento Local em Volta Redonda
 						</span>
-						<h1 class="text-4xl md:text-6xl font-black leading-tight tracking-tighter mb-6" set:html={entry.data.title.replace(' | Volta Redonda - RJ', '').replace(entry.data.bairro, `<span class="text-primary">${entry.data.bairro}</span>`)} />
+						<h1 class="text-4xl md:text-6xl font-black leading-tight tracking-tighter mb-6" set:html={entry.data.title.split(' | ')[0].replace(entry.data.bairro, `<span class="text-primary">${entry.data.bairro}</span>`)} />
 						<p class="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl leading-relaxed">
 							{entry.data.subtitle || `Locação de caçambas estacionárias licenciadas para coleta e destinação correta de entulhos. Agilidade e segurança para sua obra no bairro ${entry.data.bairro}.`}
 						</p>

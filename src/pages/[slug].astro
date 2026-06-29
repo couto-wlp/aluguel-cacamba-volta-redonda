@@ -13,20 +13,78 @@ export async function getStaticPaths() {
 		props: { entry, type: 'blog' },
 	}));
 
-	const bairroPaths = bairroEntries.map(entry => ({
-		params: { slug: `aluguel-de-cacamba-${entry.slug}` },
-		props: { entry, type: 'bairro' },
-	}));
+	const bairroPaths = bairroEntries.map(entry => {
+		let slug;
+		if (entry.slug === 'cacamba-entulho-duzentos-e-quarenta-e-nove' || entry.slug === 'cacamba-entulho-niteroi') {
+			slug = entry.slug;
+		} else if (entry.slug === 'aluguel-cacamba-belmonte') {
+			slug = 'aluguel-de-cacamba-belmonte';
+		} else if (entry.slug === 'aluguel-cacamba-jardim-suica') {
+			slug = 'aluguel-de-cacamba-jardim-suica';
+		} else if (entry.slug === 'aluguel-cacamba-santa-rita-de-zarur') {
+			slug = 'aluguel-de-cacamba-santa-rita-de-zarur';
+		} else if (entry.slug === 'aluguel-cacamba-jardim-europa') {
+			slug = 'aluguel-de-cacamba-jardim-europa';
+		} else if (entry.slug === 'aluguel-cacamba-sideropolis') {
+			slug = 'aluguel-de-cacamba-sideropolis';
+		} else {
+			slug = `aluguel-de-cacamba-${entry.slug}`;
+		}
+		return {
+			params: { slug },
+			props: { entry, type: 'bairro' },
+		};
+	});
 
 	return [...blogPaths, ...bairroPaths];
 }
 
 let { entry, type } = Astro.props;
 
+const { slug } = Astro.params;
+
+// Redirect for the duplicate prefix url on 249 page
+if (slug === 'aluguel-de-cacamba-cacamba-entulho-duzentos-e-quarenta-e-nove') {
+	return Astro.redirect('/cacamba-entulho-duzentos-e-quarenta-e-nove', 301);
+}
+
+// Redirect for the duplicate prefix url on Belmonte page
+if (slug === 'aluguel-de-cacamba-aluguel-cacamba-belmonte' || slug === 'aluguel-de-cacamba-belmonte') {
+	return Astro.redirect('/aluguel-cacamba-belmonte', 301);
+}
+
+// Redirect for the duplicate prefix url on Niterói page
+if (slug === 'aluguel-de-cacamba-cacamba-entulho-niteroi') {
+	return Astro.redirect('/cacamba-entulho-niteroi', 301);
+}
+
+// Redirect for the duplicate prefix url on Jardim Suíça page
+if (slug === 'aluguel-de-cacamba-aluguel-cacamba-jardim-suica' || slug === 'aluguel-de-cacamba-jardim-suica') {
+	return Astro.redirect('/aluguel-cacamba-jardim-suica', 301);
+}
+
+// Redirect for the duplicate prefix url on Santa Rita de Zarur page
+if (slug === 'aluguel-de-cacamba-aluguel-cacamba-santa-rita-de-zarur' || slug === 'aluguel-de-cacamba-santa-rita-de-zarur') {
+	return Astro.redirect('/aluguel-cacamba-santa-rita-de-zarur', 301);
+}
+
+// Redirect for the duplicate prefix url on Jardim Europa page
+if (slug === 'aluguel-de-cacamba-aluguel-cacamba-jardim-europa' || slug === 'aluguel-de-cacamba-jardim-europa') {
+	return Astro.redirect('/aluguel-cacamba-jardim-europa', 301);
+}
+
+// Redirect for the duplicate prefix url on Siderópolis page
+if (slug === 'aluguel-de-cacamba-aluguel-cacamba-sideropolis' || slug === 'aluguel-de-cacamba-sideropolis') {
+	return Astro.redirect('/aluguel-cacamba-sideropolis', 301);
+}
+
 if (!entry) {
-	const { slug } = Astro.params;
 	if (slug) {
-		if (slug.startsWith('aluguel-de-cacamba-')) {
+		if (slug === 'cacamba-entulho-duzentos-e-quarenta-e-nove' || slug === 'cacamba-entulho-niteroi') {
+			const bairroEntries = await getCollection('bairros');
+			entry = bairroEntries.find(e => e.slug === slug);
+			type = 'bairro';
+		} else if (slug.startsWith('aluguel-de-cacamba-')) {
 			const realSlug = slug.replace('aluguel-de-cacamba-', '');
 			const bairroEntries = await getCollection('bairros');
 			const foundBairro = bairroEntries.find(e => e.slug === realSlug);
@@ -134,7 +192,7 @@ services.sort((a, b) => a.data.order - b.data.order);
 						<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-black bg-primary/20 text-primary mb-6 border border-primary/30 tracking-widest uppercase">
 							Atendimento Local em Volta Redonda
 						</span>
-						<h1 class="text-4xl md:text-6xl font-black leading-tight tracking-tighter mb-6" set:html={entry.data.title.replace(' | Volta Redonda - RJ', '').replace(entry.data.bairro, `<span class="text-primary">${entry.data.bairro}</span>`)} />
+						<h1 class="text-4xl md:text-6xl font-black leading-tight tracking-tighter mb-6" set:html={entry.data.title.split(' | ')[0].replace(entry.data.bairro, `<span class="text-primary">${entry.data.bairro}</span>`)} />
 						<p class="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl leading-relaxed">
 							Locação de caçambas estacionárias licenciadas para coleta e destinação correta de entulhos. Agilidade e segurança para sua obra no bairro {entry.data.bairro}.
 						</p>

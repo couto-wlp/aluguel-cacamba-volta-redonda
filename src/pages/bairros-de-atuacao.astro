@@ -10,11 +10,12 @@ function getBairroCardTitle(bairro) {
     "Fazendinha", "Ponte Alta", 
     "Siderlândia", "Vila Americana", "Vila Brasília", 
     "Vila Mury", "Vila Rica", 
-    "Vila Santa Cecília", "Voldac"
+    "Vila Santa Cecília", "Voldac",
+    "249 (Duzentos e Quarenta e Nove)"
   ].includes(bairro)) {
     prep = "na";
   } else if ([
-    "Santa Cruz", "Santa Inês", "Três Poços"
+    "Santa Cruz", "Santa Inês", "Três Poços", "Santa Rita de Zarur"
   ].includes(bairro)) {
     prep = "em";
   } else if (bairro === "Coqueiros") {
@@ -53,7 +54,7 @@ function getExcerpt(body) {
 // Para a barra lateral (apenas bairros)
 const sidebarBairros = bairros.map(b => ({
 	bairroName: b.data.bairro,
-	slug: `aluguel-de-cacamba-${b.slug}`
+	slug: ['cacamba-entulho-duzentos-e-quarenta-e-nove', 'cacamba-entulho-niteroi', 'aluguel-cacamba-belmonte', 'aluguel-cacamba-jardim-suica', 'aluguel-cacamba-santa-rita-de-zarur', 'aluguel-cacamba-jardim-europa', 'aluguel-cacamba-sideropolis'].includes(b.slug) ? b.slug : `aluguel-de-cacamba-${b.slug}`
 }));
 sidebarBairros.sort((a, b) => a.bairroName.localeCompare(b.bairroName));
 
@@ -71,7 +72,7 @@ const pages = [
 	...bairros.map(b => ({
 		title: getBairroCardTitle(b.data.bairro),
 		description: getExcerpt(b.body),
-		slug: `aluguel-de-cacamba-${b.slug}`,
+		slug: ['cacamba-entulho-duzentos-e-quarenta-e-nove', 'cacamba-entulho-niteroi', 'aluguel-cacamba-belmonte', 'aluguel-cacamba-jardim-suica', 'aluguel-cacamba-santa-rita-de-zarur', 'aluguel-cacamba-jardim-europa', 'aluguel-cacamba-sideropolis'].includes(b.slug) ? b.slug : `aluguel-de-cacamba-${b.slug}`,
 		category: `Bairro: ${b.data.bairro}`,
 		badgeColorClass: 'text-primary bg-secondary',
 		isArticle: false,

@@ -47,7 +47,7 @@ async function pushToGit() {
         name: 'couto-wlp',
         email: 'coutowlp@gmail.com',
       },
-      message: 'adicionar pagina do bairro bela vista'
+      message: 'feat: adicionar paginas dos bairros 249, Belmonte, Niteroi, Jardim Suica, Santa Rita de Zarur, Jardim Europa e Sideropolis'
     });
     console.log(`Commit criado com sucesso: ${sha}`);
   }
