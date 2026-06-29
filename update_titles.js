@@ -11,6 +11,7 @@ const titles = {
   "agua-limpa.md": "Retirada de Entulho na Água Limpa",
   "aterrado.md": "Coleta de Entulho e Resíduos no Aterrado",
   "barreira-cravo.md": "Locação de Caçambas no Barreira Cravo",
+  "bela-vista.md": "Aluguel de Caçamba no Bela Vista",
   "belo-horizonte.md": "Aluguel de Caçamba para Reformas no Belo Horizonte",
   "bom-jesus.md": "Descarte de Entulho Legalizado no Bom Jesus",
   "brasilandia.md": "Caçamba para Obras na Brasilândia",

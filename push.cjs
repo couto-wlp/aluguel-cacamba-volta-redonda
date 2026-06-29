@@ -47,7 +47,7 @@ async function pushToGit() {
         name: 'couto-wlp',
         email: 'coutowlp@gmail.com',
       },
-      message: 'adicionar pagina do bairro barreira cravo'
+      message: 'adicionar pagina do bairro bela vista'
     });
     console.log(`Commit criado com sucesso: ${sha}`);
   }
