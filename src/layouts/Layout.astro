@@ -43,7 +43,6 @@ const {
 				}, 1500);
 			});
 		</script>
-		<link rel="icon" type="image/png" sizes="192x192" href="/favicon.png" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<slot name="head" />
 		<meta name="generator" content={Astro.generator} />
@@ -76,7 +75,7 @@ const {
 			</a>
 				
 				<!-- Desktop Links -->
-				<nav class="hidden lg:flex items-center gap-8 text-base font-bold">
+				<nav class="hidden lg:flex items-center gap-8 text-sm font-bold">
 					<a href="/" class="nav-link transition-all duration-200 hover:scale-105 active:scale-95">Início</a>
 					<a href="/servicos" class="nav-link transition-all duration-200 hover:scale-105 active:scale-95">Serviços</a>
 					<a href="/sobre" class="nav-link transition-all duration-200 hover:scale-105 active:scale-95">Sobre Nós</a>
@@ -200,7 +199,7 @@ const {
 									</svg>
 								</span>
 								<div>
-									<span class="text-[10px] text-blue-300 block uppercase font-bold">Fixo</span>
+									<span class="text-[10px] text-blue-300 block uppercase font-bold">Ligação</span>
 									<a href={`tel:${SITE_CONFIG.phoneFormatted}`} class="text-white hover:text-primary font-bold transition-colors">{SITE_CONFIG.phone}</a>
 								</div>
 							</li>
