@@ -19,20 +19,6 @@ const {
 
 const brandName = SITE_CONFIG.name;
 let fullTitle = title;
-
-if (isBairro) {
-	// Para páginas de bairros, mantém o título original (ex: "Aluguel de Caçamba no Açude | Volta Redonda - RJ")
-	fullTitle = title;
-} else if (!title.includes(brandName)) {
-	if (title.includes(" | Volta Redonda - RJ")) {
-		fullTitle = title.replace(" | Volta Redonda - RJ", ` | ${brandName}`);
-	} else if (title.includes("Volta Redonda")) {
-		// Se já contém "Volta Redonda" no título, adicionamos apenas "Caçambas" para evitar repetir a cidade
-		fullTitle = `${title} | Caçambas`;
-	} else {
-		fullTitle = `${title} | ${brandName}`;
-	}
-}
 ---
 
 <!-- SEO Principal -->
