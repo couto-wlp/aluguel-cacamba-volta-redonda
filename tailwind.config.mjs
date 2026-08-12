@@ -11,7 +11,7 @@ export default {
         accent: '#000000',
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+        sans: ['Arial', 'Helvetica', 'sans-serif'],
       },
     },
   },
