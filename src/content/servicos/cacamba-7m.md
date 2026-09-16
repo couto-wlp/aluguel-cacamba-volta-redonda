@@ -1,13 +1,12 @@
 ---
 title: "Caçamba de 7m³"
 pageTitle: "Aluguel de Caçamba de 7m³ em Volta Redonda"
-description: "Projetada para grandes volumes, a caçamba de 7m³ é a nossa gigante, perfeita para remoção de materiais volumosos de construções comerciais, podas extensas ou limpeza industrial em Volta Redonda. Fale com nossa equipe no WhatsApp e agende a sua!"
+description: "Maior capacidade para grandes obras, demolições ou grande volume de resíduos."
 icon: "🏗️"
-image: "../../assets/cacamba-7m.webp"
-order: 3
-capacity: "7m³ (Suporta até 8 toneladas - indicada para resíduos leves ou mistos)"
+order: 2
+capacity: "7m³ (Suporta até 8 toneladas)"
 dimensions: "3.2m de comprimento x 1.8m de largura x 1.6m de altura"
-rentalPeriod: "Customizado ou trocas programadas periódicas"
+rentalPeriod: "Até 3 dias úteis (ou conforme a necessidade da obra)"
 benefits:
   - "Máxima capacidade para grandes geradores e obras industriais"
   - "Ideal para drywall, madeiras, gesso, plásticos e embalagens"
@@ -22,11 +21,4 @@ permanencia: "Customizado"
 equivalencia: "140 Carrinhos / 380 Latas"
 ---
 
-A **Caçamba de 7m³** é a solução definitiva para demandas de grande porte em Volta Redonda. Ideal para construtoras, indústrias e comércio que geram resíduos de baixa densidade mas com alto volume de descarte.
-
-### Principais Aplicações:
-- **Grandes Empreendimentos:** Descarte contínuo de materiais de acabamento, embalagens plásticas e paletes de madeira.
-- **Limpezas Industriais:** Retirada de sobras de processos industriais não perigosos, sucata leve e gesso.
-- **Estruturas de Drywall/Gesso:** Perfeita para descarte de placas de gesso acartonado e perfis metálicos, que ocupam muito volume.
-
-Por ser um equipamento maior, seu posicionamento requer vias de acesso livre e espaço de manobra adequado para o caminhão poli-guindaste.
+A **Caçamba de 7m³** oferece maior capacidade para grandes obras, demolições ou grande volume de resíduos em Volta Redonda. Ideal para construtoras, indústrias e comércio que geram resíduos com alto volume de descarte.
