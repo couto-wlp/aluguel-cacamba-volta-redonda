@@ -47,7 +47,7 @@ async function pushToGit() {
         name: 'couto-wlp',
         email: 'coutowlp@gmail.com',
       },
-      message: 'feat: adicionar paginas dos bairros 249, Belmonte, Niteroi, Jardim Suica, Santa Rita de Zarur, Jardim Europa e Sideropolis'
+      message: process.argv[3] || 'Atualizar todos os links de botões de contato para o WhatsApp'
     });
     console.log(`Commit criado com sucesso: ${sha}`);
   }
@@ -60,7 +60,8 @@ async function pushToGit() {
     dir,
     remote: 'origin',
     ref: 'main',
-    onAuth: () => ({ username: token })
+    force: false,
+    onAuth: () => ({ username: 'couto-wlp', password: token })
   });
 
   console.log('Push finalizado!');

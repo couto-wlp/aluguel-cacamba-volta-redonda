@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
 import aboutImg from '../assets/sobre_nos_empresa_frota.jpg';
+import { SITE_CONFIG } from '../data/config';
 ---
 
 <Layout title="Nossa Empresa | Caçambas Volta Redonda" description="Aluguel de caçamba em Volta Redonda, conheça a nossa empresa. Remoção ágil e segura de entulhos para sua reforma ou obra. Peça seu orçamento!">
@@ -118,7 +119,7 @@ import aboutImg from '../assets/sobre_nos_empresa_frota.jpg';
 					
 					<!-- CTA de Contato -->
 					<div class="text-center max-w-md mx-auto">
-						<a href="/contato" class="w-full inline-flex items-center justify-center px-8 py-4 rounded-xl bg-primary text-accent font-black text-base hover:scale-105 active:scale-95 transition-all shadow-md hover:bg-yellow-500">
+						<a href={SITE_CONFIG.whatsappUrl} target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center px-8 py-4 rounded-xl bg-primary text-accent font-black text-base hover:scale-105 active:scale-95 transition-all shadow-md hover:bg-yellow-500">
 							Fale com Nossa Equipe
 						</a>
 					</div>

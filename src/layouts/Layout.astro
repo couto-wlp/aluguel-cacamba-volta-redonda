@@ -84,7 +84,7 @@ const {
 				</nav>
 
 				<div class="hidden lg:block">
-					<a href="/contato" class="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-primary text-accent font-black text-sm hover:scale-105 active:scale-95 hover:bg-yellow-500 shadow-md shadow-primary/20 transition-all duration-200">
+					<a href={SITE_CONFIG.whatsappUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-primary text-accent font-black text-sm hover:scale-105 active:scale-95 hover:bg-yellow-500 shadow-md shadow-primary/20 transition-all duration-200">
 						Pedir Caçamba
 					</a>
 				</div>
@@ -214,7 +214,7 @@ const {
 								</span>
 								<div>
 									<span class="text-[10px] text-blue-300 block uppercase font-bold">Ligação</span>
-									<a href={`tel:${SITE_CONFIG.phoneFormatted}`} class="text-white hover:text-primary font-bold transition-colors">{SITE_CONFIG.phone}</a>
+									<a href={SITE_CONFIG.whatsappUrl} target="_blank" rel="noopener noreferrer" class="text-white hover:text-primary font-bold transition-colors">{SITE_CONFIG.phone}</a>
 								</div>
 							</li>
 							<li class="flex items-center gap-3">

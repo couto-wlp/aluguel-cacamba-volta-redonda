@@ -6,7 +6,7 @@ export const SITE_CONFIG = {
 	phoneFormatted: '+5511943758880',
 	whatsapp: '(11) 94375-8880',
 	whatsappFormatted: '+5511943758880',
-	whatsappUrl: 'https://wa.me/5511943758880',
+	whatsappUrl: 'https://wa.me/5511943758880?text=Ol%C3%A1!%20Acessei%20o%20site%20cacambasvoltaredonda.com.br%20e%20tenho%20interesse%20em%20fazer%20um%20or%C3%A7amento.',
 	email: 'contato@cacambasvoltaredonda.com.br',
 	address: 'Av. Amaral Peixoto, 533 - Centro, Volta Redonda - RJ, 27253-223',
 	postalCode: '27253-223',
