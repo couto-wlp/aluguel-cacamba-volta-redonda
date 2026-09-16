@@ -1,7 +1,7 @@
 ---
 title: "Caçamba de 8m³"
 pageTitle: "Aluguel de Caçamba de 8m³ em Volta Redonda"
-description: "A melhor escolha para grandes obras, demolições e limpezas industriais."
+description: "A solução definitiva para construtoras, demolições intensas e indústrias que exigem o máximo de espaço."
 icon: "🏭"
 image: "../../assets/cacamba-8m.webp"
 order: 4

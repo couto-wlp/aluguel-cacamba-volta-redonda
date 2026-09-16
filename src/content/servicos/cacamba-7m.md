@@ -1,7 +1,7 @@
 ---
 title: "Caçamba de 7m³"
 pageTitle: "Aluguel de Caçamba de 7m³ em Volta Redonda"
-description: "Maior capacidade para grandes obras, demolições ou grande volume de resíduos."
+description: "Alta capacidade para grandes empreitadas. Ideal para demolições e limpeza de terrenos, otimizando seu tempo."
 icon: "🏗️"
 image: "../../assets/cacamba-7m.webp"
 order: 3

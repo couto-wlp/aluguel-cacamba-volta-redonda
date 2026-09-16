@@ -1,7 +1,7 @@
 ---
 title: "Caçamba Roll-on"
 pageTitle: "Aluguel de Caçamba Roll-on em Volta Redonda"
-description: "Equipamento robusto para indústrias, shoppings e obras de grande porte."
+description: "Equipamento robusto para indústrias e shoppings. Capacidade gigante que garante recolhimento ágil de resíduos volumosos."
 icon: "🚛"
 image: "../../assets/cacamba-roll-on.webp"
 order: 5
