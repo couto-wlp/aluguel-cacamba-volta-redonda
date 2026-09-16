@@ -4,7 +4,7 @@ pageTitle: "Aluguel de Caçamba Roll-on em Volta Redonda"
 description: "Equipamento robusto para indústrias, shoppings e obras de grande porte."
 icon: "🚛"
 image: "../../assets/cacamba-7m.webp"
-order: 4
+order: 5
 capacity: "Roll-on (15m³ a 30m³)"
 dimensions: "6.0m de comprimento x 2.4m de largura x 1.8m de altura"
 rentalPeriod: "Contratos mensais ou sob demanda industrial"

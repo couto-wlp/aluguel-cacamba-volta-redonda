@@ -4,7 +4,7 @@ pageTitle: "Aluguel de Caçamba de 8m³ em Volta Redonda"
 description: "A melhor escolha para grandes obras, demolições e limpezas industriais."
 icon: "🏭"
 image: "../../assets/cacamba-7m.webp"
-order: 3
+order: 4
 capacity: "8m³ (Suporta até 9 toneladas)"
 dimensions: "3.4m de comprimento x 1.9m de largura x 1.7m de altura"
 rentalPeriod: "Customizado ou conforme a necessidade da obra"

@@ -6,10 +6,10 @@ import heroBg from '../assets/hero_bg_opt.webp';
 import aboutImg from '../assets/sobre_nos_empresa_opt.webp';
 import { SITE_CONFIG } from '../data/config';
 
-// Obter os equipamentos/serviços e ordenar (exibir 6m³, 7m³, 8m³ e Roll-on na home)
+// Obter os equipamentos/serviços e ordenar (exibir 5m³, 6m³, 7m³, 8m³ e Roll-on na home)
 const services = await getCollection('servicos');
 services.sort((a, b) => a.data.order - b.data.order);
-const homepageServices = services.filter(s => ['cacamba-6m', 'cacamba-7m', 'cacamba-8m', 'cacamba-roll-on'].includes(s.slug));
+const homepageServices = services.filter(s => ['cacamba-5m', 'cacamba-6m', 'cacamba-7m', 'cacamba-8m', 'cacamba-roll-on'].includes(s.slug));
 ---
 
 <Layout title="Aluguel de Caçamba de Entulho em Volta Redonda - RJ" transparentHeader={true} description="Faça seu orçamento gratuito hoje mesmo direto no WhatsApp! Quando o assunto é aluguel de caçamba em Volta Redonda, somos a sua melhor opção.">
@@ -177,8 +177,8 @@ const homepageServices = services.filter(s => ['cacamba-6m', 'cacamba-7m', 'caca
 				</h2>
 			</div>
 
-			<!-- Grid Gap-8 para caçambas 6m³, 7m³, 8m³ e Roll-on -->
-			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+			<!-- Grid Gap-8 para caçambas 5m³, 6m³, 7m³, 8m³ e Roll-on -->
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
 				{homepageServices.map(service => (
 					<div class={`relative bg-white border border-gray-150 rounded-[32px] p-8 flex flex-col justify-between transition-all duration-300 shadow-sm hover:shadow-2xl cursor-pointer ${service.data.popular ? 'border-primary/60 ring-2 ring-primary/10' : ''}`}>
 						<div>

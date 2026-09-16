@@ -5,7 +5,7 @@ description: "Nosso modelo padrão de 5m³ oferece o equilíbrio perfeito entre 
 icon: "🏢"
 popular: true
 image: "../../assets/cacamba-5m.webp"
-order: 2
+order: 1
 capacity: "5m³ (Suporta até 6 toneladas)"
 dimensions: "2.8m de comprimento x 1.6m de largura x 1.4m de altura"
 rentalPeriod: "Até 3 dias úteis (ou conforme a necessidade da obra)"
