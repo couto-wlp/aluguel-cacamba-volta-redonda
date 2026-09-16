@@ -57,6 +57,8 @@ async function run() {
       'src/assets/cacamba-6m.webp',
       'src/assets/cacamba-5m.webp',
       'src/assets/cacamba-7m.webp',
+      'src/assets/cacamba-8m.webp',
+      'src/assets/cacamba-roll-on.webp',
       'src/assets/cacamba-4m.webp',
       'deploy-github.mjs'
     ];
