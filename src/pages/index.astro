@@ -91,15 +91,9 @@ const homepageServices = services.filter(s => ['cacamba-5m', 'cacamba-6m', 'caca
 								</a>
 							)}
 							
-							<h3 class="text-[29px] font-black text-gray-900 mb-2 hover:text-secondary transition-colors">
+							<h3 class="text-[29px] font-black text-gray-900 mb-4 hover:text-secondary transition-colors">
 								<a href={`/aluguel-${service.slug}`}>{service.data.title}</a>
 							</h3>
-							
-							{service.data.capacity && (
-								<span class="text-sm font-bold text-secondary mb-4 block">
-									{service.data.capacity}
-								</span>
-							)}
 							
 							<p class="text-gray-500 text-sm leading-relaxed mb-6">
 								{service.data.description}
