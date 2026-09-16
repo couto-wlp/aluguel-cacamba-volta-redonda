@@ -3,7 +3,7 @@ title: "Caçamba de 6m³"
 pageTitle: "Aluguel de Caçamba de 6m³ em Volta Redonda"
 description: "Maior capacidade para grandes obras, demolições ou grande volume de resíduos."
 icon: "🚚"
-image: "../../assets/cacamba-5m.webp"
+image: "../../assets/cacamba-6m.webp"
 order: 2
 capacity: "6m³ (Suporta até 7.5 toneladas)"
 dimensions: "3.0m de comprimento x 1.7m de largura x 1.5m de altura"
