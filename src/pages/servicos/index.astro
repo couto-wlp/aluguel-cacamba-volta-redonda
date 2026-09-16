@@ -58,7 +58,15 @@ function getExcerpt(body) {
 
 			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 				{services.map(service => (
-					<div class={`relative bg-white border border-gray-150 rounded-[32px] p-8 flex flex-col justify-between transition-all duration-300 shadow-sm hover:shadow-2xl cursor-pointer ${service.data.popular ? 'border-primary/60 ring-2 ring-primary/10' : ''}`}>
+					<div class={`relative bg-white border border-gray-150 rounded-[32px] p-8 flex flex-col justify-between transition-all duration-300 shadow-sm hover:shadow-2xl cursor-pointer ${service.data.popular ? 'border-primary ring-2 ring-primary/20' : ''}`}>
+						{service.data.popular && (
+							<div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-primary text-slate-955 font-black text-xs px-4 py-1.5 rounded-full shadow-md border border-yellow-300 z-10 whitespace-nowrap flex items-center gap-1.5 uppercase tracking-wider">
+								<svg class="w-3.5 h-3.5 fill-slate-955" viewBox="0 0 24 24">
+									<path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+								</svg>
+								Mais Pedida
+							</div>
+						)}
 						<div>
 							{service.data.image ? (
 								<a href={`/aluguel-${service.slug}`} class="block w-full h-64 overflow-hidden mb-6 flex items-center justify-center">
